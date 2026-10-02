@@ -1,0 +1,80 @@
+# PHP 热阻 ML 设计器 · 练手项目
+
+> 脉动/振荡热管（PHP/OHP）热阻预测与可解释设计优化 —— 《热管理背景 AI4S 专项计划》18 个月路线中的**第一个作品集项目**。纯文献数据即可起步，不依赖实验条件。
+> 复现基准：DLR 学位论文（Illbruck, 2026）——3,473 个文献数据点，XGBoost + SHAP，RMSPE 20.2%，R²=0.941。
+
+## 目标
+
+1. 用树模型（XGBoost / LightGBM / sklearn HGB）预测 PHP 热阻 R_th（K/W）
+2. 用 SHAP 回答三个设计问题：
+   - 最优充液率是多少？（文献预期：50–60%）
+   - 重力/倾角影响多大？（文献预期：垂直底热最优，水平显著退化）
+   - 热流密度是不是最强特征？（DLR 结论：是，贡献接近第二名两倍）
+3. 接贝叶斯优化做流道参数自动寻优（进阶，第 2 阶段）
+
+## 目录结构
+
+```
+php-thermal-resistance/
+├── README.md                 ← 本文件
+├── requirements.txt
+├── data/
+│   ├── sources.md            ← 公开文献数据源清单（逐篇列出可数字化内容）
+│   └── php_demo.csv          ← 演示数据（make_demo_data.py 生成，物理启发式）
+├── src/
+│   ├── make_demo_data.py     ← 生成演示数据集
+│   └── train.py              ← 训练 + 交叉验证 + SHAP 分析 + 出图
+└── outputs/                  ← 运行后生成：parity.png / shap_*.png / metrics.json
+```
+
+## 快速开始
+
+```bash
+pip install -r requirements.txt
+
+# 1. 生成演示数据（约 1000 个样本）
+python src/make_demo_data.py
+
+# 2. 训练 + SHAP 分析（自动选择后端：优先 XGBoost，缺失时用 sklearn HGB）
+python src/train.py
+
+# 3. 贝叶斯优化设计闭环（EI 采集函数 + GP 代理，~6 秒）
+python src/optimize.py            # 默认工作点 q=30 W/cm²
+python src/optimize.py --q 45     # 换个工作点看最优设计如何迁移
+```
+
+macOS 上 XGBoost 需要 OpenMP：可选执行 `brew install libomp`，否则脚本自动降级到 sklearn 后端，结果口径一致。
+
+## 验收标准
+
+- [ ] 5 折交叉验证：log 尺度 R² ≥ 0.9（与 DLR 的相对误差口径一致），MAPE ≤ 15%
+- [ ] SHAP 依赖图复现文献结论：充液率的 SHAP 贡献谷值落在 50–65%（热阻最优区间）
+- [ ] SHAP 摘要图显示热流密度为最强特征
+- [ ] 倾角依赖图显示 90°（垂直底热）最优、0° 显著退化
+- [ ] 能用自己的话解释：为什么低充液率 + 高功率组合会出现热阻飙升（烧干）
+
+## 路线（三阶段）
+
+| 阶段 | 内容 | 验收 |
+|-|-|-|
+| 1 演示数据复现（本文档） | 物理启发式合成数据上跑通全流程 | 上述 5 条 |
+| 2 文献数据替换 | 按 `data/sources.md` 用 WebPlotDigitizer 数字化 2–3 篇文献曲线，替换 `php_demo.csv` | CV R² ≥ 0.85，结论方向与文献一致 |
+| 3 设计优化闭环 | 训练完的代理模型 + sklearn GP + EI 采集函数贝叶斯优化，以最小热阻为目标寻优流道参数（`src/optimize.py`） | 输出 `optimal_designs.csv`：各工质最优设计参数 + 预测热阻 + 收敛曲线与设计空间景观图 |
+
+**阶段 3 运行结果（q = 30 W/cm²，演示数据）**：最优设计为水工质、充液率 70%、d_h 3.0 mm、20 弯、垂直底热，预测 R_th = 0.122 K/W，较"全部取中点的平庸设计"改善 44.3%。两个可讲给面试官的细节：① 最优充液率随工作点功率上移（30 W/cm² 时 56% 的静态最优被烧干风险推到 70%）；② d_h 与弯折数顶到边界——说明目标函数在该方向仍单调，工程上应加入制造约束或拓宽边界，这是真实设计优化里的典型议题。
+
+## 特征口径（与 DLR 对齐）
+
+| 特征 | 单位 | 说明 |
+|-|-|-|
+| fluid | 类别 | 工质（水 / 乙醇 / 丙酮 / R134a …） |
+| fill_ratio | % | 充液率，文献区间 5–100% |
+| inclination_deg | ° | 倾角，0=水平，90=垂直底热 |
+| heat_flux_wcm2 | W/cm² | 加热热流密度 |
+| hydraulic_diameter_mm | mm | 水力直径 |
+| n_turns | - | 弯折数/匝数 |
+| R_th_K_W | K/W（目标） | 蒸发段-冷凝段温差 / 加热功率 |
+
+---
+
+*本项目为学习用途；演示数据为物理启发式合成数据，定量结论以文献数据阶段为准。*

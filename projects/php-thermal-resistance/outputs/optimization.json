@@ -1,0 +1,47 @@
+{
+  "q_point_W_cm2": 30.0,
+  "results": [
+    {
+      "fluid": "water",
+      "fill_ratio_pct": 70.4,
+      "hydraulic_diameter_mm": 3.0,
+      "n_turns": 20,
+      "evaporator_length_mm": 40.0,
+      "inclination_deg": 90.0,
+      "R_th_pred_K_W": 0.122
+    },
+    {
+      "fluid": "ethanol",
+      "fill_ratio_pct": 63.7,
+      "hydraulic_diameter_mm": 3.0,
+      "n_turns": 17,
+      "evaporator_length_mm": 40.0,
+      "inclination_deg": 90.0,
+      "R_th_pred_K_W": 0.151
+    },
+    {
+      "fluid": "acetone",
+      "fill_ratio_pct": 62.0,
+      "hydraulic_diameter_mm": 3.0,
+      "n_turns": 16,
+      "evaporator_length_mm": 40.0,
+      "inclination_deg": 90.0,
+      "R_th_pred_K_W": 0.166
+    },
+    {
+      "fluid": "R134a",
+      "fill_ratio_pct": 67.4,
+      "hydraulic_diameter_mm": 3.0,
+      "n_turns": 20,
+      "evaporator_length_mm": 40.0,
+      "inclination_deg": 90.0,
+      "R_th_pred_K_W": 0.232
+    }
+  ],
+  "baseline": {
+    "water": 0.21888516045372827,
+    "ethanol": 0.33143481352401327,
+    "acetone": 0.3832401365552401,
+    "R134a": 0.42641947664027785
+  }
+}

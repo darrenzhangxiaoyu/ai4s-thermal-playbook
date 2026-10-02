@@ -1,0 +1,343 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  # ===== 顶部装饰与标题 =====
+  - elementId: top-bar
+    elementType: shape
+    bounds: [0, 0, 794, 8]
+    shapeName: rect
+    fill: {type: gradient, gradientType: linear, angle: 0,
+      stops: [{position: 0, color: "$amber"}, {position: 0.55, color: "$teal"}, {position: 1, color: "$blue"}]}
+  - elementId: title
+    elementType: text
+    bounds: [48, 32, 560, 40]
+    content:
+      style: "$h1"
+      wrap: false
+      align: [left, middle]
+      text: 热管理 AI4S · 选题速查
+  - elementId: title-tag
+    elementType: text
+    bounds: [560, 42, 186, 22]
+    content:
+      fontSize: 11
+      color: "$coral"
+      bold: true
+      wrap: false
+      align: [right, middle]
+      text: 沸腾与两相蒸发器件专题
+  - elementId: subtitle
+    elementType: text
+    bounds: [48, 78, 698, 22]
+    content:
+      style: "$sub"
+      wrap: false
+      align: [left, middle]
+      text: 器件 × 重力环境 × AI 切入点对照 · 适配航天器热控与高热流芯片液冷双背景
+
+  # ===== 核心结论 =====
+  - elementId: take-rule
+    elementType: shape
+    bounds: [48, 114, 4, 36]
+    shapeName: rect
+    fill: {type: solid, color: "$coral"}
+  - elementId: takeaway
+    elementType: text
+    bounds: [62, 112, 684, 40]
+    content:
+      style: "$body"
+      align: [left, middle]
+      text: |
+        <p><strong>读表前先记住一件事：</strong>同一类器件，地面与微重力是两个设计问题——地面靠<strong>浮力</strong>排汽，空间靠<strong>剪切力、毛细力与表面张力</strong>（低 Bond 数）。重力应作为 AI 模型的显式输入变量。</p>
+
+  # ===== 重力标尺 =====
+  - elementId: gs-label
+    elementType: text
+    bounds: [48, 166, 320, 18]
+    content:
+      fontSize: 13
+      color: "$ink"
+      bold: true
+      wrap: false
+      align: [left, middle]
+      text: 重力标尺 · 器件落位
+  - elementId: gs-tick1
+    elementType: text
+    bounds: [48, 186, 90, 16]
+    content: {fontSize: 10, color: "$gray", wrap: false, align: [left, middle], text: 1 g（地面）}
+  - elementId: gs-tick2
+    elementType: text
+    bounds: [250, 186, 170, 16]
+    content:
+      fontSize: 10
+      color: "$gray"
+      wrap: false
+      align: [center, middle]
+      text: |
+        <p>10<sup>-2</sup> g（落塔 / 抛物线飞行）</p>
+  - elementId: gs-tick3
+    elementType: text
+    bounds: [470, 186, 120, 16]
+    content:
+      fontSize: 10
+      color: "$gray"
+      wrap: false
+      align: [center, middle]
+      text: |
+        <p>10<sup>-4</sup> g</p>
+  - elementId: gs-tick4
+    elementType: text
+    bounds: [600, 186, 146, 16]
+    content:
+      fontSize: 10
+      color: "$gray"
+      wrap: false
+      align: [right, middle]
+      text: |
+        <p>≈10<sup>-6</sup> g（近地轨道）</p>
+  - elementId: gs-bar
+    elementType: shape
+    bounds: [48, 206, 698, 12]
+    shapeName: roundRect
+    adjustments: [50000]
+    fill: {type: gradient, gradientType: linear, angle: 0,
+      stops: [{position: 0, color: "$amber"}, {position: 0.5, color: "$teal"}, {position: 1, color: "$blue"}]}
+  # 器件落位点（第一行：地面侧）
+  - elementId: d1-dot
+    elementType: shape
+    bounds: [86, 204, 14, 14]
+    shapeName: ellipse
+    fill: {type: solid, color: "$amber"}
+    border: {style: solid, width: 2, color: "#FFFFFF"}
+  - elementId: d1-lead
+    elementType: line
+    bounds: [93, 222, 1, 14]
+    viewBox: [1, 14]
+    points: "0.5,0 0.5,14"
+    curve: sharp
+    border: {style: solid, width: 1, color: "$gray"}
+  - elementId: d1-label
+    elementType: text
+    bounds: [34, 238, 118, 16]
+    content: {fontSize: 10, color: "$ink", wrap: false, align: [center, middle], text: 池沸腾 · 浸没冷却}
+  - elementId: d2-dot
+    elementType: shape
+    bounds: [216, 204, 14, 14]
+    shapeName: ellipse
+    fill: {type: solid, color: "$coral"}
+    border: {style: solid, width: 2, color: "#FFFFFF"}
+  - elementId: d2-lead
+    elementType: line
+    bounds: [223, 222, 1, 14]
+    viewBox: [1, 14]
+    points: "0.5,0 0.5,14"
+    curve: sharp
+    border: {style: solid, width: 1, color: "$gray"}
+  - elementId: d2-label
+    elementType: text
+    bounds: [168, 238, 110, 16]
+    content: {fontSize: 10, color: "$ink", wrap: false, align: [center, middle], text: 脉动 / 振荡热管}
+  - elementId: d3-dot
+    elementType: shape
+    bounds: [430, 204, 14, 14]
+    shapeName: ellipse
+    fill: {type: solid, color: "$teal"}
+    border: {style: solid, width: 2, color: "#FFFFFF"}
+  - elementId: d3-lead
+    elementType: line
+    bounds: [437, 222, 1, 14]
+    viewBox: [1, 14]
+    points: "0.5,0 0.5,14"
+    curve: sharp
+    border: {style: solid, width: 1, color: "$gray"}
+  - elementId: d3-label
+    elementType: text
+    bounds: [356, 238, 162, 16]
+    content: {fontSize: 10, color: "$ink", wrap: false, align: [center, middle], text: 微通道流动沸腾冷板（跨段）}
+  # 器件落位点（第二行：空间侧）
+  - elementId: d4-dot
+    elementType: shape
+    bounds: [560, 204, 14, 14]
+    shapeName: ellipse
+    fill: {type: solid, color: "$blue"}
+    border: {style: solid, width: 2, color: "#FFFFFF"}
+  - elementId: d4-lead
+    elementType: line
+    bounds: [567, 218, 1, 12]
+    viewBox: [1, 12]
+    points: "0.5,0 0.5,12"
+    curve: sharp
+    border: {style: solid, width: 1, color: "$gray"}
+  - elementId: d4-label
+    elementType: text
+    bounds: [505, 232, 124, 16]
+    content: {fontSize: 10, color: "$ink", wrap: false, align: [center, middle], text: 毛细泵回路 CPL/LHP}
+  - elementId: d5-dot
+    elementType: shape
+    bounds: [688, 204, 14, 14]
+    shapeName: ellipse
+    fill: {type: solid, color: "$blue"}
+    border: {style: solid, width: 2, color: "#FFFFFF"}
+  - elementId: d5-lead
+    elementType: line
+    bounds: [695, 218, 1, 12]
+    viewBox: [1, 12]
+    points: "0.5,0 0.5,12"
+    curve: sharp
+    border: {style: solid, width: 1, color: "$gray"}
+  - elementId: d5-label
+    elementType: text
+    bounds: [630, 232, 116, 16]
+    content: {fontSize: 10, color: "$ink", wrap: false, align: [center, middle], text: 低温贮箱沸腾}
+
+  # ===== 对照表 =====
+  - elementId: tb-label
+    elementType: text
+    bounds: [48, 266, 380, 22]
+    content:
+      style: "$sec"
+      wrap: false
+      align: [left, middle]
+      text: 器件 × 重力 × AI 切入点对照
+  - elementId: tb-legend
+    elementType: text
+    bounds: [430, 270, 316, 16]
+    content:
+      fontSize: 10
+      color: "$gray"
+      wrap: false
+      align: [right, middle]
+      text: |
+        <p><span style="color:$amber">●</span> 地面　<span style="color:$blue">●</span> 微重力　<span style="color:$coral">●</span> 重力强敏感　<span style="color:$teal">●</span> 重力不敏感/跨段</p>
+  - elementId: main-table
+    elementType: table
+    bounds: [48, 294, 698, 524]
+    columnWidths: [0.175, 0.145, 0.175, 0.25, 0.255]
+    rowHeights: [0.088, 0.152, 0.152, 0.152, 0.152, 0.152, 0.152]
+    style: "$default"
+    rows:
+      - - text: 器件
+        - text: 典型重力环境
+        - text: 排汽/驱动机制
+        - text: AI 切入点
+        - text: 对标工作 · 数据点
+      - - text: 微通道流动沸腾冷板
+          bold: true
+        - text: 地面（AI 芯片）
+          color: "$amber"
+          bold: true
+        - text: 强制对流＋核态沸腾
+        - text: CHF/HTC 代理预测、流道参数优化
+        - text: Purdue/NASA 跨重力 ANN；清华两相微通道 CHF 1682 W/cm²
+      - - text: 微通道两相
+          bold: true
+        - text: 微重力（星上载荷）
+          color: "$blue"
+          bold: true
+        - text: 剪切力排汽（低 Bond 数）
+        - text: 跨重力统一关联式、流型生成模型
+        - text: FBCE/ISS 在轨数据库；NASA EPSCoR 生成式流型
+      - - text: 池沸腾 / 浸没冷却
+          bold: true
+        - text: 地面（数据中心）
+          color: "$amber"
+          bold: true
+        - text: 浮力排汽
+        - text: 沸腾状态识别、CHF 实时预警
+        - text: CNN＋迁移学习，专攻跨工况泛化瓶颈
+      - - text: 脉动/振荡热管（PHP/OHP）
+          bold: true
+        - text: 重力强敏感
+          color: "$coral"
+          bold: true
+        - text: 重力＋毛细＋相变振荡
+        - text: 热阻代理＋SHAP 可解释设计
+        - text: DLR XGBoost：3,473 数据点，最优充液率 50–60%
+      - - text: 毛细泵两相回路（CPL/LHP）
+          bold: true
+        - text: 重力不敏感·空间默认
+          color: "$teal"
+          bold: true
+        - text: 毛细抽吸
+        - text: 启动/瞬态预测、数字孪生
+        - text: 图学习孪生路线可迁移（LPTM 图结构）
+      - - text: 低温推进剂贮箱沸腾
+          bold: true
+        - text: 微重力在轨管理
+          color: "$blue"
+          bold: true
+        - text: Marangoni＋表面张力
+        - text: VOF 仿真加速代理、热控策略优化
+        - text: 液氧在轨加注模拟：气泡脱离直径 0.3–0.6 mm
+
+  # ===== 关键数字 =====
+  - elementId: num-rule
+    elementType: shape
+    bounds: [48, 846, 698, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: num1
+    elementType: text
+    bounds: [48, 862, 222, 36]
+    content: {fontSize: 27, color: "$coral", bold: true, wrap: false, align: [left, middle], text: 1682 W/cm²}
+  - elementId: num1-cap
+    elementType: text
+    bounds: [48, 902, 222, 48]
+    content:
+      style: "$cap"
+      align: [left, top]
+      text: 清华 SiC 两相微通道实验 CHF（蒸发换热），89 mW 泵功带走 1,682 W/cm²，COP>19,000
+  - elementId: num2
+    elementType: text
+    bounds: [286, 862, 222, 36]
+    content: {fontSize: 27, color: "$blue", bold: true, wrap: false, align: [left, middle], text: 50–60%}
+  - elementId: num2-cap
+    elementType: text
+    bounds: [286, 902, 222, 48]
+    content:
+      style: "$cap"
+      align: [left, top]
+      text: PHP 最优充液率（XGBoost＋SHAP 可解释设计，3,473 文献数据点；垂直底热布置最优）
+  - elementId: num3
+    elementType: text
+    bounds: [524, 862, 222, 36]
+    content: {fontSize: 27, color: "$teal", bold: true, wrap: false, align: [left, middle], text: ±10%}
+  - elementId: num3-cap
+    elementType: text
+    bounds: [524, 902, 222, 48]
+    content:
+      style: "$cap"
+      align: [left, top]
+      text: FBCE 跨重力 CHF-ANN 对 85% 数据的预测误差带（ISS 微重力＋地面联合训练）
+  - elementId: num-take
+    elementType: text
+    bounds: [48, 962, 698, 20]
+    content:
+      fontSize: 12
+      color: "$ink"
+      wrap: false
+      align: [left, middle]
+      text: |
+        <p><strong>起步建议：</strong>纯文献数据即可复现 PHP 热阻设计器——这是不依赖实验条件、最快出成果的第一块作品集。</p>
+
+  # ===== 页脚 =====
+  - elementId: ft-rule
+    elementType: shape
+    bounds: [48, 1066, 698, 1]
+    shapeName: rect
+    fill: {type: solid, color: "$line"}
+  - elementId: ft-src
+    elementType: text
+    bounds: [48, 1076, 560, 30]
+    content:
+      fontSize: 9.5
+      color: "$gray"
+      lineHeight: 1.4
+      align: [left, top]
+      text: 资料来源：2026 年 10 月前公开文献调研整理（FBCE/ISS、DLR、Purdue、清华、MOX/Thales Alenia 等）；速查用途，细节与引用见《热管理背景 AI4S 专项计划》
+  - elementId: ft-date
+    elementType: text
+    bounds: [620, 1076, 126, 16]
+    content: {fontSize: 9.5, color: "$gray", wrap: false, align: [right, middle], text: 2026.10 · AI4S 调研系列}

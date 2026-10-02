@@ -1,0 +1,51 @@
+version: v2
+title: 热管理 AI4S 速查海报
+size: [794, 1123]
+theme:
+  colors:
+    ink: "#264653"
+    blue: "#2E5EAA"
+    teal: "#2A9D8F"
+    amber: "#C77D0A"
+    coral: "#E76F51"
+    gray: "#6B7280"
+    light: "#F4F6F9"
+    line: "#E3E7EE"
+  textStyles:
+    h1:
+      fontSize: 29
+      color: "$ink"
+      bold: true
+    sub:
+      fontSize: 15
+      color: "$gray"
+    sec:
+      fontSize: 15
+      color: "$ink"
+      bold: true
+    body:
+      fontSize: 13
+      color: "$ink"
+      lineHeight: 1.5
+    cap:
+      fontSize: 10
+      color: "$gray"
+  tableStyles:
+    default:
+      cellStyle:
+        fontSize: 11
+        color: "$ink"
+        lineHeight: 1.4
+        align: [left, middle]
+        border: {style: solid, width: 1, color: "$line"}
+      firstRowStyle:
+        fill: {type: solid, color: "$ink"}
+        color: "#FFFFFF"
+        bold: true
+        fontSize: 11.5
+        align: [left, middle]
+      bodyStyles:
+        - fill: {type: solid, color: "#FFFFFF"}
+        - fill: {type: solid, color: "$light"}
+pages:
+  - pages/1_poster.page

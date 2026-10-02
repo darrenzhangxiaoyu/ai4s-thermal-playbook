@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 模型与运行产物（可用脚本重新生成）
+projects/php-thermal-resistance/outputs/model.pkl
+projects/php-thermal-resistance/data/php_demo.csv
+
+# 海报渲染的中间产物
+poster/screenshots/
