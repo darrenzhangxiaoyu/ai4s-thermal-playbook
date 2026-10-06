@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """PHP 热阻预测：树模型 + 5 折 CV + SHAP 可解释分析。
 
-用法：
+用法（可在任意目录执行，路径相对本项目解析）：
     python src/train.py [--data data/php_demo.csv] [--model auto] [--outdir outputs]
 
 后端选择：优先 XGBoost（macOS 需 libomp），不可用时自动降级 sklearn HistGradientBoosting。
@@ -9,20 +9,26 @@
 import argparse
 import json
 import os
+import sys
+from pathlib import Path
 
-import numpy as np
-import pandas as pd
-import matplotlib
+# 共享的中文字体/路径工具；必须在 import matplotlib 之前导入（它会设置 MPLCONFIGDIR）
+for _p in Path(__file__).resolve().parents:
+    if (_p / "tools" / "cjkfont.py").exists():
+        sys.path.insert(0, str(_p / "tools"))
+        break
+import cjkfont  # noqa: E402
+
+import numpy as np  # noqa: E402
+import pandas as pd  # noqa: E402
+import matplotlib  # noqa: E402
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-from matplotlib import font_manager
+import matplotlib.pyplot as plt  # noqa: E402
 
-FONT_DIR = "/Users/zhangxiaoyu/Library/Application Support/kimi-desktop/daimon-share/daimon/runtime/python/fonts"
-for _f in ["NotoSansSC-Regular.ttf", "NotoSansSC-Bold.ttf"]:
-    if os.path.exists(f"{FONT_DIR}/{_f}"):
-        font_manager.fontManager.addfont(f"{FONT_DIR}/{_f}")
-plt.rcParams["font.family"] = "Noto Sans SC"
-plt.rcParams["axes.unicode_minus"] = False
+cjkfont.setup_cjk_font()
+
+# 本项目根目录（<repo>/projects/php-thermal-resistance），使默认路径与当前工作目录无关
+PROJECT_DIR = Path(__file__).resolve().parents[1]
 
 INK, BLUE, TEAL, CORAL, GRAY = "#264653", "#2E5EAA", "#2A9D8F", "#E76F51", "#8A94A6"
 
@@ -82,9 +88,9 @@ def cv_evaluate(model, X, y, kind):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", default="data/php_demo.csv")
+    ap.add_argument("--data", default=str(PROJECT_DIR / "data" / "php_demo.csv"))
     ap.add_argument("--model", default="auto", choices=["auto", "xgb", "hgb"])
-    ap.add_argument("--outdir", default="outputs")
+    ap.add_argument("--outdir", default=str(PROJECT_DIR / "outputs"))
     args = ap.parse_args()
     os.makedirs(args.outdir, exist_ok=True)
 

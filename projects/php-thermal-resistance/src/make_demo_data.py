@@ -11,6 +11,11 @@
 import numpy as np
 import pandas as pd
 
+from pathlib import Path
+
+# 本项目根目录（<repo>/projects/php-thermal-resistance），使输出路径与当前工作目录无关
+PROJECT_DIR = Path(__file__).resolve().parents[1]
+
 rng = np.random.default_rng(42)
 N = 1000
 
@@ -70,7 +75,8 @@ df = pd.DataFrame({
     "R_th_K_W": np.round(rows, 4),
 })
 
-out = "data/php_demo.csv"
+out = PROJECT_DIR / "data" / "php_demo.csv"
+out.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(out, index=False, encoding="utf-8-sig")
 print(f"saved {len(df)} rows -> {out}")
 print(df.describe(include="all").to_string())

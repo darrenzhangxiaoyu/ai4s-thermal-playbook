@@ -1,21 +1,27 @@
 # -*- coding: utf-8 -*-
-"""AI4S 调研报告图表：统一配色风格"""
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from matplotlib import font_manager
-import numpy as np
+"""AI4S 调研报告图表（fig1–fig4）：统一配色风格"""
+import sys
+from pathlib import Path
 
-FONT_DIR = '/Users/zhangxiaoyu/Library/Application Support/kimi-desktop/daimon-share/daimon/runtime/python/fonts'
-for f in ['NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf']:
-    font_manager.fontManager.addfont(f'{FONT_DIR}/{f}')
-plt.rcParams['font.family'] = 'Noto Sans SC'
-plt.rcParams['axes.unicode_minus'] = False
+# 共享的中文字体/路径工具；必须在 import matplotlib 之前导入（它会设置 MPLCONFIGDIR）
+for _p in Path(__file__).resolve().parents:
+    if (_p / 'tools' / 'cjkfont.py').exists():
+        sys.path.insert(0, str(_p / 'tools'))
+        break
+import cjkfont  # noqa: E402
+
+import matplotlib  # noqa: E402
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt  # noqa: E402
+import numpy as np  # noqa: E402
+
+cjkfont.setup_cjk_font()
 
 INK, BLUE, TEAL, AMBER, CORAL, GRAY, LIGHT = (
     '#264653', '#2E5EAA', '#2A9D8F', '#E9C46A', '#E76F51', '#8A94A6', '#F4F6F9')
 
-OUT = '/Users/zhangxiaoyu/Documents/02-研发/01-研发项目/50-AI4S/docs/assets'
+# 输出到仓库内 docs/assets/，与脚本所在位置无关（原实现写死了作者机器的绝对路径）
+OUT = str(cjkfont.repo_root() / 'docs' / 'assets')
 
 def style_ax(ax):
     for s in ['top', 'right']:

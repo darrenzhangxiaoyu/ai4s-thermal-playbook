@@ -1,0 +1,50 @@
+{
+  "n_samples": 800,
+  "seed": 42,
+  "grid": {
+    "nx": 120,
+    "ny_s": 10,
+    "ny_c": 14
+  },
+  "fluid": "water",
+  "fluid_properties": {
+    "k_f": 0.6,
+    "rho": 997.0,
+    "cp": 4180.0,
+    "mu": 0.00089
+  },
+  "param_names": [
+    "H_c",
+    "H_s",
+    "L",
+    "u_mean",
+    "q_flux",
+    "k_s"
+  ],
+  "param_labels": {
+    "H_c": "通道高度 H_c (mm)",
+    "H_s": "基板厚度 H_s (mm)",
+    "L": "流向长度 L (mm)",
+    "u_mean": "平均流速 u (m/s)",
+    "q_flux": "热流密度 q'' (W/cm²)",
+    "k_s": "固体导热系数 k_s (W/mK)"
+  },
+  "target_names": [
+    "R_th",
+    "dp",
+    "P_pump",
+    "T_max",
+    "Nu_mean",
+    "Re",
+    "Le_over_L"
+  ],
+  "validity_constraint": "Le,h/L ≤ 1.0",
+  "entrance_ratio": {
+    "median": 0.4934870088711172,
+    "max": 0.9995323476320399
+  },
+  "feasibility_constraint": "T_max ≤ 358.15 K (85 °C，单相液态水)",
+  "feasible_fraction": 0.31,
+  "solver_verification": "outputs/solver_verification.json（13/13 项通过）",
+  "wall_time_s": 5.2
+}

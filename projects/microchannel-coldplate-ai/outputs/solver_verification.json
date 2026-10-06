@@ -1,0 +1,115 @@
+[
+  {
+    "benchmark": "温度场最大绝对误差",
+    "value": 2.3305801732931286e-12,
+    "target": 0.0,
+    "abs_error": 2.3305801732931286e-12,
+    "tol": 1e-08,
+    "passed": true
+  },
+  {
+    "benchmark": "热点温度 T_max",
+    "value": 301.45000000000067,
+    "target": 301.45,
+    "abs_error": 6.821210263296962e-13,
+    "tol": 1e-08,
+    "passed": true
+  },
+  {
+    "benchmark": "能量守恒相对误差",
+    "value": 2.4100188511511083e-12,
+    "target": 0.0,
+    "abs_error": 2.4100188511511083e-12,
+    "tol": 1e-10,
+    "passed": true
+  },
+  {
+    "benchmark": "能量守恒误差 (H_c=0.4mm u=0.10m/s q=30W/cm²)",
+    "value": 1.3238200659139292e-12,
+    "target": 0.0,
+    "abs_error": 1.3238200659139292e-12,
+    "tol": 1e-08,
+    "passed": true
+  },
+  {
+    "benchmark": "主体温升 ΔT_b (H_c=0.4mm u=0.10m/s q=30W/cm²)",
+    "value": 53.884477237567864,
+    "target": 53.989720357243975,
+    "abs_error": 0.10524311967611055,
+    "tol": 0.2699486017862199,
+    "passed": true
+  },
+  {
+    "benchmark": "能量守恒误差 (H_c=0.8mm u=0.05m/s q=10W/cm²)",
+    "value": 5.434382425543542e-12,
+    "target": 0.0,
+    "abs_error": 5.434382425543542e-12,
+    "tol": 1e-08,
+    "passed": true
+  },
+  {
+    "benchmark": "主体温升 ΔT_b (H_c=0.8mm u=0.05m/s q=10W/cm²)",
+    "value": 17.96149241244882,
+    "target": 17.99657345241466,
+    "abs_error": 0.035081039965838556,
+    "tol": 0.08998286726207329,
+    "passed": true
+  },
+  {
+    "benchmark": "能量守恒误差 (H_c=0.2mm u=0.20m/s q=80W/cm²)",
+    "value": 1.099351720768027e-13,
+    "target": 0.0,
+    "abs_error": 1.099351720768027e-13,
+    "tol": 1e-08,
+    "passed": true
+  },
+  {
+    "benchmark": "主体温升 ΔT_b (H_c=0.2mm u=0.20m/s q=80W/cm²)",
+    "value": 95.7946262002369,
+    "target": 95.98172507954484,
+    "abs_error": 0.18709887930793911,
+    "tol": 0.4799086253977242,
+    "passed": true
+  },
+  {
+    "benchmark": "发展段剖面 θ(η) 最大相对偏差",
+    "value": 0.004702177034067171,
+    "target": 0.0,
+    "abs_error": 0.004702177034067171,
+    "tol": 0.5,
+    "passed": true
+  },
+  {
+    "benchmark": "该截面局部 Nu",
+    "value": 5.384691286340288,
+    "target": 5.385,
+    "abs_error": 0.0003087136597121898,
+    "tol": 0.026925,
+    "passed": true
+  },
+  {
+    "benchmark": "能量守恒相对误差",
+    "value": 2.055557514540851e-08,
+    "target": 0.0,
+    "abs_error": 2.055557514540851e-08,
+    "tol": 1e-07,
+    "passed": true
+  },
+  {
+    "benchmark": "网格收敛（剖面误差单调下降）",
+    "value": 4.7021770340671714e-05,
+    "target": 0.0,
+    "abs_error": 4.7021770340671714e-05,
+    "tol": 0.0033813152721178796,
+    "passed": true
+  },
+  {
+    "benchmark": "假设审计 Le,h/L ≤ 1 占比(%)",
+    "value": 41.699999999999996,
+    "target": 100.0,
+    "abs_error": 0.0,
+    "tol": 0.0,
+    "passed": true,
+    "note": "仅记录，用于确定采样约束"
+  }
+]

@@ -1,0 +1,336 @@
+{
+  "range": "24-45",
+  "agent": "dsh-subagent/ai4s-refs-024-045/2026-10-06",
+  "references": [
+    {
+      "id": 24,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "主文档 docs/AI4S全方位调研报告.md 全文检索不到 [^24^] 标记（1–63 区间的缺口编号之一，与 8/9/14/32/34/43/46/59 同类）。按协议仍返回该条目；该编号的原文来源无法重构，应视为未证实。"
+    },
+    {
+      "id": 25,
+      "claim": "DeepMind AlphaProof 将预训练大模型\"直觉\"与 AlphaZero 强化学习结合，在 Lean 形式化环境中自我对弈训练；2024 年与 AlphaGeometry 2 联手在 IMO 达银牌水平（28 分），是 AI 首次在该赛事获奖牌；2025 年 11 月技术细节正式发表于 Nature；数学是 AI4S 的\"元能力\"，AlphaProof 核心是形式化推理与强化学习",
+      "status": "verified",
+      "source": {
+        "title": "Google DeepMind's Latest Paper in Nature Unveils Most Powerful Mathematical Model for IMO（报道对象：Nature 论文 Olympiad-level formal mathematical reasoning with reinforcement learning，DOI 10.1038/s41586-025-09833-y）",
+        "publisher": "36Kr / 新智元（原文引自 Nature 论文）",
+        "date": "2025-11-13",
+        "url": "https://eu.36kr.com/en/p/3551304246589575",
+        "type": "media"
+      },
+      "evidence_quote": "DeepMind's AlphaProof, in collaboration with AlphaGeometry 2, solved 4 out of the 6 competition questions at the 2024 IMO, scoring 28 points (out of 42), reaching the level of a silver-medalist. This score was only 1 point short of the gold-medal line (29 points).",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "Nature 正刊页（https://www.nature.com/articles/s41586-025-09833-y ）因 IdP 重定向被拦，正文未能直接抓取；逐字证据取自 36Kr/新智元 2025-11-13 同期报道（已实际打开，HTTP 200），该文以该 Nature 论文为核心并复述 28 分/银牌/4 题/距金牌线 1 分等细节，时间与文档\"2025 年 11 月 Nature\"吻合。论文核心方法（预训练大模型 + AlphaZero 式强化学习 + Lean 自我对弈）在同一报道中逐字描述。"
+    },
+    {
+      "id": 26,
+      "claim": "2026 年 5 月升级框架 AlphaProof Nexus 融合大语言模型、AlphaProof 与进化算法，一次性解决 9 个开放的 Erdos 问题（含两道悬置 56 年的难题），并在 OEIS 中证明 44 个开放猜想；AlphaProof/AlphaGeometry 达 IMO 银牌、攻克开放难题",
+      "status": "verified",
+      "source": {
+        "title": "Advancing Mathematics Research with AI-Driven Formal Proof Search（arXiv:2605.22763v2）",
+        "publisher": "Google DeepMind 等（Tsoukalas, Kovsharov, Shirobokov, Surina, … Chaudhuri）",
+        "date": "2026-05-21（v2 2026-06-08）",
+        "url": "https://arxiv.org/abs/2605.22763",
+        "type": "paper"
+      },
+      "evidence_quote": "Our full-featured agent autonomously solved 9 Erdős problems out of 353 attempted, including two questions that had been open for 56 years, at the inference cost of a few hundred dollars per problem. It also proved 44/492 open conjectures from the Online Encyclopedia of Integer Sequences (OEIS)",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "同时实际打开论文 HTML 全文（https://arxiv.org/html/2605.22763v2 ）逐字确认：框架名\"AlphaProof Nexus\"、进化算法组件（\"coordinated using an evolutionary algorithm\"）、AlphaProof 作为专门证明工具、以及\"9/353\"\"44/492\"两个分母。口径修正：文档写\"证明 44 个开放猜想\"省略了分母（实为 492 个被形式化猜想中证出 44 个），\"9 个 Erdos 问题\"同理（353 个中 9 个）。量子位 2026-05-26 报道（https://www.qbitai.com/2026/05/425455.html ，已实际打开）独立印证 AlphaProof Nexus 名称、Gemini 驱动、9 道 Erdos 题与 44 个 OEIS 猜想。"
+    },
+    {
+      "id": 27,
+      "claim": "Sakana AI 的 The AI Scientist（2024 年 8 月发布，约 15 美元/篇）首次将\"创意生成—实验执行—论文撰写\"整合为自动化流程；2026 年 3 月相关工作登上 Nature 正刊；第三方评估显示 AI Scientist 系统存在文献综述肤浅、42% 实验因代码错误失败、结果幻觉等问题，距离真正自主科学发现仍有距离",
+      "status": "verified",
+      "source": {
+        "title": "Evaluating Sakana's AI Scientist: Bold Claims, Mixed Results, and a Promising Future?（SIGIR Forum 59(1), 1–20；arXiv:2502.14297）",
+        "publisher": "Joeran Beel, Min-Yen Kan, Moritz Baumgart — University of Siegen / NUS",
+        "date": "2025-02-21",
+        "url": "https://isg.beel.org/blog/2025/02/21/sakana-ai-scientist-evaluation/",
+        "type": "paper"
+      },
+      "evidence_quote": "The AI Scientist also lacks robustness in experiment execution—five out of twelve proposed experiments (42%) failed due to coding errors, and those that did run often produced logically flawed or misleading results … Hallucinated numerical results were contained in several manuscripts.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "\"$15/篇 + 2024-08-12\"由原始论文 arXiv:2408.06292（已实际打开）逐字支持：\"Each idea is implemented and developed into a full paper at a cost of less than $15 per paper.\"；该第三方评估另给 \"$6–$15\" 区间。\"2026-03 登上 Nature 正刊\"由 Sakana AI 官方公告逐字支持（2026-03-26，https://sakana.ai/ai-scientist-nature/ ，已实际打开）：\"a paper describing all of this work and that includes new insights has been published in Nature\"。42% 出处为 5/12 实验因编码错误失败（单一研究组样本，非大规模统计），文档\"42%\"数字精确但对样本量未加说明。"
+    },
+    {
+      "id": 28,
+      "claim": "卡内基梅隆大学 Coscientist（2023 年 12 月发表于 Nature）展示 GPT-4 驱动的自主化学实验设计与执行能力；ChemCrow 将 18 个专业化学工具与大模型结合，自主规划并执行了驱虫剂与三种有机催化剂的合成，并指导发现新型发色团；DeepModeling、awesome-auto-research 等开源社区与自动科研系统全景图谱",
+      "status": "partially_verified",
+      "source": {
+        "title": "Carnegie Mellon-designed artificially intelligent coscientist automates scientific discovery（对应论文 Nature, doi:10.1038/s41586-023-06792-0）",
+        "publisher": "Carnegie Mellon University — EurekAlert（AAAS）官方新闻稿",
+        "date": "2023-12-20（论文 2023-12-21 出版）",
+        "url": "https://www.eurekalert.org/news-releases/1011392",
+        "type": "official"
+      },
+      "evidence_quote": "A non-organic intelligent system has for the first time designed, planned and executed a chemistry experiment, Carnegie Mellon University researchers report in the Dec. 21 issue of the journal Nature (doi:10.1038/s41586-023-06792-0).",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "Coscientist 部分核验通过（机构、期刊、期号、GPT-4/Claude 驱动、自主实验设计与执行均逐字支持）。ChemCrow 的\"18 个专业化学工具\"与\"驱虫剂 + 三种有机催化剂 + 新型发色团\"未能取得一手正文：Nature Machine Intelligence 论文页（https://www.nature.com/articles/s42256-024-00832-8 ）因 IdP 重定向无法抓取，arXiv:2304.05376 正文本次未能打开逐字核验，故整体降为 partially_verified。同一编号还被用于 §4.3/§6.3 的\"awesome-auto-research（自动科研系统全景图谱）\"仓库条目，该具体仓库未定位到一手页面，该子项为 not_found。"
+    },
+    {
+      "id": 29,
+      "claim": "Coscientist（2023 年 12 月 Nature）展示 GPT-4 驱动的自主化学实验能力；ChemCrow 将 18 个专业化学工具与大模型结合；The AI Scientist（2024 年 8 月，约 15 美元/篇），2025 年 4 月 v2 版本有论文通过 ICLR 2025 workshop 评审（6.33 分），2026 年 3 月相关工作登上 Nature 正刊；Sakana AI 同年完成 1.35 亿美元 B 轮融资、估值 26.5 亿美元；化学/自主实验室处于原型验证阶段；AI Scientist 系统实验失败率与结果幻觉问题仍高",
+      "status": "contradicted",
+      "source": {
+        "title": "Announcing Our Series B",
+        "publisher": "Sakana AI（官方博客）",
+        "date": "2025-11-17（2026-04-09 更新）",
+        "url": "https://sakana.ai/series-b/",
+        "type": "official"
+      },
+      "evidence_quote": "we are proud to announce that we have raised 32 Billion Yen (200 million US Dollars) for our Series B … これにより、当社のPost-money Valuation（資金調達後企業価値）は約4,320億円（27億米ドル）に、累計調達額は総額約660億円（4億1,200万米ドル）になります。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "该编号聚合多个子论点，其中 Sakana AI 融资数字被官方一手来源直接推翻：文档称\"1.35 亿美元 B 轮、估值 26.5 亿美元\"，官方为 B 轮 320 亿日元（2 亿美元）、投后估值约 4320 亿日元（27 亿美元），宣布时间 2025-11-17（Google 战略投资为 2026-01-23）。金额与时间均不符 → contradicted。其余子论点各自成立：$15/篇与 2024-08（arXiv:2408.06292）；v2 论文通过 ICLR 2025 ICBINB workshop 评审、平均 6.33 分（6/7/6）由 Sakana 官方公告逐字支持（https://sakana.ai/ai-scientist-nature/ ）；42% 实验因编码错误失败（Beel et al. 2025）；Coscientist 见 id 28。§2.6 与 §4.3 表格中的\"估值 26.5 亿美元\"须改为约 27 亿美元并补 B 轮金额/时间。"
+    },
+    {
+      "id": 30,
+      "claim": "数学/推理方向产业化程度尚低（坐标图左上象限），主要价值在基础研究方法与 AI 安全（可验证推理），对以就业为导向的入门者建议作为能力储备而非首选赛道",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "该句是作者自制的\"产业化程度×入门友好度\"象限判断（对应 §2.7 表中\"数学/推理 … 低：需深厚数学功底\"），属主观评估而非可援引事实。多轮检索（\"AI4S 数学推理 产业化 象限 就业\"、\"AI for math industry adoption\"）未找到任何支撑来源，判 not_found。建议：若保留该判断，应显式标注为本报告作者观点而非外部引用。"
+    },
+    {
+      "id": 31,
+      "claim": "谷歌 AI Co-Scientist 走\"科学家在环路\"路线，基于 Gemini 2.0 的多智能体系统在 48 小时内独立复现了帝国理工学院团队耗时十年确认的细菌基因转移机制，其提出的肝纤维化候选药物经斯坦福实验室验证显著有效（p < 0.01）；2026 年 DeepMind 的 AlphaProof Nexus 解决 9 个开放 Erdos 问题、Sakana AI 的 AI Scientist 登上 Nature 正刊",
+      "status": "partially_verified",
+      "source": {
+        "title": "Towards an AI co-scientist（arXiv:2502.18864v1）",
+        "publisher": "Google Cloud AI Research / Google DeepMind / Stanford University / Imperial College London",
+        "date": "2025-02-26",
+        "url": "https://arxiv.org/html/2502.18864v1",
+        "type": "paper"
+      },
+      "evidence_quote": "The system independently proposed that cf-PICIs interact with diverse phage tails to expand their host range. This in silico discovery mirrored the novel and experimentally validated results that expert researchers had already performed … the co-scientist generated this hypothesis in just two days, it was building on decades of research",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已核验：基于 Gemini 2.0 的多智能体\"scientist-in-the-loop\"系统属实；作者含 Imperial College London 的 Tiago R D Costa、José R Penadés（对应\"帝国理工团队\"）；肝纤维化新靶点经人肝类器官验证属实（摘要：\"validated by anti-fibrotic activity and liver cell regeneration in human hepatic organoids\"）。口径出入：原文为\"in just two days\"（两天）而非\"48 小时\"，且明确说明该系统是\"building on decades of research\"，文档\"帝国理工团队耗时十年确认\"的\"十年\"无一手来源（BBC/Live Science 等二手报道用\"years\"/\"a decade\"，本次未取得论文原文的十年表述）。\"p < 0.01\"与\"斯坦福实验室验证\"未见于该文：相关实验验证见 AI-Assisted Drug Re-Purposing for Human Liver Fibrosis（Adv Sci 2025, DOI 10.1002/advs.202508751，作者含 Stanford 的 Gary Peltz），因期刊正文本次未能打开逐字核验，整体置信 medium。AlphaProof Nexus / AI Scientist 子项另见 id 26/27，均已核验。"
+    },
+    {
+      "id": 32,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "主文档全文检索不到 [^32^] 标记（缺口编号）。按协议返回该条目，原文来源无法重构，应视为未证实。"
+    },
+    {
+      "id": 33,
+      "claim": "Intern-S1、磐石、玻尔平台为科学大模型/平台方向代表，\"2025 年起集中爆发\"；上海 AI 实验室\"磐石\"提供 200+ 跨学科智能体的发现平台；上海 AI 实验室 Intern-Discovery 平台；中科院\"磐石\"科学基础大模型",
+      "status": "partially_verified",
+      "source": {
+        "title": "构建自主实验室体系 做强科学模型体系 北京着力建设全球科学智能创新中枢（《北京市加快推进人工智能赋能科学研究实施方案（2026-2028年）》解读）",
+        "publisher": "北京市人民政府门户网站（来源：北京日报）",
+        "date": "2026-07-21",
+        "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202607/t20260721_4774516.html",
+        "type": "official"
+      },
+      "evidence_quote": "国内首个通用科学基础大模型磐石、全球首个微观世界大原子模型DPA、密度泛函模型MegaDFT……这些科学智能领域的基础设施，都诞生在北京。",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已核验：\"磐石\"通用科学基础大模型存在且为国内首个（北京市政府门户网站逐字）；\"2025 年起集中爆发\"与上海 AI 实验室 2025-07-26 发布十项\"AI+科学\"里程碑成果（科技日报 https://www.stdaily.com/web/gdxw/2025-07/26/content_376166.html ）的时点一致。未核验：\"200+ 跨学科智能体的发现平台\"、\"Intern-Discovery 平台\"这两个具体数字/平台名未取得一手逐字页面，故整体 partially_verified。主体标注需注意：文档 §2.7 把\"磐石\"列为中科院，而北京市政府文章与公开报道中的\"磐石\"（DP Technology/深势？此处未定）归属存在歧义，建议核对再定。"
+    },
+    {
+      "id": 34,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "主文档全文检索不到 [^34^] 标记（缺口编号）。按协议返回该条目，原文来源无法重构，应视为未证实。"
+    },
+    {
+      "id": 35,
+      "claim": "深度求索发布 DeepSeek-Prover-V2 数学推理模型，国产模型在形式化推理赛道占有一席之地；深势科技为 DeepModeling 开源社区核心发起方，玻尔科研空间站集成 Uni 系列大模型；GPT-4 都无法可靠评估化学任务输出的对错",
+      "status": "partially_verified",
+      "source": {
+        "title": "构建自主实验室体系 做强科学模型体系 北京着力建设全球科学智能创新中枢",
+        "publisher": "北京市人民政府门户网站（来源：北京日报）",
+        "date": "2026-07-21",
+        "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202607/t20260721_4774516.html",
+        "type": "official"
+      },
+      "evidence_quote": "由北京科学智能研究院、深势科技打造的智能化科研平台系统\"玻尔科研空间站\"，正在开动\"脑力\"，为全国数百所高校院所、企业的超450万名用户，提供全链条科研服务……科研人员只需使用自然语言，就能控制1800余种仪器设备开展实验。",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已核验：玻尔科研空间站由深势科技与北京科学智能研究院打造、覆盖\"读文献—做计算—做实验\"全链条、服务超 450 万用户、可控制 1800 余种仪器（北京市政府门户网站逐字，已实际打开）。未取得一手逐字：DeepSeek-Prover-V2 的官方发布页本次多次抓取失败（api.deepseek.com 不支持抓取、GitHub 超时），故该子项仅由媒体报道（InfoQ/DoNews 等）间接支持，未达\"一手页面逐字\"标准；\"DeepModeling 开源社区核心发起方\"与\"集成 Uni 系列大模型\"、\"200+ 智能体\"未取得一手逐字；\"GPT-4 无法可靠评估化学任务输出对错\"未定位到具体来源。整体 partially_verified。"
+    },
+    {
+      "id": 36,
+      "claim": "英伟达将 AI4S 列为与大模型、具身智能并列的 AI 三大核心方向，推出面向生物医药和材料研发的 BioNeMo 大模型框架，并与美国能源部合作构建面向科学研究的 AI 超算平台；OpenAI 于 2025 年 10 月组建 \"OpenAI for Science\" 团队，其判断是\"2025 年 AI 改变了程序员写代码的方式，2026 年同样的事情将发生在科学研究领域\"；Hassabis 预言未来 10—15 年人类将进入\"科学发现的新文艺复兴\"；有市场观点认为 GPU 在原子级模拟场景\"天生低效\"，专用 AI4S 算力（APU 等）可实现百倍速度、十分之一功耗",
+      "status": "partially_verified",
+      "source": {
+        "title": "Google's Nobel-winning AI leader sees a 'renaissance' ahead—after a 10- or 15-year shakeout",
+        "publisher": "Fortune",
+        "date": "2026-02-11",
+        "url": "https://fortune.com/2026/02/11/demis-hassabis-nobel-google-deepmind-predicts-ai-renaissance-radical-abundance/",
+        "type": "media"
+      },
+      "evidence_quote": "\"In 10, 15 years' time, we'll be in a kind of new golden era of discovery that [is] a kind of new renaissance,\" Hassabis predicted.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已核验：Hassabis \"10—15 年 / 新文艺复兴\" 由 Fortune 2026-02-11 采访逐字支持（已实际打开，HTTP 200）。OpenAI 科学团队：2025 年 10 月成立\"科学事业部\"，由 Kevin Weil 负责，见 MIT Tech Review 中文版经网易转载（2026-01-29，https://www.163.com/dy/article/KKEQC97K05119734.html ，已实际打开）逐字\"2025 年 10 月，OpenAI 宣布成立全新的'科学事业部'\"。未取得一手逐字：\"英伟达将 AI4S 列为与大模型、具身智能并列的三大核心方向\"（NVIDIA 官方博客仅见 BioNeMo Agent Toolkit 等发布，未见此三分类表述）；\"BioNeMo 与 DOE 共建科学超算\"；\"2025 年 AI 改变程序员写代码方式、2026 年发生在科研领域\"这句 OpenAI 表态的原始出处；以及\"GPU 原子级模拟天生低效、APU 百倍速度十分之一功耗\"（疑似来自国盛证券/道氏技术 APU 芯培森研报的二手表述）。整体 partially_verified。"
+    },
+    {
+      "id": 37,
+      "claim": "能源部（DOE）运行着全球最快的三台超算（El Capitan、Frontier、Aurora），2025 年 10 月宣布与英伟达、AMD 合作新建 9 台 AI 超算，同年 12 月追加超 3.2 亿美元建设\"科学云\"与\"变革性 AI 模型联盟\"；2026 年 3 月启动投入近 3 亿美元的\"创世纪使命\"计划；NSF 与英伟达各出资约 7500/7700 万美元支持 Ai2 建设开放多模态 AI 基础设施",
+      "status": "partially_verified",
+      "source": {
+        "title": "Energy Department Advances Investments in AI for Science",
+        "publisher": "U.S. Department of Energy（energy.gov 官方新闻稿）",
+        "date": "2025-12-10",
+        "url": "https://www.energy.gov/articles/energy-department-advances-investments-ai-science",
+        "type": "official"
+      },
+      "evidence_quote": "The U.S. Department of Energy (DOE) today announced over $320 million in investments to rapidly advance the Genesis Mission's artificial intelligence (AI) capabilities … By investing in the American Science Cloud and the Transformational AI Model Consortium we are creating the foundational technologies and AI-ready data sets",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "逐条核验：①\"2025 年 12 月追加超 3.2 亿美元\"——正确，DOE 官方 2025-12-10 发布\"over $320 million\"，明确包含 American Science Cloud（美国科学云）与 Transformational AI Models Consortium（变革性 AI 模型联盟），与文档表述逐字对应。②\"9 台 AI 超算\"——正确（2025-11 前后宣布，跨 Argonne/Oak Ridge/Los Alamos 三个国家实验室，Argonne 的 Solstice 含 10 万块 NVIDIA Blackwell GPU，Oak Ridge 的 Lux/Discovery 用 AMD），但文档写\"2025 年 10 月宣布\"，二手来源指向 11 月，月份可能有 1 个月偏差。③\"2026 年 3 月启动投入近 3 亿美元的创世纪使命\"——部分有误：Genesis Mission 由行政令于 2025-11 设立，2026-03-17/23 宣布的是 $293 million 的 Genesis Mission request for applications（Phase I 单项 50 万–75 万美元，申请截止 2026-04-28），并非\"3 月启动\"，金额\"近 3 亿\"与 $293M 吻合（ANS Nuclear Newswire 2026-03-23，https://www.ans.org/news/2026-03-23/article-7860/doe-announces-genesis-mission-request-for-applications/ ，已实际打开）。④NSF $75M / NVIDIA $77M 支持 Ai2 的 OMAI 计划——正确（Nextgov 2025-08-14 逐字：\"NSF will also be contributing $75 million to the OMAI Initiative\"、\"NVIDIA will provide hardware and software … in addition to supplying $77 million to the project\"（NVIDIA 出资额逐字为 $77 million），NSF 官网新闻稿 https://www.nsf.gov/news/nsf-nvidia-partnership-enables-ai2-develop-fully-open-ai 本地区被 403 拦截）。⑤\"三台最快超算 El Capitan/Frontier/Aurora\"本次未取得一手榜单逐字。"
+    },
+    {
+      "id": 38,
+      "claim": "Google DeepMind / Isomorphic Labs 为国际巨头，拥有 AlphaFold 系列、AlphaProof、GraphCast；Isomorphic 获 6 亿美元融资并与诺华/礼来合作",
+      "status": "verified",
+      "source": {
+        "title": "Isomorphic Labs announces $600m external investment round",
+        "publisher": "Isomorphic Labs（公司官网公告）",
+        "date": "2025-03-31",
+        "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-600m-external-investment-round",
+        "type": "official"
+      },
+      "evidence_quote": "Isomorphic Labs announces it has raised $600 Million in its first external funding round. The financing round is led by Thrive Capital, with participation from GV, and follow-on capital from existing investor, Alphabet.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "融资 6 亿美元由公司官网逐字确认（已实际打开）。\"与诺华/礼来合作\"由同一官网 Partnerships 页逐字确认（https://www.isomorphiclabs.com/partnerships ，已实际打开）：\"We first announced a strategic research collaboration with Novartis … in January 2024\"、\"Iso's strategic research collaboration with Eli Lilly and Company\"（后者 2024-01 宣布，含约 8300 万美元首付、最高约 29 亿美元里程碑，见 Endpoints News https://endpoints.news/alphabets-ai-unit-isomorphic-inks-drug-discovery-deals-with-eli-lilly-novartis-for-up-to-3b/ ）。批注：官网 News 区另显示 2026-02-18 \"Isomorphic Labs announces Series B investment round\"，如文档引用时点需注意区分 A/首轮（2025-03）与后一轮（2026-02）。"
+    },
+    {
+      "id": 39,
+      "claim": "DOE 运行全球最快三台超算，2025 年 10 月宣布与英伟达、AMD 合作新建 9 台 AI 超算；同年 12 月追加超 3.2 亿美元建设\"科学云\"与\"变革性 AI 模型联盟\"；2026 年 3 月启动投入近 3 亿美元的\"创世纪使命\"计划；NSF 与英伟达各出资约 7500/7700 万美元支持 Ai2",
+      "status": "partially_verified",
+      "source": {
+        "title": "Energy Department Advances Investments in AI for Science",
+        "publisher": "U.S. Department of Energy（energy.gov 官方新闻稿）",
+        "date": "2025-12-10",
+        "url": "https://www.energy.gov/articles/energy-department-advances-investments-ai-science",
+        "type": "official"
+      },
+      "evidence_quote": "The U.S. Department of Energy (DOE) today announced over $320 million in investments to rapidly advance the Genesis Mission's artificial intelligence (AI) capabilities … the American Science Cloud (AmSC) … The Transformational AI Models Consortium (ModCon)",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "与 id 37 为同一段论述的两个标记（合并去重时请合并）。核验结论同 id 37：12 月 $320M+（含科学云 AmSC 与变革性 AI 模型联盟 ModCon）verified；9 台 AI 超算存在但宣布时间疑为 2025-11 而非 10 月；Genesis Mission 于 2025-11 由行政令设立，2026-03 宣布的是 $293M 的申请征集（RFA）而非\"3 月启动投入近 3 亿美元\"；NSF $75M / NVIDIA $77M 支持 Ai2 的 OMAI 计划正确（Nextgov 2025-08-14，https://www.nextgov.com/artificial-intelligence/2025/08/nvidia-nsf-join-forces-nonprofit-bring-ai-scientific-research/407461/ ，已实际打开）。"
+    },
+    {
+      "id": 40,
+      "claim": "沙利文《中国高校科研机构 AI4S 市场追踪报告（2025）》显示中国高校科研机构 AI4S 云市场 2025 年约 51 亿元人民币、预计 2030 年增至 107 亿元（CAGR 约 16%），阿里云以 26% 份额领跑；高校与科研机构需求从单一算力升级为覆盖科研数据、模型工具、仿真计算、Agent 工作流和自动化实验的平台能力，竞争关键转向端到端科研闭环",
+      "status": "partially_verified",
+      "source": {
+        "title": "沙利文发布《中国高校科研机构AI4S市场追踪报告，2025年》，阿里云第一",
+        "publisher": "阿里云（分析师报告页，引 Frost & Sullivan 沙利文报告）",
+        "date": "2026-05",
+        "url": "https://www.aliyun.com/analyst-reports/frost-ai4s-2025",
+        "type": "report"
+      },
+      "evidence_quote": "国际市场调研机构沙利文（Frost & Sullivan）发布《中国高校科研机构AI4S市场追踪报告，2025年》。报告显示，阿里云以26%的市场份额领跑中国高校科研机构AI4S云市场，稳居第一……中国高校科研AI4S云市场正处于快速成长期，预计2030年将达107亿元。",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已核验：阿里云 26% 份额第一、2030 年达 107 亿元、报告名称《中国高校科研机构AI4S市场追踪报告，2025年》均逐字支持（阿里云官网报告页，已实际打开，HTTP 200）；同页另逐字支持\"需求正在从单一算力资源，升级为AI全栈能力建设\"这一结构性判断（与文档\"从单一算力升级为平台能力\"一致）。未核验：\"2025 年约 51 亿元\"的当年数字与\"CAGR 约 16%\"未在该页出现，本次未取得沙利文原报告正文，故 partially_verified。"
+    },
+    {
+      "id": 41,
+      "claim": "QYResearch 数据显示 2025 年全球 AI for Science 市场规模约 45.38 亿美元，预计 2032 年达 262.3 亿美元，CAGR 高达 28.9%；2026 年 4 月中国发布最大规模 AI4S 计算集群（6 万卡规模），剑指百亿美元级市场；AI4S 下游覆盖化工、医药、新能源等合计近 11 万亿美元产值行业，研发渗透率达 2.5% 时年产值可突破 1400 亿美元；用好 6 万卡 AI4S 集群、最大规模高校 AI4S 云市场等中国独有基础设施红利",
+      "status": "partially_verified",
+      "source": {
+        "title": "我国最大规模科学智能计算集群投入使用",
+        "publisher": "北京国际科技创新中心（ncsti.gov.cn，信息来源：中国科学报）",
+        "date": "2026-04-16",
+        "url": "https://www.ncsti.gov.cn/kjdt/kjrd/qtrd_kjrd/202604/t20260416_244057.html",
+        "type": "official"
+      },
+      "evidence_quote": "4月14日，中科曙光提供的6万卡科学智能（AI for Science，AI4S）计算集群系统，在位于郑州的国家超算互联网核心节点投入使用。据介绍，该系统是目前国内最大的AI4S计算集群",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已核验：\"2026 年 4 月中国最大规模 AI4S 计算集群（6 万卡）\"逐字支持（中科曙光提供、郑州国家超算互联网核心节点、2026-04-14 投用；同页另有\"总计链接超300万CPU核和超20万GPU卡\"）。QYResearch 45.38 亿美元→262.3 亿美元：QYResearch 官网报告页（https://www.qyresearch.com/reports/6206246/ai-for-science ）本次抓取为空页，改由格隆汇转载的同一 QYResearch 报告（2026-09-17，https://dxpress.gelonghui.com/p/6695963 ，已实际打开）逐字确认\"2025年全球……销售额达到了45.38亿美元，预计2032年将达到262.3亿美元\"，但该转载页把 CAGR 数值留空，\"28.9%\"未获逐字确认，故 partially_verified。\"11 万亿美元 / 2.5% / 1400 亿美元\"经核验存在口径错误：国盛证券《道氏技术》研报（2025-08-25）原文为\"AI4S 合计可覆盖的下游市场规模接近 11 万亿美元。当研发渗透率达到 2.5%时，AI4S 行业的规模约 149 亿美元，若渗透率能提升至 25%，则 AI4S 将成长为年产值突破 1400 亿美元\"（小牛行研图表转载，https://www.hangyan.co/charts/3707357002624664941 ，已实际打开）——即 1400 亿美元对应 25% 渗透率而非 2.5%，文档把 2.5% 与 1400 亿美元错误绑定，须修正。"
+    },
+    {
+      "id": 42,
+      "claim": "AI4S 下游覆盖化工、医药、新能源等合计近 11 万亿美元产值的行业，研发渗透率达 2.5% 时年产值即可突破 1400 亿美元（与 [^41^] 同一段渗透率测算）",
+      "status": "partially_verified",
+      "source": {
+        "title": "全球AI for Science市场规模测算（亿美元）——国盛证券《道氏技术：AI for Science 破局研发，固态电池材料矩阵成型》图表 19",
+        "publisher": "国盛证券研究所（经小牛行研 hangyan.co 转载图表）",
+        "date": "2025-08-25",
+        "url": "https://www.hangyan.co/charts/3707357002624664941",
+        "type": "report"
+      },
+      "evidence_quote": "AI4S 有望成长为千亿美金的巨大市场，在化工、医药、新能源、合金、显示、半导体六大领域中，AI4S 合计可覆盖的下游市场规模接近 11 万亿美元。当研发渗透率达到 2.5%时，AI4S 行业的规模约 149 亿美元，若渗透率能提升至 25%，则 AI4S 将成长为年产值突破 1400 亿美元（近万亿人民币）的巨大市场。",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "\"11 万亿美元下游覆盖\"与\"1400 亿美元\"两个数字均有来源（国盛证券研报图表，经小牛行研转载，已实际打开）；但文档把\"2.5% 渗透率\"与\"1400 亿美元\"错误绑定：研报原文为 2.5%→约 149 亿美元、25%→突破 1400 亿美元。属明显数量级错配，须修正（或删去 2.5% 与 1400 亿的绑定）。另：原始研报正文在 sgpjbg/和讯等站点被付费墙/反爬拦截，本引用为图表转载页，非券商原始 PDF，故未给 verified。"
+    },
+    {
+      "id": 43,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "主文档全文检索不到 [^43^] 标记（缺口编号）。按协议返回该条目，原文来源无法重构，应视为未证实。"
+    },
+    {
+      "id": 44,
+      "claim": "AlphaFold 数据库已覆盖超过 2 亿个蛋白质结构预测，一家大模型公司将结构生物学\"从数月湿实验压缩到几分钟 GPU 时间\"的范式转变，已成为 AI4S 的标准叙事",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "该编号仅在 §2.1 生命科学段落出现一次，且被用来支撑\"2 亿+ 蛋白质结构预测\"与\"数月湿实验→几分钟 GPU\"这一叙事性论断。本次多轮检索未定位到与文档措辞对应的可援引一手来源（AlphaFold DB 覆盖量级应可查证，但\"一家大模型公司将结构生物学从数月压缩到几分钟 GPU 时间\"的原始出处无法确定），判 not_found。说明：本条与文档其余部分（AlphaFold2/3、2024 诺奖，见 [^10^][^11^][^12^]）不同，属独立编号，需单独补源而非复用他处引用。"
+    },
+    {
+      "id": 45,
+      "claim": "通识启蒙资源：鄂维南《AI for Science：一场正在发生的科技革命》演讲，概念提出者亲述，适合建立整体认知",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "该编号位于 §6.3 学习资源清单。多轮检索（\"鄂维南 AI for Science 一场正在发生的科技革命 演讲\"等）未定位到以此为确切标题的一手发布页（鄂维南确有大量 AI4S 公开演讲与文章，但该确切标题未能落到可访问的原页）。判 not_found；若需保留，建议替换为可核验的具名来源，例如清华大学智能产业研究院《关于AI for Science的一些观点》（https://air.tsinghua.edu.cn/info/1007/2431.htm ）或 2026 科学智能大会相关官方报道。"
+    }
+  ],
+  "summary": {
+    "verified": 4,
+    "partially_verified": 10,
+    "not_found": 7,
+    "contradicted": 1,
+    "dead_link": 0,
+    "blocking_issues": [
+      "[^29^] Sakana AI 融资数字错误（contradicted 级）：文档\"1.35 亿美元 B 轮、估值 26.5 亿美元\"，官方公告为 B 轮 320 亿日元（2 亿美元）、投后估值约 4320 亿日元（27 亿美元），时间 2025-11-17。§2.6 与 §4.3 表格均须改。",
+      "[^41^][^42^] 渗透率与产值错配：国盛证券原文为 2.5%→约 149 亿美元、25%→突破 1400 亿美元；文档把 2.5% 与 1400 亿美元绑定，数量级错误。",
+      "[^26^] OEIS/Erdos 口径缺分母：原文为 44/492 个开放猜想、9/353 个 Erdos 问题，非无分母的\"证明 44 个\"。",
+      "[^31^] \"48 小时复现\"应为正文的\"two days\"；\"帝国理工耗时十年确认\"的\"十年\"无一手来源（原文只说 building on decades of research）。肝纤维化 p<0.01/斯坦福验证未能逐字核验。",
+      "[^37^][^39^] Genesis Mission 时间线有误：2025-11 由行政令设立；2026-03 宣布的是 $293M 的申请征集（RFA），不是\"3 月启动投入近 3 亿美元\"；\"9 台 AI 超算\"宣布时间疑为 2025-11 而非 10 月。",
+      "[^36^] \"英伟达三大核心方向\"\"BioNeMo 与 DOE 共建超算\"\"OpenAI 那两句判断\"\"GPU 天生低效/APU 百倍\"均未取得一手逐字来源，须补源或降级为观点。",
+      "[^33^][^35^] \"200+ 跨学科智能体\"\"Intern-Discovery 平台\"\"Uni 系列大模型\"\"DeepModeling 核心发起方\"\"GPT-4 无法评估化学输出\"均未取得一手逐字；DeepSeek-Prover-V2 仅媒体二手。",
+      "[^28^] ChemCrow 的 18 工具 / 驱虫剂 + 三种有机催化剂 + 发色团未取得一手正文（Nature Machine Intelligence 页被 IdP 拦）；\"awesome-auto-research\"仓库未定位。",
+      "[^40^] 沙利文报告\"2025 年约 51 亿元\"当年值与\"CAGR 约 16%\"未在可访问页面出现。",
+      "缺口编号 24/32/34/43 在主文档中不存在，另有 44（2 亿蛋白结构/数月→几分钟）、45（鄂维南演讲标题）与 30（象限判断）无法定位来源，均为 not_found。",
+      "[^37^][^39^] 与 [^41^] 各自的\"三台最快超算\"与 QYResearch CAGR 28.9% 未取得一手逐字（CAGR 值在转载页被留空）。"
+    ]
+  }
+}

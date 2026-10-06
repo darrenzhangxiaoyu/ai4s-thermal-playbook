@@ -1,0 +1,126 @@
+{
+  "n_samples": 800,
+  "n_features": 6,
+  "feasible_fraction": 0.31,
+  "cv_metrics": {
+    "R_th|hgb": {
+      "r2": 0.8857892085396161,
+      "mape_pct": 3.7655697377232453,
+      "rmse": 5.481252539600432e-05,
+      "r2_feasible": 0.9832731229005595,
+      "log_space": true
+    },
+    "R_th|mlp": {
+      "r2": 0.845961079837339,
+      "mape_pct": 5.619285884064974,
+      "rmse": 6.365631206375368e-05,
+      "r2_feasible": 0.9459033573215598,
+      "log_space": true
+    },
+    "dp|hgb": {
+      "r2": 0.9553022805308817,
+      "mape_pct": 12.095984073244402,
+      "rmse": 1731.0669400041854,
+      "r2_feasible": 0.9415754754296075,
+      "log_space": true
+    },
+    "dp|mlp": {
+      "r2": 0.9845850428637595,
+      "mape_pct": 7.90455875663387,
+      "rmse": 1016.5818235397038,
+      "r2_feasible": 0.9801176187280938,
+      "log_space": true
+    },
+    "P_pump|hgb": {
+      "r2": 0.969032910585482,
+      "mape_pct": 8.214038496777636,
+      "rmse": 17.271597313756736,
+      "r2_feasible": 0.9681588800241231,
+      "log_space": true
+    },
+    "P_pump|mlp": {
+      "r2": 0.9966923443079883,
+      "mape_pct": 5.533176652886141,
+      "rmse": 5.644720696361192,
+      "r2_feasible": 0.9960006647794241,
+      "log_space": true
+    },
+    "T_max|hgb": {
+      "r2": 0.9175281222695996,
+      "mape_pct": 2.241438144375298,
+      "rmse": 27.77637775744205,
+      "r2_feasible": 0.5816962583521834,
+      "log_space": false
+    },
+    "T_max|mlp": {
+      "r2": 0.9622992334065655,
+      "mape_pct": 1.6256428552569944,
+      "rmse": 18.78009388656147,
+      "r2_feasible": 0.6991534799816739,
+      "log_space": false
+    },
+    "Nu_mean|hgb": {
+      "r2": 0.8391495437828953,
+      "mape_pct": 3.062662775374285,
+      "rmse": 0.38519822405338583,
+      "r2_feasible": 0.90791375248392,
+      "log_space": false
+    },
+    "Nu_mean|mlp": {
+      "r2": 0.9549375127979515,
+      "mape_pct": 1.2155136887591798,
+      "rmse": 0.20388285526223546,
+      "r2_feasible": 0.9867306839350679,
+      "log_space": false
+    },
+    "POD_field": {
+      "modes": 4,
+      "energy_captured": 0.9992271362743477,
+      "rmse_K": 24.25420842688915,
+      "hotspot_mape_pct": 2.451526126008953
+    },
+    "T_max|derived_from_Rth": {
+      "r2": 0.9580916479791962,
+      "mape_pct": 1.0221464488441363,
+      "rmse": 19.800354242150686,
+      "r2_feasible": 0.9805310636268083,
+      "log_space": false
+    },
+    "T_max_modeling_choice": {
+      "chosen": "derived",
+      "reason": "T_max ≡ T_in + q''·R_th，导出式与物理定义一致且更准"
+    }
+  },
+  "shap_ranking": [
+    {
+      "feature": "平均流速 u (m/s)",
+      "mean_abs_shap": 0.1681675897212589
+    },
+    {
+      "feature": "流向长度 L (mm)",
+      "mean_abs_shap": 0.05546539752081309
+    },
+    {
+      "feature": "通道高度 H_c (mm)",
+      "mean_abs_shap": 0.03741572496827573
+    },
+    {
+      "feature": "固体导热系数 k_s (W/mK)",
+      "mean_abs_shap": 0.004835168074960628
+    },
+    {
+      "feature": "基板厚度 H_s (mm)",
+      "mean_abs_shap": 0.0034722857940739805
+    },
+    {
+      "feature": "热流密度 q'' (W/cm²)",
+      "mean_abs_shap": 0.0007556508205267841
+    }
+  ],
+  "pod": {
+    "modes": 4,
+    "energy_captured": 0.9992271362743477,
+    "rmse_K": 24.25420842688915,
+    "hotspot_mape_pct": 2.451526126008953
+  }
+}

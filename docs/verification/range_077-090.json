@@ -1,0 +1,232 @@
+{
+  "range": "77-90",
+  "agent": "subagent-thermal-077-090",
+  "references": [
+    {
+      "id": 77,
+      "claim": "AI 数据中心液冷渗透率 2024 年仅 14%，2025 年随 GB200 NVL72 放量跳升至 33%",
+      "status": "verified",
+      "source": {
+        "title": "机构：AI数据中心将规模化导入液冷散热技术，预估2025年渗透率逾30%",
+        "publisher": "证券时报（引 TrendForce 集邦咨询液冷产业研究）",
+        "date": "2025-08-21",
+        "url": "https://stcn.com/article/detail/3222209.html",
+        "type": "media"
+      },
+      "evidence_quote": "预估其在AI数据中心的渗透率将从2024年14%，大幅提升至2025年33%，并于未来数年持续成长。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "数字完全一致（14%→33%），归因也一致（GB200 NVL72 于 2025 年放量）。但为二手报道，TrendForce 原始报告页面未直接访问成功，若需一手可补 TrendForce 新闻稿。"
+    },
+    {
+      "id": 78,
+      "claim": "芯片 TDP：V100 300W → H100 700W → B200 约 1000W → GB300 1400W，预计 2026 年 Vera Rubin VR200 达 2300W、2027 年 VR300 达 3600W；风冷极限 700–800W/芯片、约 20kW/柜；Rubin NVL72 机柜 100% 全液冷并于 2026Q3 交付",
+      "status": "partially_verified",
+      "source": {
+        "title": "Heißer als ein Whirlpool: Der Durchbruch bei 45 °C zur Kühlung der größten KI-Maschinen（英文原版：Hotter Than a Hot Tub: The 45°C Breakthrough to Cool AI's Biggest Machines）",
+        "publisher": "NVIDIA Blog（官方博客，2026-06-21）",
+        "date": "2026-06-21",
+        "url": "https://blogs.nvidia.de/blog-liquid-cooling-ai-factories/",
+        "type": "official"
+      },
+      "evidence_quote": "Die Rubin-Generation der KI-Infrastruktur von NVIDIA ist die weltweit erste mit einer 100 % Flüssigkeitskühlung. Jeder Chip, jede Netzwerkkomponente wird vollständig mit Flüssigkeit in einem geschlossenen Kreislauf gekühlt, ohne dass es irgendwo im System Lüfter gibt.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "英伟达官方博客只证实『Rubin 代际 = 全球首个 100% 液冷、每一颗芯片与网络组件闭环液冷、系统内无风扇』，未给出 2300W/3600W 或 2026Q3 交付。nvidia.com 原站 curl 被连接重置（Connection reset），改引官方德文镜像博客（内容与英文原版同稿）。分项核验：(1) V100 300W 见 NVIDIA V100 官方 datasheet https://www.nvidia.com/content/dam/en-zz/zh_tw/Solutions/design-visualization/grid-vpc-vapps/volta-v100-datasheet-update-a4-636418-r4-tw.pdf（SXM2 300 W / PCIe 250 W）；(2) H100 SXM「Max TDP up to 700 W (configurable)」见 https://portal.mlcloud.uni-tuebingen.de/user-guide/_specs/gpu/h100/ ；(3) B200 SXM TDP 1000 W 见 https://inferencebench.io/gpus/compare/nvidia-b200-sxm-vs-nvidia-h200-sxm/（数据库，非厂商一手；Lenovo 产品指南标题『ThinkSystem NVIDIA HGX B200 180GB 1000W GPU Product Guide』可旁证，但 lenovopress.lenovo.com/lp2226.pdf 需登录、无法打开）；(4) GB300 1400W 与 VR200 2300W 同源：郭明錤供应链调查『GB300 NVL72 at 1.4/140 (kW)』『Max P GPU/rack power (TGP/TDP): ~2.3/230 (kW)』见 https://www.eet-china.com/mp/a465374.html ；(5) VR300 3600W 仅见外资/亚资券商观点转述『VR300 NVL576 更高的 TDP(3600W以上)』见 https://wantrich.chinatimes.com/news/20251205900244-420101 。以上 2300W、3600W、1400W 均无 NVIDIA 官方规格页佐证，且 VR200 2300W 明确对应 Max P 高功耗档（另有 Max Q ~1800W 档）。『风冷极限 700–800W/芯片、约 20kW/柜』未找到任何一手来源。『2026Q3 交付』未证实：可查到的公开口径是 VR200 NVL72 机架组装预计 2026 年三季度末进入量产、2026 下半年出货约 5000–7000 台（郭明錤供应链调查），以及英伟达称 Rubin 芯片 2026 下半年量产出货。另：官方博客口径为『Rubin 平台/代际』，文档写作『Rubin NVL72 机柜』，命名（NVL72 vs NVL144）需与官方对齐。"
+    },
+    {
+      "id": 79,
+      "claim": "信通院报告指出两相冷板可应对 300 W/cm²、全液冷冷板为主流选型、GB300 首次引入微通道冷板",
+      "status": "partially_verified",
+      "source": {
+        "title": "智算中心液冷产业全景研究报告（2025年）",
+        "publisher": "中国信息通信研究院云计算与大数据研究所（2025 年 8 月）",
+        "date": "2025-08",
+        "url": "http://hansenfluid.com/news/Intelligent_Computing_Center_Research_Report.htm",
+        "type": "report"
+      },
+      "evidence_quote": "业界同时积极开展两相冷板技术的实践探索，两相技术可利用冷却液相变实现高效换热，可应对 300W/cm2 以上的热流密度挑战…… 冷板式液冷占据主流地位",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "该 URL 是服务商对信通院报告《智算中心液冷产业全景研究报告（2025年）》正文的转载（全文含信通院版权声明、目录与章节，非摘要页）。300 W/cm² 与『冷板式液冷占据主流地位』两项在正文中逐字可查。但本文件正文另处表述为『面向 300W/cm2 以上热流密度挑战』，且『全液冷冷板为主流选型』与文中『冷板式液冷占据主流地位』『全液冷冷板技术』并非同一句，属改写。『GB300 首次引入微通道冷板』在可见正文（第二章 2.1 冷板）中未找到逐字依据；tiger/华福证券研报页（3D 打印微通道冷板”为中下一代液冷关键）多次抓取失败，无法核验，暂视为未证实。信通院官方站点未提供该报告免费全文。"
+    },
+    {
+      "id": 80,
+      "claim": "中国液冷市场 2024 年约 184 亿元（同比 +66%），预计 2029 年达约 1300 亿元；热流密度从 50 向 100–150 W/cm² 攀升、Rubin 架构突破 150 W/cm²；3D 打印微通道冷板已经在量产导入",
+      "status": "partially_verified",
+      "source": {
+        "title": "智算中心液冷产业全景研究报告（2025年）",
+        "publisher": "中国信息通信研究院云计算与大数据研究所（2025 年 8 月）",
+        "date": "2025-08",
+        "url": "http://hansenfluid.com/news/Intelligent_Computing_Center_Research_Report.htm",
+        "type": "report"
+      },
+      "evidence_quote": "2024年我国智算中心液冷市场规模达到约 184亿元，较 2023年同比增长 66.1%，预计未来五年…… 2029年我国智算中心液冷市场达到约 1300亿元",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "184 亿 / +66.1% / 2029 年约 1300 亿 三数在信通院报告正文逐字一致（文档写『+66%』，实为 66.1%，可忽略；文档口径『中国液冷市场』实为『智算中心液冷市场』，范围略窄，宜修正措辞）。国金证券转引同一组数字见 https://stcn.com/article/detail/3483254.html （『根据中国信息通信研究院数据，2024年我国智算中心液冷市场规模达到184亿元，同比增长66%，2029年预计进一步达到1300亿元』）。『热流密度 50→100–150 W/cm²、Rubin 架构突破 150 W/cm²』未在该报告正文找到对应数字，未证实。『3D 打印微通道冷板已经在量产导入』在信通院报告中未找到；有两条 2026 年中文产业报道支持『3D 打印微通道液冷板进入批量制造/量产』：长江日报 2026-09-15（华工激光『铜打印微通道液冷板，内部微通道加工精度可达100微米』『可以实现3C、AI行业中核心结构件的规模化量产』）https://cjrb.cjn.cn/h5/html5/2026-09/15/content_151730_3839478.htm ；温州网 2026-09-28（某企业 3D 打印液冷散热构件已供货英伟达）https://www.66wz.com/wendu/system/2026/09/30/105847602.shtml 。属地方媒体/企业宣传口径，非权威原始报告。"
+    },
+    {
+      "id": 81,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": {
+        "title": "<未定位到可核验来源>",
+        "publisher": "",
+        "date": "",
+        "url": "",
+        "type": ""
+      },
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "缺口编号：在 docs/ 三份文档的全量引用标记中均未出现 [^81^]（已对 .work/citation_ledger.json 与 docs/热管理背景AI4S专项计划.md、docs/AI4S全方位调研报告.md、docs/流体与能源AI4S入行指南.md 做全文检索确认）。按协议填 claim=<未在正文中出现>、status=not_found。编号 77–107 在第三份文档中连续，81 的缺失说明原 107 条参考文献表存在未在正文引用的条目，或正文有未落笔的编号。"
+    },
+    {
+      "id": 82,
+      "claim": "清华孙波团队的两相微通道散热在 SiC 芯片 >1000 W/cm² 热流密度下实验测得临界热流密度（CHF）1682 W/cm²、COP>19000，模拟预测可达 4000 W/cm²",
+      "status": "verified",
+      "source": {
+        "title": "Two-Phase Flow Boiling for Ultra-High Heat Flux SiC Chip Cooling",
+        "publisher": "International Journal of Heat and Mass Transfer, Vol. 255: 127885（作者 Shasha Huo, Xinqiang Wang, Bo Sun）",
+        "date": "2025-10-03",
+        "url": "https://www.ablesci.com/scholar/paper?id=3ZzeKAao3",
+        "type": "paper"
+      },
+      "evidence_quote": "We observed an CHF of 1682 W/cm2 with COP up to ∼19000 at flow rate of 3.0 ml/s, which means Only 89 mW of power is needed to take away the heat flux of 1682 W/cm2 on a chip.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "CHF 1682 W/cm²、COP>19000 逐字一致（DOI: 10.1016/j.ijheatmasstransfer.2025.127885）。『模拟预测可达 4000 W/cm²』不在期刊摘要中，只见于中文产业媒体 iTherM 转述：『模拟预测 CHF 最高可达4000 W/cm²』https://itherm.cn/index/news/news_show/article_id/649.html ；该媒体同时确认 SiC 芯片热流密度『常超 1000 W/cm²』。ScienceDirect 原文页返回 403，无法直接抓取摘要；DOI 已给出，机构/图书馆代理可复核 4000 W/cm² 的模拟上限。团队归属：作者 Bo Sun 与清华大学孙波团队一致，但本条目未从论文页直接取得『清华大学』机构标注（ablesci 未列机构）。"
+    },
+    {
+      "id": 83,
+      "claim": "运行阶段做数字孪生与智能温控（卫星热数字孪生[^83^]）——文档未给出更具体的主体、方法或数字",
+      "status": "not_found",
+      "source": {
+        "title": "<未定位到可核验来源>",
+        "publisher": "",
+        "date": "",
+        "url": "",
+        "type": ""
+      },
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "全文仅一次出现（技术地图第二段），与 [^86^] 并列使用，无任何可核验细节。穷尽检索『卫星热数字孪生』方向后，找到的具体工作均可归入 [^86^]（米兰理工 MOX × Thales Alenia，arXiv:2605.28452）与 [^87^]（EUCASS 2023 混合数字孪生），无法为该编号定位独立的一手来源。该论点本身可作为 [^83^]/[^86^] 的合并引用，但作为独立引文必须视为未证实。"
+    },
+    {
+      "id": 85,
+      "claim": "试验/在轨阶段做反问题：热参数辨识[^85^]；并把热真空试验数据、热模型视为新人拿不到的数据门槛[^85^]",
+      "status": "not_found",
+      "source": {
+        "title": "<未定位到可核验来源>",
+        "publisher": "",
+        "date": "",
+        "url": "",
+        "type": ""
+      },
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "检索『热参数辨识』『航天器热模型 参数辨识』『thermal parameter identification spacecraft』未定位到文档所指的具体来源。注意：若原意即指 MOX/Thales 的 LPTM 参数辨识（图结构 + 稀疏遥测 + 物理约束），则其一手来源是 arXiv:2605.28452，与本区间 [^86^] 同源；建议文档将 [^85^] 并入 [^86^] 或补充具体出处。"
+    },
+    {
+      "id": 86,
+      "claim": "米兰理工 MOX 与 Thales Alenia 合作的卫星热数字孪生，用集总参数热模型（LPTM）+ 图结构 + 稀疏测温遥测数据学习 + 物理约束（太阳辐射热流、主动热控），完全不需要高保真几何就能在线估计全星温度场",
+      "status": "verified",
+      "source": {
+        "title": "Physics-constrained identification of graph-based thermal networks for spacecraft digital twins",
+        "publisher": "Luca Sosta, Carlo Ciancarelli, Leonardo Marini, Stefano Pagani, Francesco Regazzoni, Nicola Parolini（MOX-Dipartimento di Matematica, Politecnico di Milano；Thales Alenia Space Italia）——arXiv:2605.28452",
+        "date": "2026-05",
+        "url": "https://ar5iv.labs.arxiv.org/html/2605.28452",
+        "type": "paper"
+      },
+      "evidence_quote": "The model reconstructs thermal dynamics directly from temperature measurements and known inputs, without relying on a priori parameter values derived from material properties or geometric assumptions.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "作者单位（MOX-Politecnico di Milano + Thales Alenia Space Italia）、LPTM 图动力学、稀疏温度测量反演、物理可容许性（节点系数正性、导热对称性）由构造强制等均与文档一致。两点出入：(1) 论文验证用的是高保真有限元生成的合成数据集（\"validated on synthetic datasets generated from high-fidelity finite element simulations\"），并非在轨真实遥测；(2) 论文措辞是『支持纳入航天器热数字孪生应用』，不是已上线在线估计。太阳辐射项处理为已知外生输入（深空辐射汇无需标定），文档写『物理约束（太阳辐射热流、主动热控）』方向正确但略简。"
+    },
+    {
+      "id": 87,
+      "claim": "EUCASS 2023 的混合数字孪生用 MLP 从 9 个传感器重建 1.2 米舱体 14400 个点的温度场，平均绝对误差 0.0121、单次预测仅 0.83ms，并实现了 FMI/Modelica 集成",
+      "status": "verified",
+      "source": {
+        "title": "Hybrid Digital Twin for Satellite Attitude Control System Based on FMI Co-Simulation Technology（DOI: 10.13009/EUCASS2023-460）",
+        "publisher": "Yang Xie, Xingchen Li, Ning Wang, Wen Yao（Defense Innovation Institute, Chinese Academy of Military Science 等），EUCASS 2023",
+        "date": "2023",
+        "url": "https://www.eucass.eu/component/docindexer?id=6882&task=download",
+        "type": "paper"
+      },
+      "evidence_quote": "we arrange 9 sensors on a square cabin with a side length of 1.2 meter. ... The structure of the MLP is set to '9-512-2048-14,400'. ... MLP 0.0121 0.0973 0.000828（Table 1: MAE, MSE, Prediction time (s)）",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "9 传感器、1.2 m 方舱、14,400 输出节点、MAE 0.0121 逐字一致；表 1 预测时间 0.000828 s ≈ 0.83 ms，与文档一致。论文明确用 Modelica 建模姿态控制系统并基于 FMI 标准做联合仿真（\"a co-simulation method based on Functional Mock-up Interface (FMI) standard\"），但联合仿真的总体时延口径为 \"time delays of less than 100ms\"，与 MLP 单次推理 0.83 ms 是两个不同指标，文档并列易被误读。另需注意本文主题为『卫星姿控系统』混合数字孪生，温度场重建是其子模块；文档表述为『混合数字孪生』未提姿控，宜补全限定。PDF 为 application/pdf，web_fetch 不支持，改用 curl 下载 + pdfminer 抽取正文逐字核对。"
+    },
+    {
+      "id": 88,
+      "claim": "中科院长春光机所的 SMS-DL 框架用 NX TMG 批量仿真自动造数据、贝叶斯优化 DNN 做代理，比传统热模型快 1000 倍以上、精度 99% 以上，还能迁移学习适配新工况（在中国空间站巡天望远镜紫外探测器上精度提升 ≥86.4%）",
+      "status": "verified",
+      "source": {
+        "title": "Surrogate modeling for spacecraft thermophysical models using deep learning",
+        "publisher": "Neural Computing and Applications (2022) 34:16577–16603；作者 Yan Xiong, Liang Guo, Yang Zhang, Mingxing Xu, Defu Tian, Ming Li（Changchun Institute of Optics, Fine Mechanics and Physics, Chinese Academy of Sciences），DOI: 10.1007/s00521-022-07257-7",
+        "date": "2022-05-21",
+        "url": "http://ir.ciomp.ac.cn/bitstream/181722/67138/1/Surrogate%20modeling%20for%20spacecraft%20thermophysic.pdf",
+        "type": "paper"
+      },
+      "evidence_quote": "an intelligent surrogate modeling strategy for spacecraft thermophysical models that uses deep learning, called SMS-DL, is proposed. An intelligent batch processing system for thermal analysis based on NX TMG Thermal Analysis was designed ... One deep neural network based on Bayesian optimization was pre-trained ... which had a computational speed that was 1000? times faster ... and high computational accuracy of 99%?",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "SMS-DL / NX TMG 批量处理 / 贝叶斯优化 DNN / 快 1000 倍 / 精度 99% 逐字一致。但『在中国空间站巡天望远镜紫外探测器上精度提升 ≥86.4%』需精确理解：原文为 \"improved the prediction accuracy by at least 86.4% over the direct prediction accuracy using the pre-trained model\"，即**迁移学习相对直接使用预训练模型的精度提升幅度**（相对改进量），不是探测器本身的预测精度达到 86.4%；文档表述『精度提升 ≥86.4%』方向正确但易被读成绝对精度，建议加『相对预训练模型直推』的限定。CIOM 机构库 handle 页有滑块验证码，无法直接打开；PDF 走 bitstream 直链下载 + pdfminer 抽取正文核对。单位含 University of Chinese Academy of Sciences、EPFL、上海交大合作者。"
+    },
+    {
+      "id": 89,
+      "claim": "运行阶段做数字孪生与智能温控（……、ISS 快速热分析[^89^]）",
+      "status": "verified",
+      "source": {
+        "title": "SURROGATE MODELING FOR RAPID THERMAL ANALYSIS OF ISS PAYLOAD（DOI: 10.1115/IMECE2025-166424）",
+        "publisher": "Jayson Johnson, Michael McPherson, Mykenzie Clark, Sonya Smith, Makoto Sasaki, John Krizmanic, Nicholas Cannady, Brian Rauch, Stephane Coutu；Penn State University；ASME IMECE 2025",
+        "date": "2025-11",
+        "url": "https://pure.psu.edu/en/publications/surrogate-modeling-for-rapid-thermal-analysis-of-iss-payload/",
+        "type": "paper"
+      },
+      "evidence_quote": "This study presents a machine learning-driven surrogate model that rapidly predicts node temperatures in the ISS Japanese Experiment Module ... the model delivers predictions in 1 second-200,000× faster than conventional methods-while maintaining a mean absolute error of 1.181°F and R2 = 0.9976.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "标题与摘要精确对应『ISS 快速热分析』，一手机构库（Penn State Pure）含完整摘要与 DOI。文档未给出具体数字，故不涉及数字出入。注意该条出现在『运行阶段做数字孪生与智能温控』的括号内，而论文本身是设计/分析阶段的代理模型（文末才提到支持实时数字孪生），归类可再斟酌；另 ISS 载荷为日本实验舱（JEM）。"
+    },
+    {
+      "id": 90,
+      "claim": "设计阶段用代理模型加速（SMS-DL、几何 CNN[^90^]）；技能表中列为『代理模型：DNN/GPR/贝叶斯优化代理；几何 CNN 处理非结构网格[^90^]』",
+      "status": "not_found",
+      "source": {
+        "title": "<未定位到可核验来源>",
+        "publisher": "",
+        "date": "",
+        "url": "",
+        "type": ""
+      },
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "『几何 CNN 处理非结构网格』是一个具体方法主张（几何深度学习/几何 CNN 在非结构网格上的代理建模），但文献中该方向的主流做法是图神经网络（GNN）直接处理非结构网格、以及 MeshGraphNets 类工作，纯『几何 CNN + 非结构网格』的对应关系存疑。本区间穷尽检索未能为 [^90^] 定位到任何一手来源。若文档作者本意指某篇具体论文（例如几何深度学习处理非结构网格的代理模型），需补出处；否则该编号对应的论点应视为未证实。"
+    }
+  ],
+  "summary": {
+    "verified": 5,
+    "partially_verified": 3,
+    "not_found": 4,
+    "contradicted": 0,
+    "dead_link": 0,
+    "blocking_issues": [
+      "【必改数字·高危】VR300 3600W 无一手来源：仅见于外资券商观点转述『VR300 NVL576 更高的 TDP(3600W以上)』，无 NVIDIA 官方规格页；VR200 2300W 同样只见于郭明錤供应链调查，且那是 Max P 高功耗档（同硬件另有 Max Q ~1800W 档）。文档写成确定规格语气，须改为『供应链/券商预期』并标注档位，或删除。",
+      "【必改归因·高危】GB300 1400W 亦无官方规格页，目前唯一支撑是供应链调查『GB300 NVL72 at 1.4/140 (kW)』（机架/GPU TGP 口径），与文档『GB300 1400W（芯片 TDP）』的措辞不完全等价。",
+      "【须删或补证】『风冷极限只有 700–800W/芯片、约 20kW/柜』未找到任何一手来源（信通院报告正文只有『单机柜功率突破 40kW』『超节点单机柜功耗普遍超过 100KW，风冷方案几乎失效』等不同口径）。建议改引信通院/CAICT 的机柜功率口径，或删除该数字。",
+      "【时间口径不一致】『Rubin NVL72 机柜……2026Q3 交付』未证实：NVIDIA 官方博客只讲 100% 液冷，未给交付时间；可查口径为『VR200 NVL72 机架组装预计 2026 年三季度末进入量产、2026 下半年出货约 5000–7000 台』（供应链）与 NVIDIA 官方『Rubin 2026 下半年量产出货』。建议改为『2026H2 量产出货』。另官方口径为『Rubin 代际/平台』，文档写『Rubin NVL72 机柜』，命名（NVL72 vs NVL144）需与官方对齐。",
+      "【须删或补证】信通院报告中『GB300 首次引入微通道冷板』未见逐字依据（可见正文只讲两相冷板可应对 300W/cm² 以上、冷板式液冷占主流、全液冷冷板技术）。该句须删除或补出信通院原文页码/图表。",
+      "【措辞须修】[^80^] 的『中国液冷市场』实为信通院口径『智算中心液冷市场』（2024 约 184 亿元、同比 +66.1%、2029 约 1300 亿元）；『热流密度 50→100–150 W/cm²、Rubin 架构突破 150 W/cm²』在该报告中未找到对应数字，未证实，应与市场数字拆开引用。",
+      "【措辞须修】[^88^] 的『精度提升 ≥86.4%』是相对预训练模型直推的**相对提升幅度**，不是探测器预测精度达到 86.4%；[^87^] 的 0.83ms 是 MLP 单次推理时间，而该文的 FMI 联合仿真时延口径是 <100ms，两者并列易被误读。",
+      "【缺口编号未证实】[^83^]（卫星热数字孪生）、[^85^]（热参数辨识）、[^90^]（几何 CNN 处理非结构网格）在区间内找不到独立一手来源。其中 [^85^] 很可能与 [^86^]（MOX/Thales LPTM 参数辨识，arXiv:2605.28452）同源，建议合并；[^90^] 的『几何 CNN + 非结构网格』方法主张与主流做法（GNN/图网络处理非结构网格）不符，须补出具体论文或删除。",
+      "【分类可调】[^89^]（Penn State IMECE 2025 ISS 载荷代理模型）是分析加速工作，被放进『运行阶段数字孪生与智能温控』括号内，建议移入设计/分析阶段的代理模型条目。"
+    ]
+  }
+}

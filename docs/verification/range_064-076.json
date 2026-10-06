@@ -1,0 +1,448 @@
+{
+  "range": "64-76",
+  "agent": "dsh-subagent (ai4s-refs-64-76)",
+  "references": [
+    {
+      "id": 64,
+      "claim": "扩散模型是 2024 年以来的新热点，正在从图像生成工具演变为面向流场重建、超分辨率和气动外形生成的“代理模型家族”",
+      "status": "partially_verified",
+      "source": {
+        "title": "Advanced representation learning for flow field analysis and reconstruction",
+        "publisher": "arXiv (physics.flu-dyn)",
+        "date": "2025-01-14",
+        "url": "https://arxiv.org/abs/2501.07835",
+        "type": "paper"
+      },
+      "evidence_quote": "integrating deep learning techniques and sparse approximation, including diffusion models, for advanced flow field analysis and reconstruction. Key applications include super-resolution flow field reconstruction, flow field inpainting",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "该预印本支持“流场重建/超分辨率”；“气动外形”由另一篇 2025 年 Physics of Fluids 论文支持（DDPM 对翼型流场超分，计算时间仅为 CFD 的 23%）。但“2024 年以来新热点”“代理模型家族”属综述性判断，未找到单一权威来源直接证成。",
+      "sub_claims": [
+        {
+          "claim": "扩散模型用于气动外形（翼型）流场重建/超分",
+          "status": "verified",
+          "source": {
+            "title": "A physics-informed diffusion model for super-resolution reconstruction of airfoil flow field data",
+            "publisher": "Physics of Fluids (via Semantic Scholar API)",
+            "date": "2025",
+            "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1063/5.0302908?fields=title,abstract,year,venue,externalIds",
+            "type": "database"
+          },
+          "evidence_quote": "we propose a novel super-resolution reconstruction method based on the denoising diffusion probabilistic model (DDPM) ... computation time being only 23% of that required by traditional computational fluid dynamics software"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "claim": "等变神经算子直接学习非局部张量本构模型（§二）；DeepModeling 社区开源燃烧模拟平台 DeepFlame（§二、§五）；周期山丘 Periodic Hills 数据集是湍流建模领域标准基准（§二、§四、§五）；用机器学习代理 Landau 流体闭合（§二）",
+      "status": "partially_verified",
+      "source": {
+        "title": "An equivariant neural operator for developing nonlocal tensorial constitutive models",
+        "publisher": "arXiv (physics.flu-dyn) / Journal of Computational Physics",
+        "date": "2022-01-04 (v2 2022-12-01)",
+        "url": "https://arxiv.org/abs/2201.01287",
+        "type": "paper"
+      },
+      "evidence_quote": "we propose a neural operator to develop nonlocal constitutive models for tensorial quantities through a vector-cloud neural network with equivariance (VCNN-e). The VCNN-e respects all the invariance properties desired by constitutive models",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "重要缺陷：同一编号在正文中被用于 4 个互不相关的主题，原参考文献表存在编号错配，65 无法指向单一来源。分项见 sub_claims：(a) 等变神经算子—verified；(b) DeepFlame—verified；(c) Periodic Hills 数据集—verified；(d) “机器学习代理 Landau 流体闭合”—未找到支持来源，视为未证实。",
+      "sub_claims": [
+        {
+          "claim": "DeepFlame 为 DeepModeling 社区开源燃烧反应流平台",
+          "status": "verified",
+          "source": {
+            "title": "DeepFlame 1.6 Released",
+            "publisher": "DeepModeling Blog",
+            "date": "2025-06-26",
+            "url": "https://blogs.deepmodeling.com/DeepFlamev1.6_26_06_2025/",
+            "type": "official"
+          },
+          "evidence_quote": "DeepFlame is an open-source platform for combustion fluid computation developed in the era of AI for Science, aiming to promote the application of combustion fluid simulation technology in scientific research and industry"
+        },
+        {
+          "claim": "周期山丘（Periodic Hills）参数化几何数据集用于数据驱动湍流建模",
+          "status": "verified",
+          "source": {
+            "title": "Flows Over Periodic Hills of Parameterized Geometries: A Dataset for Data-Driven Turbulence Modeling From Direct Simulations",
+            "publisher": "Computers & Fluids 200, 104431 / CaltechAUTHORS",
+            "date": "2020-03-30",
+            "url": "https://authors.library.caltech.edu/records/b2ech-03x92",
+            "type": "paper"
+          },
+          "evidence_quote": "we perform direct numerical simulations of flows over periodic hills with varying slopes, resulting in a family of flows over periodic hills which ranges from incipient to mild and massive separations"
+        },
+        {
+          "claim": "用机器学习代理 Landau 流体闭合",
+          "status": "not_found",
+          "source": null,
+          "evidence_quote": null,
+          "notes": "穷尽检索（含等离子体/燃烧闭合方向）未找到与该表述对应的来源，视为未证实。"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "claim": "从 JFM 2016 年 Ling 等人“嵌入伽利略不变量的深度神经网络”开始，西北工业大学张伟伟团队、符号回归修正 SA/SST 模型（可解释、可泛化）等一系列工作已形成成熟谱系",
+      "status": "verified",
+      "source": {
+        "title": "Data-enabled discovery of specific and generalisable turbulence closures",
+        "publisher": "Journal of Fluid Mechanics (Northwestern Polytechnical University Pure)",
+        "date": "2025-07-25",
+        "url": "https://pure.nwpu.edu.cn/en/publications/data-enabled-discovery-of-specific-and-generalisable-turbulence-c/",
+        "type": "paper"
+      },
+      "evidence_quote": "We address this challenge using symbolic regression, which yields interpretable, white-box expressions. [...] The models outperform baseline Reynolds-averaged Navier-Stokes closures (e.g. the Spalart-Allmaras and shear stress transport models) in both a priori and a posteriori tests.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "张伟伟（Weiwei Zhang, NPU School of Aeronautics）为该文作者之一，DOI 10.1017/jfm.2025.10332；摘要另有 “compact, interpretable, and generalise across configurations”，支撑“可解释、可泛化”与“符号回归修正 SA/SST”。Ling et al. 2016 的题名/作者/期刊/年份经 Semantic Scholar 与 Crossref 核对无误（DOI 10.1017/jfm.2016.615, J. Fluid Mech. 807:155–166）。核验当日 Cambridge Core 处于 “Temporary Disruption”，未能打开正文，“伽利略不变量”这一细节仅由题名 “embedded invariance” 支持。",
+      "sub_claims": [
+        {
+          "claim": "Ling, Kurzawski & Templeton, Reynolds averaged turbulence modelling using deep neural networks with embedded invariance, JFM 2016",
+          "status": "verified",
+          "source": {
+            "title": "Reynolds averaged turbulence modelling using deep neural networks with embedded invariance",
+            "publisher": "Journal of Fluid Mechanics (via Semantic Scholar API)",
+            "date": "2016",
+            "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1017/jfm.2016.615?fields=title,abstract,year,venue,externalIds,authors",
+            "type": "database"
+          },
+          "evidence_quote": "{\"title\": \"Reynolds averaged turbulence modelling using deep neural networks with embedded invariance\", \"venue\": \"Journal of Fluid Mechanics\", \"year\": 2016, \"externalIds\": {\"MAG\": \"2534240011\", \"DOI\": \"10.1017/jfm.2016.615\"}}"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "claim": "控制优化环节的代表作是 RL 托卡马克控制与 RL 流动控制",
+      "status": "verified",
+      "source": {
+        "title": "Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control",
+        "publisher": "Journal of Fluid Mechanics (Crossref record)",
+        "date": "2019-02-20",
+        "url": "https://api.crossref.org/works?query.bibliographic=Artificial+neural+networks+trained+through+deep+reinforcement+learning+discover+control+strategies+for+active+flow+control&rows=2&select=DOI,title,container-title,issued,author",
+        "type": "database"
+      },
+      "evidence_quote": "{\"DOI\":\"10.1017/jfm.2019.62\",\"title\":[\"Artificial neural networks trained through deep reinforcement learning discover control strategies for active flow control\"],\"container-title\":[\"Journal of Fluid Mechanics\"],\"issued\":{\"date-parts\":[[2019,2,20]]}}",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "RL 流动控制代表作核实为 Rabault, Kuchta, Jensen, Réglade, Cerardi, JFM 2019, DOI 10.1017/jfm.2019.62。RL 托卡马克控制代表作见 id 76（DeepMind, Nature 2022）。该编号为“代表作”归纳性引用，两个方向均有对应一手论文。",
+      "sub_claims": [
+        {
+          "claim": "RL 托卡马克磁体控制",
+          "status": "verified",
+          "source": {
+            "title": "Magnetic control of tokamak plasmas through deep reinforcement learning",
+            "publisher": "Nature 602:414–419",
+            "date": "2022-02-16",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8850200/",
+            "type": "paper"
+          },
+          "evidence_quote": "A newly designed control architecture uses deep reinforcement learning to learn to command the coils of a tokamak, and successfully stabilizes a wide variety of fusion plasma configurations."
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": null,
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "缺口编号。全文 [^N^] 标记统计为 64,65,66,67,69,70,71,72,73,74,75,76，无 [^68^]；《流体与能源AI4S入行指南.md》正文中不存在该编号对应的句子。"
+    },
+    {
+      "id": 69,
+      "claim": "更前沿的方向是等变神经算子直接学习非局部张量本构模型，把湍流闭合从“点态函数”升级为“算子学习”，可适配任意非结构网格",
+      "status": "verified",
+      "source": {
+        "title": "An equivariant neural operator for developing nonlocal tensorial constitutive models",
+        "publisher": "arXiv (physics.flu-dyn) / Journal of Computational Physics",
+        "date": "2022-01-04 (v2 2022-12-01)",
+        "url": "https://arxiv.org/abs/2201.01287",
+        "type": "paper"
+      },
+      "evidence_quote": "The VCNN-e respects all the invariance properties desired by constitutive models, faithfully reflects the region of influence in physics, and is applicable to different spatial resolutions.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "期刊版 DOI 10.1016/j.jcp.2023.112243（J. Comput. Phys. 2023）。摘要明确该算子在点云/向量云（vector-cloud）上定义、对空间分辨率不敏感；“可适配任意非结构网格”系对该性质的转述，摘要未逐字使用“非结构网格”。",
+      "sub_claims": []
+    },
+    {
+      "id": 70,
+      "claim": "监测预测环节包括流场超分辨率、实验数据同化、破裂预测与风功率预测",
+      "status": "partially_verified",
+      "source": {
+        "title": "Machine Learning for Fluid Mechanics",
+        "publisher": "Annual Review of Fluid Mechanics (Crossref record)",
+        "date": "2020-01-05",
+        "url": "https://api.crossref.org/works?query.bibliographic=Machine+learning+for+fluid+mechanics+Brunton+Noack+Koumoutsakos&rows=2&select=DOI,title,container-title,issued,author",
+        "type": "database"
+      },
+      "evidence_quote": "{\"DOI\":\"10.1146/annurev-fluid-010719-060214\",\"title\":[\"Machine Learning for Fluid Mechanics\"],\"container-title\":[\"Annual Review of Fluid Mechanics\"],\"issued\":{\"date-parts\":[[2020,1,5]]}}",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "该编号对应一份四点式清单，未找到单一来源同时覆盖；此处给出 Annual Review of Fluid Mechanics 领域权威综述作为代表来源，其覆盖流场估计/降阶/控制，但不单独覆盖“风功率预测”。破裂预测已在 id 73 获得一手核验（HL-2A 已嵌入等离子体控制系统）。风功率预测一项本轮未找到匹配来源，未证实。",
+      "sub_claims": [
+        {
+          "claim": "深度学习破裂预测",
+          "status": "verified",
+          "source": {
+            "title": "Recent progress on deep learning-based disruption prediction algorithm in HL-2A tokamak",
+            "publisher": "Chinese Physics B (Semantic Scholar API)",
+            "date": "2023",
+            "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1088/1674-1056/accb44?fields=title,abstract,year,venue,externalIds,authors",
+            "type": "database"
+          },
+          "evidence_quote": "It is also implemented into the plasma control system and gets an accuracy of 89.0% during online test."
+        },
+        {
+          "claim": "风功率预测",
+          "status": "not_found",
+          "source": null,
+          "evidence_quote": null,
+          "notes": "本轮检索未定位到与文档表述直接对应的来源，视为未证实。"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "claim": "Siemens 观察：2025 年 CFD 会议论文集中神经算子与 ROM 已无处不在，重点不只是提速而是解锁新应用（§一）；STAR-CCM+ 的 Krylov-ROM 把大型三维系统单次迭代从 32 秒降到 5.5 秒（提速超 6 倍），并在建筑 HVAC 控制案例中配合强化学习实现 35% 能耗下降（§二）；Siemens PhysicsAI 允许工程师用既有仿真数据直接训练预测模型（§三）；Siemens ROM 文档作参考（§四）；STAR-CCM+ 已大规模产品化（§六）",
+      "status": "partially_verified",
+      "source": {
+        "title": "Siemens introduces new Simcenter PhysicsAI add-on for AI-powered CFD design exploration",
+        "publisher": "Siemens (Press Release)",
+        "date": "2026-05-27",
+        "url": "https://news.siemens.com/en-gb/siemens-simcenter-physicsai/",
+        "type": "official"
+      },
+      "evidence_quote": "Simcenter PhysicsAI allows engineers to train and validate AI surrogate models using simulation results, run near instant predictions on new geometries within their simulation integrated environment and retain easy access to high-fidelity CFD simulation as the validation reference.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "该编号为 5 条不同论断的集合，分项见 sub_claims。(a) “2025 年 CFD 会议观察”未见任何 Siemens 一手来源 → not_found，§一开篇论断失去支撑。(b) Krylov-ROM：Siemens 官方博客原文仅有 “over six times faster”（支持“提速超 6 倍”），正文中的 32 秒→5.5 秒具体数值在全部文字页面中均未出现（疑仅存于博客配图 “Improvements in Krylov reduction performance breakdown”），未证实。(c) HVAC 35%：追到 Chalmers 2025 硕士论文（Star-CCM+ 生成 973 个 CFD 样本 + FNO 代理 + SAC 控制），原文为 “approximately 35% in energy cost reduction”；系第三方论文而非 Siemens 官方案例，且口径是“能耗成本”而非严格“能耗”。(d)(e) 已核实。",
+      "sub_claims": [
+        {
+          "claim": "Siemens 观察：2025 年 CFD 会议神经算子/ROM 无处不在并解锁新应用",
+          "status": "not_found",
+          "source": null,
+          "evidence_quote": null,
+          "notes": "多轮检索未找到任何 Siemens 官方页面包含该表述。"
+        },
+        {
+          "claim": "STAR-CCM+ Krylov-ROM 提速超 6 倍",
+          "status": "verified",
+          "source": {
+            "title": "What’s new in Simcenter Reduced Order Modeling?",
+            "publisher": "Siemens Simcenter Blog",
+            "date": "2024-04-29",
+            "url": "https://blogs.sw.siemens.com/simcenter/whats-new-in-simcenter-reduced-order-modeling/",
+            "type": "official"
+          },
+          "evidence_quote": "This release also sees improvements in Krylov reduction performance for both iterative and direct solvers. Turnaround time for 3D to 1D Krylov based ROMs is now over six times faster and applicable to large systems with many inputs"
+        },
+        {
+          "claim": "Krylov-ROM 单次迭代 32 秒 → 5.5 秒",
+          "status": "not_found",
+          "source": null,
+          "evidence_quote": null,
+          "notes": "具体秒数未在任何可访问文字页面出现。"
+        },
+        {
+          "claim": "建筑 HVAC 控制案例配合强化学习实现 35% 能耗下降",
+          "status": "partially_verified",
+          "source": {
+            "title": "Dynamic Control of HVAC Attributes. Improving Energy Efficiency of HVAC System Using Machine Learning and Computational Fluid Dynamics",
+            "publisher": "Chalmers University of Technology (Master’s thesis)",
+            "date": "2025",
+            "url": "https://odr.chalmers.se/items/3e0804d0-33a4-4d9b-9de5-f359c4e4ce8e",
+            "type": "report"
+          },
+          "evidence_quote": "Results show that the SAC consumed 4,836 kWh compared to 7,460 kWh for PID, which corresponds to approximately 35% in energy cost reduction.",
+          "notes": "使用 Star-CCM+ 与 FNO/SAC，但与 Siemens 官方案例无隶属关系；口径为能耗成本。"
+        },
+        {
+          "claim": "Siemens 已把 Krylov 降阶算法产品化（ROM 文档）",
+          "status": "verified",
+          "source": {
+            "title": "Implementation of a Krylov reduction algorithm into Simcenter ROM Builder",
+            "publisher": "ITEA 4 (COMPAS project, Siemens Industry Software NV)",
+            "date": "2023-11-21",
+            "url": "https://itea4.org/project/exploitable-result/1009/implementation-of-a-krylov-reduction-algorithm-into-simcenter-rom-builder.html",
+            "type": "official"
+          },
+          "evidence_quote": "A novel multifrequency implementation of the Krylov method has been explored and implemented into the commercial software \"Simcenter ROM builder\" to automate the ROM creation process for mechanical and thermal systems."
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "claim": "2025 年 10 月 DeepMind 与 Commonwealth Fusion Systems（CFS）达成合作，目标是在 2026 年竣工的 SPARC 装置上构建“AI 驾驶员”，围绕可微等离子体模拟、增益最大化路径、实时控制三个方向展开",
+      "status": "partially_verified",
+      "source": {
+        "title": "With AI alliance, Google DeepMind and CFS take fusion to the next level",
+        "publisher": "Commonwealth Fusion Systems — The Tokamak Times",
+        "date": "2025-10-16",
+        "url": "http://blog.cfs.energy/with-ai-alliance-google-deepmind-and-cfs-take-fusion-to-the-next-level/",
+        "type": "official"
+      },
+      "evidence_quote": "A foundation of our collaboration is work on Google DeepMind’s TORAX software, an open-source tool that lets researchers join multiple AI models to simulate the physics of plasma, the superhot cloud of charged particles that form fusion’s fuel. Then putting TORAX to work, Google DeepMind and CFS will explore ways to improve how we’ll run our SPARC fusion machine",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "合作时间（2025-10-16）、对手方（Google DeepMind × CFS）与三大方向均已核实：CFS 官方博客给出可微模拟与增益最大化，实时控制段落给出 “AI could be used as a component within the control system running SPARC”；中科院网信工作网 2025-11-25 亦逐条复述同一三方向。DeepMind 官方博客题名与日期（2025-10-16, “Bringing AI to the next generation of fusion energy”）确认存在，但其正文为前端渲染，本工具抓取不到正文，故未用作证据页。**出入**：“2026 年竣工的 SPARC”与 CFS 现口径不符——CFS SPARC 官方页称 “In 2027, it’ll become the world’s first commercially relevant fusion energy machine to produce more energy from fusion than it needs to power the process — a threshold called net energy generation or Q>1”，且 2026-08-05 CFS 博客称 SPARC “now almost 80% complete”。建议改为“计划 2027 年前后实现净增益”。",
+      "sub_claims": [
+        {
+          "claim": "DeepMind×CFS 三大合作方向（可微模拟、增益最大化、实时控制）",
+          "status": "verified",
+          "source": {
+            "title": "美企合作利用AI加速聚变能源发展",
+            "publisher": "中国科学院网信工作网（《网络安全和信息化动态》2025年第11期）",
+            "date": "2025-11-25",
+            "url": "https://ecas.cas.cn/xxkw/kbcd/201115_148350/ml/xxhcxyyyal/202511/t20251125_5089840.html",
+            "type": "official"
+          },
+          "evidence_quote": "2025年10月16日，美国谷歌DeepMind与联邦聚变系统公司（CFS）达成合作，将借助AI加速热核能源的研发进程。"
+        },
+        {
+          "claim": "SPARC 于 2026 年竣工",
+          "status": "partially_verified",
+          "source": {
+            "title": "SPARC: Proving commercial fusion energy is possible",
+            "publisher": "Commonwealth Fusion Systems",
+            "date": "2026",
+            "url": "https://cfs.energy/technology/sparc/",
+            "type": "official"
+          },
+          "evidence_quote": "In 2027, it’ll become the world’s first commercially relevant fusion energy machine to produce more energy from fusion than it needs to power the process — a threshold called net energy generation or Q>1.",
+          "notes": "官方口径为 2027 年实现 Q>1；2026-08 完成度约 80%，“2026 年竣工”未见一手确认。"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "claim": "中国在聚变 AI 上并不落后：EAST 装置已实现基于深度强化学习的 βp 实时反馈控制，HL-2A/HL-3 托卡马克的深度学习破裂预测已嵌入装置控制系统实际运行",
+      "status": "verified",
+      "source": {
+        "title": "Recent progress on deep learning-based disruption prediction algorithm in HL-2A tokamak",
+        "publisher": "Chinese Physics B (Semantic Scholar API)",
+        "date": "2023",
+        "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1088/1674-1056/accb44?fields=title,abstract,year,venue,externalIds,authors",
+        "type": "database"
+      },
+      "evidence_quote": "For the real-time capacity, the algorithm is accelerated to deal with an input slice within 0.3 ms with the help of some adjustments on it and TFLite framework. It is also implemented into the plasma control system and gets an accuracy of 89.0% during online test.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "HL-2A 破裂预测：DOI 10.1088/1674-1056/accb44，摘要给出 TPR 92.2%、FPR 2.5%、总准确率 96.1%，加速至 0.3 ms/切片，并已实现入等离子体控制系统（在线测试 89.0%）；摘要同时提到迁移到 HL-2M（即 HL-3），支撑“HL-2A/HL-3”表述。EAST βp 深度强化学习实时反馈控制见 sub_claims（PPFC 2024, DOI 10.1088/1361-6587/ad3749）。",
+      "sub_claims": [
+        {
+          "claim": "EAST 实现基于深度强化学习的 βp 实时反馈控制",
+          "status": "verified",
+          "source": {
+            "title": "Real-time feedback control of βp based on deep reinforcement learning on EAST",
+            "publisher": "Plasma Physics and Controlled Fusion (Semantic Scholar API)",
+            "date": "2024",
+            "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=deep%20reinforcement%20learning%20EAST%20tokamak%20beta%20real-time%20control&fields=title,abstract,year,venue,externalIds&limit=8",
+            "type": "database"
+          },
+          "evidence_quote": "Finally, the scheme was successfully implemented on EAST, effectively tracking the βp target with lower hybrid wave (LHW) at 4.6 GHz as the actuator, and providing reference for implementing feedback control based on reinforcement learning in tokamaks."
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "claim": "聚变赛道在中美同时升温——美国有 CFS/DOE“创世纪使命”（近 3 亿美元投入聚变实用化），中国有 EAST/HL 系列装置与 BEST/CFETR 工程（§三）；SPARC 计划 2026 年后建成冲刺净增益，中国 BEST/CFETR 紧随其后（§六）",
+      "status": "partially_verified",
+      "source": {
+        "title": "DOE announces Genesis Mission request for applications",
+        "publisher": "American Nuclear Society — Nuclear Newswire",
+        "date": "2026-03-23",
+        "url": "https://www.ans.org/news/2026-03-23/article-7860/doe-announces-genesis-mission-request-for-applications/",
+        "type": "media"
+      },
+      "evidence_quote": "the announcement of the DOE’s $293 million Genesis Mission request for applications, which invites interdisciplinary teams to submit ideas for projects addressing over 20 of Genesis’s stated national challenges, several of which focus on accelerating nuclear research and nuclear energy output.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "“近 3 亿美元”与 $293M 吻合，但口径被窄化：Genesis Mission 是覆盖 20+ 项国家挑战的 AI for science 计划（含“加速聚变能交付”一项），并非“投入聚变实用化”。SPARC 净增益：CFS 官方页称 2027 年实现 Q>1，与“2026 年后”不矛盾。BEST：CGTN 2026-10-01 报道园区交付启用、计划 2027 年建成、2030 年前后演示氘氚聚变发电；该来源未提及 CFETR，CFETR 本轮未获一手核验。",
+      "sub_claims": [
+        {
+          "claim": "SPARC 冲刺能量净增益（Q>1）",
+          "status": "verified",
+          "source": {
+            "title": "SPARC: Proving commercial fusion energy is possible",
+            "publisher": "Commonwealth Fusion Systems",
+            "date": "2026",
+            "url": "https://cfs.energy/technology/sparc/",
+            "type": "official"
+          },
+          "evidence_quote": "In 2027, it’ll become the world’s first commercially relevant fusion energy machine to produce more energy from fusion than it needs to power the process — a threshold called net energy generation or Q>1."
+        },
+        {
+          "claim": "中国 BEST 工程进展（2027 建成，2030 前后演示聚变发电）",
+          "status": "verified",
+          "source": {
+            "title": "China's 'artificial sun' project enters key construction phase",
+            "publisher": "CGTN",
+            "date": "2026-10-01",
+            "url": "https://news.cgtn.com/news/2026-10-01/China-s-artificial-sun-project-enters-key-construction-phase-1QSYBsXj0d2/p.html",
+            "type": "media"
+          },
+          "evidence_quote": "BEST is planned to complete construction by 2027 and aims to demonstrate deuterium-tritium fusion power generation around 2030."
+        },
+        {
+          "claim": "CFETR 工程紧随其后",
+          "status": "not_found",
+          "source": null,
+          "evidence_quote": null,
+          "notes": "本轮检索未获得 CFETR 的一手进展来源，未证实。"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "claim": "学习 TORAX（JAX 编写，DeepMind 开源，可微等离子体模拟）（§四、§五）",
+      "status": "verified",
+      "source": {
+        "title": "TORAX: A Fast and Differentiable Tokamak Transport Simulator in JAX",
+        "publisher": "arXiv (physics.plasm-ph), Google DeepMind",
+        "date": "2024-06-10 (v4 2026-07-09)",
+        "url": "https://arxiv.org/abs/2406.06718",
+        "type": "paper"
+      },
+      "evidence_quote": "We present TORAX, a new, open-source, differentiable tokamak core transport simulator implemented in Python using the JAX framework.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "全部作者隶属 Google DeepMind；论文正文脚注给出仓库 https://github.com/google-deepmind/torax 与文档 https://torax.readthedocs.io。核验当日直接抓取 github.com 超时（未成功），故 url 采用实际抓取成功的 arXiv 页面，仓库地址在此注明。",
+      "sub_claims": []
+    },
+    {
+      "id": 76,
+      "claim": "DeepMind 用深度强化学习控制托卡马克磁体、把等离子体“雕刻”成雪花形、ITER 形等复杂位形的工作登上了 Nature",
+      "status": "verified",
+      "source": {
+        "title": "Magnetic control of tokamak plasmas through deep reinforcement learning",
+        "publisher": "Nature 602:414–419 (PMC full text)",
+        "date": "2022-02-16",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8850200/",
+        "type": "paper"
+      },
+      "evidence_quote": "We successfully produce and control a diverse set of plasma configurations on the Tokamak à Configuration Variable, including elongated, conventional shapes, as well as advanced configurations, such as negative triangularity and ‘snowflake’ configurations.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "DOI 10.1038/s41586-021-04301-9。“ITER 形”对应正文 Fig. 3b 图注 “Approximate ITER-proposed shape with neutral beam heating (NBH) entering H-mode.”；雪花形另有 Fig. 3d “Snowflake configuration with a time-varying control of the bottom X-point”。实验在 EPFL 的 TCV 上完成，非 ITER 本体。**表述缺陷**：该 Nature 论文（2022）并未开源 TORAX，TORAX 是 2024 年才公开发布（见 id 75），正文把“上 Nature”与“开源 TORAX”并列挂在同一引用下，易被误读为同一事件。",
+      "sub_claims": []
+    }
+  ],
+  "summary": {
+    "verified": 6,
+    "partially_verified": 6,
+    "not_found": 1,
+    "contradicted": 0,
+    "dead_link": 0,
+    "blocking_issues": [
+      "id 71：§一 的“Siemens 对 2025 年 CFD 会议的观察”找不到任何来源（not_found）；Krylov-ROM 的具体数字“32 秒→5.5 秒”在全部可访问文字页面中不存在（官方仅称 over six times faster）；“35% 能耗下降”实际出自 Chalmers 硕士论文（Star-CCM+ + FNO + SAC，且为能耗成本），并非 Siemens 官方案例。§一开篇论断与 §二/§六 的性能数字应据此下调措辞。",
+      "id 72：正文“2026 年竣工的 SPARC”与 CFS 官方口径冲突（官方称 2027 年实现 Q>1；2026-08 时 SPARC 完成度约 80%），应改为“2027 年前后实现净增益”。",
+      "id 65：一个编号承载 4 个互不相关主题（等变神经算子 / DeepFlame / Periodic Hills 数据集 / Landau 流体闭合），原参考文献表存在编号错配；其中“机器学习代理 Landau 流体闭合”无支持来源。",
+      "id 74：把 DOE“创世纪使命”（$293M、覆盖 20+ 国家挑战）表述为“投入聚变实用化”，口径被窄化；CFETR 进展未获一手核验。",
+      "id 64：“2024 年以来新热点”“代理模型家族”为综述性判断，仅有分项论文支持，无单一权威来源。"
+    ]
+  }
+}

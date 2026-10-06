@@ -2,9 +2,12 @@
 
 > 用途：阶段 2 用 WebPlotDigitizer（https://automeris.io/）或 Engauge Digitizer 从下列文献曲线中数字化数据点，替换 `php_demo.csv`。建议统一为 README 中的特征口径。
 
-## A. 复现基准（首选）
+## A. 对标基准（首选）
 
-### DLR 学位论文（Illbruck, 2026）—— XGBoost + SHAP，3,473 数据点
+### DLR 本科毕业论文（Illbruck, 2026）—— XGBoost + SHAP，3,473 数据点
+> ⚠️ 该文献是**本科毕业论文（Bachelorarbeit）**，且原文自述模型限定于
+> "底部加热 + 平面蛇形（planar meander）"构型——其"垂直底热最优"结论含数据集偏向。
+> 本项目当前阶段并未复现它（用的是 1,000 行合成数据），它是**口径对标**而非复现对象。
 - **链接**：https://elib.dlr.de/224483/ （全文开放获取 PDF）
 - **输入特征**：热流密度、有效换热面积、充液率、倾角、水力直径、弯折数、无量纲数
 - **目标**：热阻 R_th

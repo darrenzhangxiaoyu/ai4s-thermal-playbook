@@ -13,3 +13,10 @@ projects/php-thermal-resistance/data/php_demo.csv
 
 # 海报渲染的中间产物
 poster/screenshots/
+
+# 交接工作区（临时）
+.work/
+
+# 项目 2 的数据集快照（约 7 MB，可由 make_dataset.py 在 5 秒内重建）
+projects/microchannel-coldplate-ai/data/coldplate_dataset.npz
+projects/microchannel-coldplate-ai/outputs/surrogate.pkl

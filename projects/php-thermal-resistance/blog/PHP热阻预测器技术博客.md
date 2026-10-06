@@ -12,7 +12,13 @@
 
 但设计它很痛苦。管内两相流动是强非线性、强瞬态过程，DLR（德国宇航中心）在最近一项研究里说得直白：传统 CFD 要么算得准但慢得没法用于设计空间探索，要么快但精度打折——**他们最终选择了机器学习路线，用 XGBoost + SHAP 在 3,473 个文献数据点上建立了热阻预测模型（RMSPE 20.2%，R²=0.941），并明确指出 ML 才是支撑 PHP 大规模设计空间探索的工具**。
 
-这篇文章复刻这条路线，做成一个任何人都能跑通的最小闭环：
+这篇文章**按同一口径**搭建一条任何人都能跑通的最小闭环（先用合成数据把流程跑通，再换真实文献数据）：
+
+> ⚠️ **先说清楚口径**：下文所有定量结果都基于 `make_demo_data.py` 生成的**物理启发式合成数据（1,000 行）**，
+> 它**不是对 DLR 那篇文献的复现**——数据集、样本量（1,000 vs 3,473）与误差口径（MAPE vs RMSPE）都不同。
+> 合成数据的作用只有一个：让流程在没有实验条件、没有数字化数据的阶段就能端到端跑起来并被检验。
+> 另外，该基准文献是一篇**本科毕业论文**，原文自述模型限定于"底部加热 + 平面蛇形"构型，
+> 所以它"垂直底热最优"的结论包含数据集偏向，不宜直接外推。
 
 ```
 文献数据（数字化）→ 热阻预测模型 → SHAP 可解释分析 → 贝叶斯优化寻优设计
@@ -129,7 +135,7 @@ python src/optimize.py --q 30  # 贝叶斯优化，可换工作点
 
 ## 参考
 
-1. Illbruck (DLR), *Pulsating Heat Pipe, Gradient Boosting, Machine Learning*, 2026. 开放获取：https://elib.dlr.de/224483/
+1. Illbruck (DLR), *Pulsating Heat Pipe, Gradient Boosting, Machine Learning*, 2026（**本科毕业论文**；原文自述模型限定于底部加热 + 平面蛇形构型）. 开放获取：https://elib.dlr.de/224483/
 2. Wang X. et al., Predicting of thermal resistances of closed vertical meandering pulsating heat pipe using ANN. *Applied Thermal Engineering* 149:1134-1141, 2019.
 3. Ahmadi M.H. et al., Applicability of connectionist methods to predict thermal resistance of pulsating heat pipes with ethanol. *Int. J. Heat Mass Transf.* 126:1079-1086, 2018.
 4. 脉动热管水平及小倾角条件下的传热性能（中科院机构知识库，超纯水工质，倾角 × 充液率 × 功率网格）。

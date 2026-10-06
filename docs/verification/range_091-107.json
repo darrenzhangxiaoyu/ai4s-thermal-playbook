@@ -1,0 +1,277 @@
+{
+  "range": "91-107",
+  "agent": "subagent-range-091-107",
+  "references": [
+    {
+      "id": 91,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "缺口编号。对 docs/ 三份文档及整个工作区 grep 正则 \\[\\^(91|97)\\^\\] 均无匹配：第三份文档实际出现的标记是 77-90、92-96、98-107，91 与 97 从未被正文引用。按协议填 not_found。"
+    },
+    {
+      "id": 92,
+      "claim": "Purdue 的学位论文已把\"ML 代理任意截面通道的 Nu/f 统一关联式 + 数千几何批量 CFD 自动化 + 冷板设计优化 + 与拓扑优化结合\"串成完整工作流（L12 亦作\"对标 Purdue 统一关联式工作\"）。",
+      "status": "partially_verified",
+      "source": {
+        "title": "Data Generation and Training of Surrogate Models for Friction Factor and Nusselt Number in Low Reynolds Number Flows Through Pin Fin Geometries",
+        "publisher": "ASME Journal of Heat and Mass Transfer (Pai, Saeel S.; Navaresse, Bruno; Weibel, Justin A. — Purdue University)",
+        "date": "2024",
+        "url": "https://ouci.dntb.gov.ua/en/works/9Jy88DDl/",
+        "type": "paper"
+      },
+      "evidence_quote": "The model training data are generated using an automated workflow that allows thousands of numerical simulations to be carried out on across different geometric and flow configurations. A total of ~14,800 distinct simulation cases, for both friction factor and Nusselt number, are generated",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "Purdue 学位论文本身（\"Machine-Learning-Aided Development of Surrogate Models for Flexible Design Optimization of Enhanced Heat Transfer Surfaces\"，https://hammer.purdue.edu/articles/thesis/.../28373483 ）**无法访问**：web_fetch 与 curl 均返回 HTTP 403，且仓库记录标注 \"File(s) under embargo\"。故改以可访问的同行评议论文佐证工作流：①上条 ASME 2024（DOI 10.1115/1.4066970）证实\"自动化工作流 + 数千次 CFD（~14,800 例）+ Nu/f 代理\"；②Saeel S. Pai & Justin A. Weibel, \"Machine-learning-aided design optimization of internal flow channel cross-sections\", IJHMT 195 (2022) 123118, DOI 10.1016/j.ijheatmasstransfer.2022.123118（落地页 https://docs.lib.purdue.edu/coolingpubs/397/ 访问成功）证实\"任意截面内流道 ML 辅助设计优化\"；③其参考文献含 Pai, \"A machine-learning-based surrogate model for internal flow Nusselt number and friction factor in various channel cross sections\"，证实\"任意截面统一 Nu/f 关联式\"。**出入**：\"与拓扑优化结合\"未获证实——拓扑优化在该谱系中仅作为被引背景文献出现（如 IJHMT 169/172/209 的拓扑优化微通道散热器论文），并非该学位论文自身的工作流环节；文档此处有拔高。另：文档称\"学位论文\"，而 ASME 2024 与 IJHMT 2022 均为期刊论文，论文题名与作者一致（Pai/Weibel，Purdue CTRC）。 （补充逐字：'...and for a range of transverse and longitudinal pitches, with water as the working fluid.'）"
+    },
+    {
+      "id": 93,
+      "claim": "两相压降通用关联式（建模阶段用 ML 学关联式与闭合）；微/迷你通道两相压降 ML 关联式；数据资源表中的\"Springer 通用关联式论文\"。",
+      "status": "verified",
+      "source": {
+        "title": "Machine learning-based models for frictional pressure drop prediction of condensing and adiabatic flow in micro, mini and macro channels utilizing universal data",
+        "publisher": "International Journal of Air-Conditioning and Refrigeration (Springer Nature) — Shourehdeli, Shaban Alyari; Mobini, Kamran",
+        "date": "2023-03-22",
+        "url": "https://link.springer.com/article/10.1007/s44189-023-00025-9",
+        "type": "paper"
+      },
+      "evidence_quote": "This study proposes a universal machine learning-based model to predict the adiabatic and condensing frictional pressure drop. For developing the proposed model, 11,411 data points of adiabatic and condensing flow inside micro, mini and macro channels are collected from 80 sources.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "Springer 出版 + \"universal\" + ML + 微/迷你通道两相压降四个要素全中，与文档 L18/L90/L101 的\"Springer 通用关联式论文\"\"微/迷你通道两相压降 ML 关联式\"高度吻合。DOI 10.1007/s44189-023-00025-9。**检索方式说明**：web_fetch 该文时被重定向到 idp.springer.com（cross-origin redirect）而失败，故用 curl 取回 HTML 正文（561 KB）后提取摘要文字，摘录来自该页正文。confidence 记为 medium 仅因文档未给出作者/年份，无法排除另有同主题 Springer 论文；但主题、出版方与措辞的匹配度很高。"
+    },
+    {
+      "id": 94,
+      "claim": "两相压降/换热关联式是 ML 关联式建模论文最密集的领域；微通道/两相公开数据可用\"文献附表（Mudawar 谱系）\"。",
+      "status": "verified",
+      "source": {
+        "title": "An artificial neural network model to predict mini/micro-channels saturated flow boiling heat transfer coefficient based on universal consolidated data",
+        "publisher": "International Journal of Heat and Mass Transfer 149 (2020) 119211 — Qiu, Yue; Garg, D.; Zhou, Li-Wei; Kharangate, Chirag R.; Kim, Sung-Min; Mudawar, Issam（Purdue University Boiling and Two-Phase Flow Laboratory）",
+        "date": "2020",
+        "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.ijheatmasstransfer.2019.119211?fields=title,abstract,year,venue,authors",
+        "type": "paper"
+      },
+      "evidence_quote": "A consolidated database of 16953 data points for flow boiling heat transfer in mini/micro-channels is amassed from 50 sources that includes 16 working fluids, reduced pressures of 0.0046 - 0.77, hydraulic diameters of 0.15mm - 6.5mm",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "\"Mudawar 谱系\"得到确证：作者含 Issam Mudawar（Purdue），主题为 mini/micro-channel 流动沸腾换热/压降的 universal consolidated data。姊妹篇（压降方向）：Yue Qiu, D. Garg, Sung-Min Kim, I. Mudawar, Chirag R. Kharangate, \"Machine learning algorithms to predict flow boiling pressure drop in mini/micro-channels based on universal consolidated data\", IJHMT 2021, DOI 10.1016/j.ijheatmasstransfer.2021.121607（题名/作者/年份经 Semantic Scholar API 核对）。这就是文档所称\"文献附表\"式公开数据来源：16,953 点、50 个来源、16 种工质。**检索方式说明**：ScienceDirect 与 Mendeley 均对自动抓取返回 403 / Cloudflare 拦截，故经 Semantic Scholar Graph API 取得题录与摘要正文（该 API 响应即所引 URL 的页面正文）。"
+    },
+    {
+      "id": 95,
+      "claim": "振荡热管（OHP）共轭传热数据同化工作（与 DLR PHP 的\"物理建模 + ML 设计\"形成闭环）。",
+      "status": "verified",
+      "source": {
+        "title": "Modeling and estimation of transient two-phase thermofluid systems: an example of oscillating heat pipes",
+        "publisher": "University of California, Los Angeles（Li, Yuxuan，PhD dissertation；导师 Eldredge / Lavine）",
+        "date": "2024",
+        "url": "https://escholarship.org/content/qt80k8g42k/qt80k8g42k.pdf",
+        "type": "report"
+      },
+      "evidence_quote": "The model reported here aims to capture the essential physics of an OHP with minimal complexity and treats some parameters typically derived from correlations or experiments (such as the film thickness and film triple point velocity) as functions with tunable constants to be estimated by data assimilation.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "\"共轭传热 + 数据同化 + OHP\"三要素逐字命中；同页文献列表载 Li, Yuxuan et al., \"A conjugate heat transfer model of oscillating heat pipe dynamics, performance, and dryout\", Int. J. Heat Mass Transfer 227 (2024) 125530，以及 \"A data assimilation model of oscillating heat pipe dynamics and performance\" (Joint 21st IHPC / 15th IHPS, Melbourne, 2023)。方法含 Ensemble Kalman Filter 与 MCMC 参数估计。**检索方式说明**：该 PDF 无法用 web_fetch（unsupported content type），经 curl 下载后 pdfminer 抽取正文。"
+    },
+    {
+      "id": 96,
+      "claim": "PINN 做换热系数反演；\"PINN 在这类反问题上比正问题更有优势\"；PINN 反问题实现步骤含损失函数设计与稀疏观测反演。",
+      "status": "partially_verified",
+      "source": {
+        "title": "Study of Boiling Heat Transfer and Two-Phase Flows using Physics-Informed Neural Networks",
+        "publisher": "Proceedings of the 18th UK Heat Transfer Conference (UKHTC2024), Birmingham — Jalili, D.; Keshmiri, A.; Mahmoudi, Y.（The University of Manchester）",
+        "date": "2024-09",
+        "url": "https://more.bham.ac.uk/ukhtc-2024/wp-content/uploads/sites/80/2024/09/UKHTC-2024_paper_76.pdf",
+        "type": "paper"
+      },
+      "evidence_quote": "Models were regularly employed to make inverse predictions (i.e. predictions were made without supplying observational data) to demonstrate the power of PINNs as a method of accelerating parametric studies and preparing them for implementation as part of real-time control systems",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "PINN 用于沸腾/两相换热的**反问题**成立，且同一团队有期刊版：Darioush Jalili & Y. Mahmoudi, \"Physics-informed neural networks for two-phase film boiling heat transfer\", Int. J. Heat and Mass Transfer, 2025, DOI 10.1016/j.ijheatmasstransfer.2025.126680（题录经 Semantic Scholar API 核对）。**出入**：文档具体写作\"换热系数 PINN 反演\"，但该文的反演算例针对蒸发/气泡与膜态沸腾的物理量（论文摘要报告正问题最大误差 3.6%、迁移/反演 6.1%），并未以\"反演对流换热系数\"为标题或结论；\"稀疏观测反演\"亦非该文措辞。故降级为 partially_verified。**检索方式说明**：PDF 经 curl 下载 + pdfminer 抽取；同组期刊版为付费墙，仅取题录。 （补充逐字：'Additionally, an extended inverse study was performed, within which the transfer learning capabilities of the PINN method were assessed.'；'revealing a maximum PINN prediction error of 6.1%.'）"
+    },
+    {
+      "id": 97,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "缺口编号。全工作区无 [^97^] 标记。按协议填 not_found。"
+    },
+    {
+      "id": 98,
+      "claim": "FBCE 由 Purdue 与 NASA Glenn 合作，2021 年 8 月上 ISS，2022 年 2-7 月完成大规模在轨实验，建立了前所未有的微重力流动沸腾与 CHF 数据库；Purdue/NASA 用 ANN 统一预测地球重力与微重力下的流动沸腾 HTC 与 CHF；考虑流量振荡的 CHF-ANN 能对 85% 的数据做到 ±10% 相对误差；并作为\"/ISS 微重力两相数据库\"数据源与跨重力 CHF 预测对标基准。",
+      "status": "partially_verified",
+      "source": {
+        "title": "Purdue-designed heat transfer experiment arrives at International Space Station / Completed experiments on International Space Station to help answer how boiling and condensation work in space",
+        "publisher": "Purdue University News（2021-08-12）；EurekAlert! / Purdue University（2024-09-26）",
+        "date": "2021-08-12",
+        "url": "https://www.purdue.edu/newsroom/archive/releases/2021/Q3/purdue-designed-heat-transfer-experiment-arrives-at-international-space-station.html",
+        "type": "media"
+      },
+      "evidence_quote": "FBCE's flow boiling module was launched to the space station in August 2021 and began operations in early 2022.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "**逐项裁决**：(a) Purdue × NASA Glenn 合作 —— 证实（\"designed, built and tested by Purdue and NASA's Glenn Research Center\"，EurekAlert 2024-09-26；PI Issam Mudawar，NASA Glenn 的 Mojib Hasan）。(a) 2021 年 8 月上站 —— **证实**（Purdue 新闻 2021-08-12：\"arrived at the International Space Station on Thursday (Aug. 12)\"，由 Antares/Cygnus NG-16 发射）。(a) \"2022 年 2-7 月完成大规模在轨实验\" —— **未能逐字证实**：EurekAlert 只说 \"began operations in early 2022\"、\"two years of active experiments\"，以及 \"Purdue completed its test campaign in July\"（指 2024 年整机，含随后替换上去的冷凝模块）；2 月起始与 7 月截止的**流量沸腾专项窗口**未在所访问页面出现。(a) \"前所未有的微重力流动沸腾与 CHF 数据库\" —— 定性支持（NASA 官方页 science.nasa.gov 称 FBCE \"seeks to validate a model for flow boiling critical heat flux (CHF)... Data from microgravity and the ground are compared\"；EurekAlert 称 Mudawar 称\"The amount of data coming out of the FBCE is just absolutely enormous\"），但无\"unprecedented\"字样与条目数。(b) ANN 统一预测地球重力与微重力 HTC 与 CHF —— 来源确实存在：I. Mudawar, Steven J. Darges, V. S. Devahdhanush, \"Prediction technique for flow boiling heat transfer and critical heat flux in both microgravity and Earth gravity via artificial neural networks (ANNs)\", Int. J. Heat Mass Transfer, 2024, DOI 10.1016/j.ijheatmasstransfer.2023.124998（题名/作者/年份经 Semantic Scholar API 核对）；作者自存 PDF（engineering.purdue.edu/mudawar/files/articles-all/2024/2024-03.pdf）多次下载均在 2.87 MB 中断、残缺文件无法解析，故未取得该文正文逐字证据。(c) \"流量振荡 CHF-ANN 对 85% 数据 ±10% 误差\" —— **未获证实，且很可能张冠李戴**：文档把它挂在 [^98^]（FBCE 路线）下，但真正的\"流量振荡 CHF-ANN\"是 G.-H. Su, K. Morita, K. Fukuda, M. Pidduck, D. Jia, J. Miettinen, \"Analysis of the critical heat flux in round vertical tubes under low pressure and flow oscillation conditions: Applications of artificial neural network\", Nuclear Engineering and Design 220(1) (2003) 17-35, DOI 10.1016/S0029-5493(02)00304-7（VTT/西安交大/九州大）。该文完整摘要（https://cris.vtt.fi/en/publications/analysis-of-the-critical-heat-flux-in-round-vertical-tubes-under-/ ）**通篇没有 85% 或 ±10% 的字样**，只给出 F 随压力/质量流量/相对振幅/入口过冷度/L-D 的参数趋势。因此\"85% / ±10%\"这两个数字在本区间内**找不到任何一手来源支持**，应视为未证实；若文档作者掌握该数字，需另补出处。 （补充逐字：'The Flow Boiling and Condensation Experiment (FBCE), which arrived at the International Space Station on Thursday (Aug. 12)'；'designed, built and tested by Purdue and NASA's Glenn Research Center'；'Purdue completed its test campaign in July.'）"
+    },
+    {
+      "id": 99,
+      "claim": "核反应堆 CHF 预测已出现\"物理增强神经网络集成 + 不确定性量化\"的工作（Frontiers 2025）；作为\"带不确定性量化的 CHF 预测实现参考\"。",
+      "status": "verified",
+      "source": {
+        "title": "Ensembles of physics-enhanced neural networks for the prediction of critical heat flux in nuclear reactors and the quantification of its uncertainty",
+        "publisher": "Frontiers in Nuclear Engineering（Pedroni, Nicola，Politecnico di Torino）",
+        "date": "2025-12-01",
+        "url": "https://www.frontiersin.org/journals/nuclear-engineering/articles/10.3389/fnuen.2025.1692182/full",
+        "type": "paper"
+      },
+      "evidence_quote": "the possibility to build robustness in the CHF predictions by bootstrap and PENN weights random reinitialization for quantifying uncertainty and estimating prediction intervals.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "标题中的 \"Ensembles\"\"physics-enhanced neural networks\"\"critical heat flux in nuclear reactors\"\"quantification of its uncertainty\" 与文档表述一一对应。DOI 10.3389/fnuen.2025.1692182，卷 4，文章号 1692182，2025-12-01 出版（Received 2025-08-25 / Accepted 2025-11-04）。**检索方式说明**：/full 页 web_fetch 成功但正文被截断；逐字摘录取自同一篇文章的 JATS XML 全文 https://public-pages-files-2025.frontiersin.org/journals/nuclear-engineering/articles/10.3389/fnuen.2025.1692182/xml （web_fetch 成功），abstract 文本与 /full 页一致。 （补充逐字：'ensembles of Physics-Enhanced Neural Networks (PENNs) are considered to predict the CHF as a function of relevant physical input variables'）"
+    },
+    {
+      "id": 100,
+      "claim": "抛物线飞行中的 FC-72 实验证明换热随重力增大而增强、微重力下减弱；地面设计靠浮力排汽、空间设计必须靠剪切力/毛细力/表面张力（低 Bond 数工况）；作为\"抛物线飞行 FC-72 实验\"数据源与两相基础参考。",
+      "status": "partially_verified",
+      "source": {
+        "title": "Gravity and Heater Size Effects on Pool Boiling Heat Transfer",
+        "publisher": "NASA Technical Reports Server (NTRS) 20140010367 — Kim, Jungho; Raj, Rishi",
+        "date": "2014-01-01",
+        "url": "https://www.science.gov/topicpages/a/advanced+passive+boiling.html",
+        "type": "report"
+      },
+      "evidence_quote": "The current work is based on observations of boiling heat transfer over a continuous range of gravity levels between 0g to 1.8g and varying heater sizes with a fluorinert as the test liquid (FC-72/n-perfluorohexane).",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "**主体与实验手段证实**：FC-72/n-perfluorohexane 工质、0g-1.8g 连续变重力、抛物线飞行 + ISS 池沸腾，正是文档所说的\"抛物线飞行 FC-72 实验\"。**方向性表述未逐字证实**：摘要说 \"For large heaters and-or higher gravity conditions, buoyancy dominated boiling ... Under low gravity conditions and-or for smaller heaters, surface tension forces dominated\"，并给出\"换热方程中重力的幂律系数是壁温的函数\"，即以**浮力主导 vs 表面张力主导的机制切换**与标度律来表述，并未直接写\"换热随重力增大而增强、微重力下减弱\"。相邻证据支持该方向：Purdue 新闻稿（2021-08-12）引 Mudawar 称 FBCE 抛物线飞行阶段\"at certain flow rates, microgravity actually did reduce the amount of heat flux by up to 50%\"——但那是**流动沸腾**（FC-72），与本文的池沸腾不是同一实验。故整体记 partially_verified。**检索方式说明**：NTRS 本体（ntrs.nasa.gov/citations/20140010367）与 archive.org 副本对自动抓取均失败/403，全文摘要取自 science.gov 主题页正文（curl 后提取），该页完整载有 NTRS 记录与摘要。 （补充逐字：'For large heaters and-or higher gravity conditions, buoyancy dominated boiling and heat transfer results were heater size independent.'；'Under low gravity conditions and-or for smaller heaters, surface tension forces dominated and heat transfer results were heater size dependent.'）"
+    },
+    {
+      "id": 101,
+      "claim": "在轨加注液氧贮箱的沸腾模拟（VOF + Marangoni 对流 + 动态接触角）显示，微重力下气泡脱离由 Marangoni 力主导、脱离直径从 >5 mm 缩小到 0.3-0.6 mm。",
+      "status": "verified",
+      "source": {
+        "title": "在轨加注过程中液氧在低温贮箱内的沸腾传热特性模拟",
+        "publisher": "《真空与低温》— 甄彦祺、夏国栋、李冉（Zhen Yanqi, Xia Guodong, Li Ran）",
+        "date": "2026",
+        "url": "https://dwgc.spacejournal.cn/article/id/7c661a9b-0be4-463c-8bbc-9483b5a0a96b",
+        "type": "paper"
+      },
+      "evidence_quote": "研究构建了耦合温度依赖型动态接触角模型与流体体积法(VOF)的多相流数值框架，并引入Marangoni效应以完善微重力沸腾传热描述……微重力条件下气泡脱离主要由Marangoni力主导，其脱离直径随壁面过热度降低由5 mm以上显著缩减至0.3—0.6 mm",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "文档的四要素（液氧贮箱/在轨加注、VOF、Marangoni、动态接触角）与\"5 mm 以上→0.3-0.6 mm\"数字**全部逐字吻合**。英文题名：Simulation of boiling heat transfer in cryogenic tank during on-orbit liquid oxygen refueling process。期刊页未标卷期与 DOI（疑为网络首发），年份以页面标注 2026 为准。**检索方式说明**：页面为 JS 渲染，web_fetch 仅返回标题，故用 curl 取 HTML（378 KB）后提取摘要正文。"
+    },
+    {
+      "id": 102,
+      "claim": "DLR 脉动热管（PHP）研究用 3,473 个文献数据点训练 XGBoost + SHAP 可解释模型预测热阻，最优充液率约 50-60%、蒸发段朝下的垂直布置性能最优、RMSPE 20.2%、R²=0.941、热流密度为最强特征（SHAP 贡献近第二名两倍）；并指出 CFD 模拟太慢、ML 才是支撑设计空间探索的工具（Illbruck 学位论文）。",
+      "status": "verified",
+      "source": {
+        "title": "Pulsating Heat Pipe, Gradient Boosting, Machine Learning",
+        "publisher": "DLR elib（electronic library）/ RWTH Aachen — Illbruck, Marvin；DLR 导师 Franke, Friedrich；DLR 航空航天空天推进研究所（Cottbus）",
+        "date": "2026-05-20",
+        "url": "https://elib.dlr.de/224483/",
+        "type": "report"
+      },
+      "evidence_quote": "A total of 3,473 data points were compiled through past publications on PHP experiments. XGBoost, an algorithm based on gradient boosting, is chosen for the predictive task due to its accuracy, interpretability, and efficiency when working with complex datasets.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "**五项基准数字逐项核对结果：全部对得上，无一项有出入。** (1) 3,473 数据点 ✓（elib 摘要页逐字：\"A total of 3,473 data points were compiled through past publications on PHP experiments\"；全文另见 p.89 \"compiles a comprehensive dataset comprising 3,473\" 与 \"A final subset of 3,473 cases was retained\"）。(2) RMSPE 20.2% ✓ 与 (3) R²=0.941 ✓（摘要页逐字；全文表 5.3 为 \"0.941 ± 0.008\"，嵌套 CV 亦为 0.941，p.3624 复述）。(4) 最优充液率 50-60% ✓——不在摘要页，在**全文 PDF**：\"It is evident that considering the FRs in the datasets span from 5 to 100%, around 50–60% seems to be the optimal FR of PHP performance.\" (5) 垂直底热最优 ✓——同一段：\"Studies on the inclination of PHPs showed that a vertical bottom head mode, describing the evaporator being placed at the bottom side of the PHP, is the configuration with superior performance in almost every case, which is supported by the SHAP-plot.\" 另\"热流密度为最强特征（近第二名两倍）\"✓：摘要页 \"revealing the heat flux as the most impactful feature\"，全文 \"The diagram also indicates that the contribution of heat flux is, on average, nearly twice...\"。XGBoost + SHAP + \"ML 提供设计空间探索速度\"均 ✓（摘要：\"the ML model offers the necessary speed and reliability for design optimization, enabling rapid exploration of the design space\"）。**两点必须标注的性质/口径问题（不影响数字，但影响引用方式）**：(A) 该文献是 **Bachelorarbeit（本科毕业论文）**，80 页，2026-05-20 出版，Open Access，而非博士/硕士学位论文；文档称\"DLR 学位论文\"字面成立但等级须标明，其证据权重应低于博士论文或期刊论文。(B) 原文自述模型适用范围受限：\"In its current state, the machine learning model is limited to relatively strict geometrical configurations, specifically bottom heating mode and planar meander-type structures.\" —— 即\"垂直底热最优\"部分来自数据集偏向（数据集中绝大部分实验为底热、平板蛇形结构），并非纯粹的外推结论；引用时应保留该限定。**对 projects/php-thermal-resistance/ 的影响**：该练手项目目前并未真正复现本文——data/sources.md 把 elib 224483 列为\"复现基准\"，但训练用的是 src/make_demo_data.py 生成的合成数据（data/php_demo.csv 仅 1,001 行），metrics.json 报 cv_r2_log 0.936 / mape 11.0%，与基准的 3,473 点、R²=0.941、RMSPE 20.2% 不是同一口径，README/博客若声称\"复现 DLR 论文\"属于夸大，应改称\"按 DLR 论文的输入/目标口径搭建的演示流程（合成数据）\"。**检索方式说明**：elib 摘要页 web_fetch 成功；全文 PDF（https://elib.dlr.de/224483/1/Abschlussarbeit_Illbruck_442715_IST.pdf ，7 MB）web_fetch 报 unsupported content type，改用 curl 下载 + pdfminer 抽取正文核验。 （补充逐字：'revealing the heat flux as the most impactful feature. The results indicate high predictive accuracy with an RMSPE = 20.2% and R2 = 0.941 and solid generalization across varying geometries and operating regimes.'）"
+    },
+    {
+      "id": 103,
+      "claim": "NASA 内布拉斯加 EPSCoR 项目在做微重力两相流型的生成式重建（从工况直接生成流型图像），目标直指航天两相热控/低温系统的数字孪生。",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "多轮定向检索（NASA EPSCoR 项目库/NASA 官方 EPSCoR 年度报告、epscor.nebraska.edu 及内布拉斯加 EPSCoR 年报、UNL/UNMC 站点、NASA Task Book、Semantic Scholar 检索、以及\"generative/GAN + microgravity two-phase flow pattern + Nebraska\"等组合）**均未找到**任何\"内布拉斯加 EPSCoR 资助、用生成式模型从工况重建微重力两相流型\"的项目或论文。返回结果只有通用 EPSCoR 项目介绍文档（nasa.gov 2016/2020 EPSCoR PDF、Nebraska EPSCoR 年报），与\"生成式流型重建\"无关。按协议宁可标 not_found 也不凑引用：该论点应视为**未证实**。若确有此项目，很可能尚未公开立项页或仅见于会议摘要；建议由原始文档作者补出处（关注者 PIs，如内布拉斯加大学林肯分校的两相流/低温团队）。confidence 记 low 是因为这是\"检索不到\"而非\"确认不存在\"。"
+    },
+    {
+      "id": 104,
+      "claim": "NASA Task Book 因此在资助\"用深度视觉重新审视 ISS 微重力沸腾数据\"的课题（L110 亦作\"ISS 沸腾数据的深度视觉重分析\"）。",
+      "status": "dead_link",
+      "source": {
+        "title": "NASA Task Book（候选记录 TASKID=15193 / tbpdf id=15633）",
+        "publisher": "NASA Space and Physical Sciences Research Applications (taskbook.nasaprs.com)",
+        "date": "n/a",
+        "url": "https://taskbook.nasaprs.com/tbp/index.cfm?TASKID=15193&action=public_query_taskbook_content",
+        "type": "database"
+      },
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "**来源已定位但当前无法访问**（故记 dead_link 而非 not_found）。搜索反复把 NASA Task Book 的 TASKID=15193（内容页）与 tbpdf.cfm?id=15633（报告 PDF）指为与\"微重力沸腾 / 深度学习\"相关的记录，但 **taskbook.nasaprs.com 对整个自动化访问返回 HTTP 403**：主页 /tbp/index.cfm、TASKID 内容页、tbpdf PDF 端点全部 403。已尝试：(1) web_fetch 直取；(2) curl 带浏览器 User-Agent；(3) curl 加 Referer 与 cookie jar（先取主页再取子页）；(4) r.jina.ai 文本抽取代理（超时）；(5) 站内检索替代路径。均失败。因此**无法确认** TASKID 15193 是否就是\"用深度视觉重审 ISS 微重力沸腾数据\"的课题，也无法给出任务标题、PI 与逐字证据。旁证（非一手，不构成核验）：搜索摘要中另有 Zenodo 数据集 \"Ground truth annotations for boiling bubble detection and measurement in microgravity\"（https://zenodo.org/records/7553797 ）与 UC Irvine 学位论文（https://escholarship.org/content/qt8gx8t5td/qt8gx8t5td.pdf ，讲微重力流动沸腾界面特征的深度学习提取），说明\"用视觉/深度学习分析 ISS 微重力沸腾数据\"这一方向确实有人在做，但无法据此确认 NASA Task Book 的资助记录。建议在有人工可访问 Task Book 的环境下复核，或由作者补链接。"
+    },
+    {
+      "id": 105,
+      "claim": "CNN、声发射频谱 + 迁移学习用于沸腾区域与膜态沸腾识别；迁移学习专门解决跨工况泛化瓶颈。",
+      "status": "verified",
+      "source": {
+        "title": "Predicting boiling heat flux, heat transfer coefficient, and regimes Non-intrusively using external acoustics and deep learning",
+        "publisher": "Scientific Reports（Lim, Doyeong; Liu, Yang; Bang, In Cheol）",
+        "date": "2025-07-02",
+        "url": "https://www.nature.com/articles/s41598-025-08183-z",
+        "type": "paper"
+      },
+      "evidence_quote": "demonstrated optimal performance, simultaneously predicting key boiling parameters—heat flux, heat transfer coefficient (HTC), and boiling regime—with prediction errors of less than 20% for heat flux and HTC, and over 98% accuracy in boiling regime classification.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "声发射 + 深度学习做**沸腾区域识别**成立（区域分类准确率 >98%）；**迁移学习**在正文明确出现，语境为\"不同换热器（池沸腾 vs 过冷流动沸腾）产生不同声学环境，凸显专门的模型适配（如 transfer learning）的重要性\"，正是文档所说\"跨工况泛化瓶颈\"。DOI 10.1038/s41598-025-08183-z。**口径提示**：该文主体是热流密度/HTC 回归 + 区域分类，\"膜态沸腾\"属区域分类的子集而非独立标题，故对\"膜态沸腾\"四字把握为 medium；CNN 架构本身在文中以深度网络形式给出。**检索方式说明**：nature.com 直连被 302 到 idp.nature.com，故用 curl 取 HTML（398 KB）后提取正文。 （补充逐字：'we propose a non-intrusive diagnostic framework combining externally measured acoustic emission (AE) signals with advanced deep learning techniques'）"
+    },
+    {
+      "id": 106,
+      "claim": "CNN 用于沸腾区域与膜态沸腾识别（与[^105^]并列，构成\"状态识别层\"的视觉与声学两条线）。",
+      "status": "verified",
+      "source": {
+        "title": "Classification of boiling regimes, fluids, and heating surfaces through deep learning algorithms and image analysis",
+        "publisher": "International Journal of Heat and Mass Transfer 242 (2025) 126829 — Paz, Concepción; Cabarcos, Adrián; Concheiro, Miguel; Conde-Fontenla, Marcos（CINTECX, Universidade de Vigo）",
+        "date": "2025",
+        "url": "https://investigo.biblioteca.uvigo.es/xmlui/bitstream/handle/11093/9274/2025_paz_boiling_regimes.pdf?sequence=6&isAllowed=y",
+        "type": "paper"
+      },
+      "evidence_quote": "This study applies Convolutional Neural Network (CNN) algorithms for image classification to identify boiling phenomena under different operating conditions, including single-phase flow, nucleate boiling, and pre-critical heat flux states.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "CNN 图像分类识别沸腾区域，且明确覆盖 **film boiling（膜态沸腾）** 区域，与文档\"CNN……用于沸腾区域与膜态沸腾识别\"吻合。性能：AlexNet 在 boiling regime classification 上 MCC 达 97%（训练）/96%（测试），优于此前 SVM 方案（约 58%）；同时分类工质与加热面类型。**检索方式说明**：该 PDF 为作者机构库（Universidade de Vigo）版本，web_fetch 不支持 PDF，故 curl 下载（5.8 MB）+ pdfminer 抽取正文。**口径提示**：文档把[^105^][^106^]并列为\"CNN、声发射频谱 + 迁移学习\"一组，本条目对应其中的 **CNN 视觉线**，[^105^] 对应**声发射 + 迁移学习线**；本文自身只在参考文献层面涉及迁移学习（引 Zhu et al., IJHMT 220 (2024) 125020 的迁移学习流动沸腾 HTC 模型），故\"迁移学习专门解决跨工况泛化\"这句应主要落在[^105^]上。 （补充逐字：'natural convection, pool boiling, transition boiling, and film boiling regimes'；'AlexNet achieved MCC values of 97 % and 96 % for boiling regime classification'）"
+    },
+    {
+      "id": 107,
+      "claim": "Brunel Two-phase Flow Database：小/微管流动沸腾换热公开数据库（数据/工具速查表中的公开数据源）。",
+      "status": "verified",
+      "source": {
+        "title": "A MACHINE LEARNING APPROACH FOR THE PREDICTION OF FLOW BOILING HEAT TRANSFER COEFFICIENTS IN SMALL TO MICRO-TUBES",
+        "publisher": "Proceedings of the 18th UK Heat Transfer Conference (UKHTC2024), Birmingham — Nazemzadeh, Nima; Coletti, Francesco; Karayiannis, Tassos G.（Hexxcell Ltd. / Brunel University London）",
+        "date": "2024-09",
+        "url": "https://more.bham.ac.uk/ukhtc-2024/wp-content/uploads/sites/80/2024/09/UKHTC-2024_paper_159.pdf",
+        "type": "paper"
+      },
+      "evidence_quote": "The work leverages the extensive Brunel Two-phase Flow Database to extract the explanatory variables needed for predictions and uses various regression models to predict the heat transfer coefficient in single small to micro tubes with diameters ranging from 0.52 to 4.26 mm",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "\"Brunel Two-phase Flow Database\"名称逐字出现，且确为**流动沸腾换热**数据（小/微管，直径 0.52-4.26 mm），规模 **27,126 个数据点**，覆盖单通道与多微通道、多种材料/形状/尺寸/长度——与文档\"小/微管流动沸腾换热公开数据库\"完全对上。该库由 Brunel University London（Karayiannis 组）维护，文档所引 Brunel 机构库记录为 https://v-lib-bura1.brunel.ac.uk/handle/2438/29983?mode=simple （**无法访问**：web_fetch 报 fetch failed，curl 报 SSL 证书主机名不匹配 \"no alternative certificate subject name matches target host name\"，故该 URL 仅记于此 notes，未作为 url 字段）。**检索方式说明**：本文 PDF 经 curl 下载 + pdfminer 抽取正文。**待补**：数据库本身的官方主页/下载入口未能定位，建议后续用 http://bura.brunel.ac.uk/ 或 Brunel 机构库检索 handle 2438/29983 复核；文档若直接给读者\"下载数据库\"的指引，需要补一个当前可访问的入口。 （补充逐字：'This extensive database comprises 27,126 data points for flow boiling in single and multi-microchannels of various materials, shapes, dimensions and lengths.'）"
+    }
+  ],
+  "summary": {
+    "verified": 9,
+    "partially_verified": 4,
+    "not_found": 3,
+    "contradicted": 0,
+    "dead_link": 1,
+    "blocking_issues": [
+      "【基准可信，但等级与口径要改】ref 102（DLR Illbruck）：五项基准数字（3,473 点 / RMSPE 20.2% / R²=0.941 / 最优充液率 50-60% / 垂直底热最优 / 热流密度最强特征近两倍）**全部核实无误**；但该文献是 Bachelorarbeit（本科毕业论文），且原文自述模型限定于 bottom heating + planar meander 构型——'垂直底热最优'含数据集偏向。projects/php-thermal-resistance/ 用 1,001 行合成数据（cv_r2_log 0.936 / mape 11.0%）而非该 3,473 点数据集，README/博客若称'复现 DLR 论文'属于夸大，须改口径。",
+      "【数字找不到出处，疑为张冠李戴】ref 98 的'考虑流量振荡的 CHF-ANN 对 85% 数据做到 ±10% 相对误差'：真正的流量振荡 CHF-ANN 是 Su et al., Nuclear Engineering and Design 220(1) (2003) 17-35（DOI 10.1016/S0029-5493(02)00304-7），其完整摘要中**没有 85% 也没有 ±10%**。该数字在本区间内无一手来源支持，应视为未证实；切勿把它继续挂在 FBCE 路线的 [^98^] 下。",
+      "【日期口径】ref 98 的'2022 年 2-7 月完成大规模在轨实验'未能逐字证实：Purdue/EurekAlert 只说 flow boiling module 于 2021 年 8 月上站、'began operations in early 2022'，而'test campaign completed in July'指的是 2024 年整机（含后换上的冷凝模块）。发表前建议改为'2021 年 8 月上站，2022 年初开始运行'或补 FBCE 专项论文出处。",
+      "【正文引用了不存在的支撑】ref 103（NASA 内布拉斯加 EPSCoR 微重力两相流型生成式重建）经多路检索**完全找不到**任何对应项目或论文，应为 not_found——这是本区间唯一一条'大概率是前一代工具编造或严重走形'的引用，建议删除或由作者补出处。",
+      "【无法核验，需人工复核】ref 104（NASA Task Book '深度视觉重审 ISS 微重力沸腾数据'）：taskbook.nasaprs.com 对自动化访问**全站 403**（主页/TASKID 内容页/PDF 端点，含 curl+UA+Referer+cookie 与代理尝试），候选记录 TASKID=15193 / tbpdf id=15633 无法打开，故记 dead_link。",
+      "【来源不可达但已用替代证据】ref 92 的 Purdue 学位论文本体在 hammer.purdue.edu 返回 403 且标注 'File(s) under embargo'，仅能以 Pai & Weibel 的 IJHMT 2022 / ASME JHMT 2024 期刊论文佐证；且文档所称'与拓扑优化结合'在该谱系中**未获证实**（拓扑优化只出现在其被引文献里），属拔高表述。",
+      "【措辞强于证据】ref 96 文档写'换热系数 PINN 反演'，可核验的 PINN 沸腾反演工作（Manchester 组 UKHTC2024 + IJHMT 2025 期刊版）做的是蒸发/气泡与膜态沸腾的反演，并未以'反演对流换热系数'为结论；ref 100 文档写'换热随重力增大而增强、微重力下减弱'，而可访问的一手摘要（NTRS 20140010367, Kim & Raj）用的是'浮力主导 vs 表面张力主导'与重力幂律标度的表述，方向性说法未逐字命中。两者均已降级为 partially_verified。",
+      "【需补充可访问入口】ref 107 的 Brunel Two-phase Flow Database 名称与规模（27,126 点）已证实，但数据库本体的官方主页/下载入口未定位到；文档若把它列为'数据/工具速查表'中的可取用资源，需补一个当前可访问的 URL（Brunel 机构库记录 v-lib-bura1.brunel.ac.uk 存在 SSL 主机名不匹配问题，无法访问）。"
+    ]
+  }
+}

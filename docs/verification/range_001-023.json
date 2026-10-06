@@ -1,0 +1,375 @@
+{
+  "range": "1-23",
+  "agent": "dsh-subagent/ai4s-refs-001-023/2026-10-06",
+  "references": [
+    {
+      "id": 1,
+      "claim": "智能科学范式下 AI 将主导科学发现全流程——在无需人类输入创造性劳动的条件下，通过智能体协作自主完成“提出构想、设计实验、形成假设、执行证伪”的闭环；清华大学智能产业研究院提出 AI 的核心突破点在于“AI 自主证伪能力”，标志 AI 从“助手”向“发现主体”转变",
+      "status": "verified",
+      "source": {
+        "title": "关于AI for Science的一些观点",
+        "publisher": "清华大学智能产业研究院（AIR）",
+        "date": "2025-07-11",
+        "url": "https://air.tsinghua.edu.cn/info/1007/2431.htm",
+        "type": "official"
+      },
+      "evidence_quote": "AI通过智能体协作，自主完成“提出构想、设计实验、形成假设、执行证伪”的闭环。其核心突破点“AI自主证伪能力”，正是确保发现科学有效性的关键",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "该文署名刘洋（AIR 执行院长）、兰艳艳（AIR 首席研究员），正文“观点二”逐字给出上述闭环与“AI自主证伪能力”表述，与文档一致；文档将其归为“清华大学智能产业研究院”正确。"
+    },
+    {
+      "id": 2,
+      "claim": "AI4S 是继实验科学、理论科学、计算科学、数据科学之后的“第五科研范式”，核心目标是推动科研从依赖经验试错的“作坊式”向高效智能的“平台科研”模式转变",
+      "status": "verified",
+      "source": {
+        "title": "AI撬动科研范式变革——专家解读人工智能驱动的科学研究专项部署工作",
+        "publisher": "科技日报（中国科技网）",
+        "date": "2023-03-27",
+        "url": "https://www.stdaily.com/web/gdxw/2023-03/27/content_1918292.html",
+        "type": "media"
+      },
+      "evidence_quote": "新一轮科技革命中很重要的一点，就是科学研究从“小农作坊”模式向“平台科研”模式转变，AI for Science正是推动“平台科研”的主要动力。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "同页另有定义：“AI for Science是以‘机器学习为代表的人工智能技术’与‘科学研究’深度融合的产物”。“第五（科研）范式/第五阶段”提法由清华大学智能产业研究院《关于AI for Science的一些观点》给出（“历经四个阶段……进入第五阶段——智能科学范式”，https://air.tsinghua.edu.cn/info/1007/2431.htm）。"
+    },
+    {
+      "id": 3,
+      "claim": "2021 年全球首家以 AI4S 命名的新型研发机构——北京科学智能研究院（AISI）成立，鄂维南任学术委员会主任；2026 年科学智能大会近 50 位院士参与；2018 年鄂维南提出“AI for Science”概念",
+      "status": "verified",
+      "source": {
+        "title": "当AI成为一种全新的科研范式",
+        "publisher": "中国国际科技交流中心（ciste.org.cn）",
+        "date": "2026-08-26",
+        "url": "https://www.ciste.org.cn/gjkjwj/zkgd/art/2026/art_be86f68cced0473d875a0a6b8fda8bdc.html",
+        "type": "official"
+      },
+      "evidence_quote": "2021年，鄂维南牵头成立全球首个专注于AI for Science领域的新型研发机构——北京科学智能研究院，并担任学术委员会主任。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "“近50位院士”由北京国际科技创新中心大会专页印证（“汇聚近50位院士、80余位青年学者”，https://www.ncsti.gov.cn/kjdt/ztbd/2026kxzndh/202608/t20260821_254170.html）。王坚“Science Foundation Model”概念由中国科协转载其 2026 科学智能大会主旨报告印证（https://www.cast.org.cn/xw/BWTJ/art/2026/art_01e732102c184bf3878f277e78db9388.html）。主体小出入：该来源称 2018 年由“鄂维南、汤超在北京大学首次提出”，文档仅提鄂维南。"
+    },
+    {
+      "id": 4,
+      "claim": "2026 年 8 月科学智能大会上，鄂维南院士提出 AI4S 已进入“下半场”，重心从人工智能方法探索转向科研体系系统性变革，包括平台化科研、“干湿闭环”、科研平权化",
+      "status": "verified",
+      "source": {
+        "title": "AI4S进入下半场 近50位院士共议人工智能赋能科学研究",
+        "publisher": "北京国际科技创新中心（ncsti.gov.cn，信息源：新浪科技/TechWeb）",
+        "date": "2026-08-21",
+        "url": "https://www.ncsti.gov.cn/kjdt/ztbd/2026kxzndh/202608/t20260821_254170.html",
+        "type": "media"
+      },
+      "evidence_quote": "中国科学院院士鄂维南在大会上指出，AI for Science已进入“下半场”，重心正从人工智能方法探索，转向人工智能时代科研体系的系统性变革。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "同页逐字含“通过平台化科研与‘干湿闭环’大幅提升探索效率”“需要推动科研平权化”。会议时间为 2026-08-21 开幕，与文档“2026 年 8 月”一致。"
+    },
+    {
+      "id": 5,
+      "claim": "日本文部科学省将 AI4S 纳入国家框架，提出三年内将新材料开发效率提升 10 倍以上的目标，走“科学基础模型 + AI 代理”路线；新加坡国立研究基金会推出“Nobel Turing Challenge”计划",
+      "status": "partially_verified",
+      "source": {
+        "title": "AI for Science革新的研究推進事業（ARiSE）の公募について",
+        "publisher": "文部科学省（MEXT）",
+        "date": "2026-05-12",
+        "url": "https://www.mext.go.jp/a_menu/kaihatu/jouhou/mext_00528.html",
+        "type": "official"
+      },
+      "evidence_quote": "「AI for Scienceの推進に向けた基本的な戦略方針」（令和8年3月31日 文部科学省）に定められた具体的アクションを先導するフラッグシップ事業として…「戦略ターゲット型」は…科学基盤モデル、AIエージェント、次世代AI駆動ラボシステムなどを一体的に開発する提案が対象です。",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "已证实：日本文部科学省确于 2026-03-31 出台《AI for Science 推进基本战略方针》，并以 ARiSE 旗舰项目落地，“科学基础模型、AI 代理、次世代 AI 驱动实验室系统”与文档“科学基础模型 + AI 代理”路线吻合。未证实：①“三年内将新材料开发效率提升 10 倍以上”在日文/中文来源中均未检索到，疑为编造；②新加坡“Nobel Turing Challenge”仅见 NRF 域名下的 PDF 搜索结果，实际抓取均返回 404（https://www.nrf.gov.sg/files/v2_Speech_by_PS_NRD_A1for_Science_Nobel_Turing_Challenge_Initiative_2024.pdf），无逐字证据。"
+    },
+    {
+      "id": 6,
+      "claim": "（综合性来源，多论点）AI4S 为“第五科研范式”；AI 角色三阶段 AI Assistant→AI Scientist→AI Innovator；2018 年提出概念；2024 年诺贝尔化学奖；2025 年科学大模型集中爆发与 OpenAI for Science；截至 2026 年仍面临数据孤岛、模型幻觉、研发生态封闭；中国“自主实验室”国家标准立项，含设备抽象层、智能管理层、智能实验层、安全管控层四层框架",
+      "status": "partially_verified",
+      "source": {
+        "title": "北京市发布自主实验室标准框架",
+        "publisher": "科学网／中国科学报",
+        "date": "2026-08-24",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/8/570256.shtm",
+        "type": "media"
+      },
+      "evidence_quote": "近日，北京市完成全国首个自主实验室国家标准立项。…自主实验室标准框架由设备抽象层、智能管理层、智能实验层和安全管控层组成",
+      "accessed": "2026-10-06",
+      "confidence": "low",
+      "notes": "编号 6 在正文中被复用于十余处不同论点，未能定位到任何单一原始来源（疑为一份综合行业报告，已丢失）。本条目所引来源确切支持其中的“自主实验室国家标准/四层框架”子论点。其余子论点的可核证情况：「第五范式、AI 主导科学发现」见 AIR（https://air.tsinghua.edu.cn/info/1007/2431.htm）；「2018 年提出」见 ciste.org.cn；「2024 诺奖」见 Nobel 官方 API；「AI Assistant→AI Scientist→AI Innovator 三阶段」中文/英文均未检索到出处，属未证实；「数据孤岛、模型幻觉、研发生态封闭」与「中美双轨格局」未找到对应来源。建议将该编号拆分为可独立核验的多条引用。"
+    },
+    {
+      "id": 7,
+      "claim": "AI4S 要解决四大痛点：基础研究成果难以解决实际问题、实验与数据处理效率低下、科研团队“小农作坊”式工作方式、生物制药材料等领域依赖经验试错；2023 年科技部联合自然科学基金委启动 AI4S 专项部署；2021 年 AISI 成立；2020 年 AlphaFold2；北京 2026 年发布《加快推进人工智能赋能科学研究实施方案（2026—2028 年）》",
+      "status": "verified",
+      "source": {
+        "title": "AI撬动科研范式变革——专家解读人工智能驱动的科学研究专项部署工作",
+        "publisher": "科技日报（中国科技网）",
+        "date": "2023-03-27",
+        "url": "https://www.stdaily.com/web/gdxw/2023-03/27/content_1918292.html",
+        "type": "media"
+      },
+      "evidence_quote": "长期以来，科研人员在实际研究中面临四大痛点：其一，辛苦研究出来的基本原理等重要成果，用来解决实际问题时比较困难；其二，目前的实验手段，以及收集、处理、分析数据的效率相对低下",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "同页逐字含第三、四点：“科研团队工作方式多为‘作坊模式’”与“在解决生物制药、材料研发等过程中面临的实际问题时，仍然依靠经验和试错方式”，四点与文档一一对应。同页亦载“科技部、自然科学基金委联合启动人工智能驱动的科学研究（AI for Science）专项部署工作”。“北京市于 2026 年发布实施方案”见北京市科委口径（2026-06-30 印发，https://www.ncsti.gov.cn/kjdt/ztbd/2026kxzndh/202608/t20260821_254170.html）；但文档“目标到 2028 年建成辐射全球的科学智能创新中枢”未在已抓取页面中找到逐字表述。"
+    },
+    {
+      "id": 8,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "编号 8 在三份文档正文中均无 [^8^] 标记（引用缺口），无法定位所支撑论点、亦无来源可重构。confidence 指对“该编号在正文中不存在”这一判断的确信度。"
+    },
+    {
+      "id": 9,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "编号 9 在三份文档正文中均无 [^9^] 标记（引用缺口），无法定位所支撑论点、亦无来源可重构。"
+    },
+    {
+      "id": 10,
+      "claim": "AlphaFold2（2021）以 Transformer + Evoformer 架构实现单链蛋白质近实验精度预测",
+      "status": "verified",
+      "source": {
+        "title": "Highly accurate protein structure prediction with AlphaFold",
+        "publisher": "Nature（正文经 PubMed Central 获取，PMC8371605）",
+        "date": "2021-07-15",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8371605/",
+        "type": "paper"
+      },
+      "evidence_quote": "The network comprises two main stages. First, the trunk of the network processes the inputs through repeated layers of a novel neural network block that we term Evoformer",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "论文摘要同时给出“near experimental accuracy in a majority of cases”（近实验精度）与“the first computational method that can regularly predict protein structures with atomic accuracy”，并说明 CASP14 参赛模型名为 AlphaFold2、与 CASP13 系统完全不同。发表信息：Nature 596(7873):583–589, doi:10.1038/s41586-021-03819-2。nature.com 原始页面被跨域登录重定向拦截，故引 PMC 全文镜像。"
+    },
+    {
+      "id": 11,
+      "claim": "AlphaFold3（2024）升级为扩散模型，将预测范围扩展到蛋白质—DNA/RNA—配体复合物，直接生成原子坐标，并在药物靶点结合预测上超过传统物理工具",
+      "status": "verified",
+      "source": {
+        "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+        "publisher": "Nature（正文经 PubMed Central 获取，PMC11168924）",
+        "date": "2024-05-08",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11168924/",
+        "type": "paper"
+      },
+      "evidence_quote": "Here we describe our AlphaFold 3 model with a substantially updated diffusion-based architecture that is capable of predicting the joint structure of complexes including proteins, nucleic acids, small molecules, ions and modified residues.",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "摘要续称“far greater accuracy for protein–ligand interactions compared with state-of-the-art docking tools”（对传统对接工具的超越）；正文述“it directly predicts the raw atom coordinates with a diffusion module”（直接生成原子坐标）。文档中“DNA/RNA”对应原文 nucleic acids；“药物靶点结合预测超过传统物理工具”对应 docking tools。发表信息：Nature 630(8016):493–500, doi:10.1038/s41586-024-07487-w。"
+    },
+    {
+      "id": 12,
+      "claim": "2024 年诺贝尔化学奖一半授予 DeepMind 的 Hassabis 与 Jumper（蛋白质结构预测），一半授予 David Baker（计算蛋白质设计）",
+      "status": "verified",
+      "source": {
+        "title": "Nobel Prize in Chemistry 2024 (official prize data API)",
+        "publisher": "Nobel Prize (nobelprize.org)",
+        "date": "2024-10-09",
+        "url": "https://api.nobelprize.org/2.1/nobelPrize/che/2024",
+        "type": "official"
+      },
+      "evidence_quote": "David Baker ... portion 1/2 ... for computational protein design; Demis Hassabis ... portion 1/4 ... for protein structure prediction; John Jumper ... portion 1/4 ... for protein structure prediction",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "本条为官方数据 API 返回的 JSON，逐字包含获奖人、份额（1/2 与 1/4+1/4）与获奖理由，与文档表述完全一致；获奖日期 2024-10-09。nobelprize.org 的新闻稿与总结页正文抓取被截断，故改用官方 API。"
+    },
+    {
+      "id": 13,
+      "claim": "DeepMind 分拆的 Isomorphic Labs 于 2025 年 3 月完成 6 亿美元 A 轮融资，与诺华、礼来开展合作；晶泰科技 2024 年 6 月上市；英矽智能 2025 年 12 月上市，2026 年与礼来达成总额最高 27.5 亿美元的 GLP-1 授权交易；剂泰科技 2026 年 5 月上市，IPO 认购超 6900 倍",
+      "status": "partially_verified",
+      "source": {
+        "title": "Isomorphic Labs announces $600m external investment round",
+        "publisher": "Isomorphic Labs（Alphabet）",
+        "date": "2025-03-31",
+        "url": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-600m-external-investment-round",
+        "type": "official"
+      },
+      "evidence_quote": "Isomorphic Labs announces it has raised $600 Million in its first external funding round. The financing round is led by Thrive Capital, with participation from GV, and follow-on capital from existing investor, Alphabet.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已证实：①Isomorphic Labs 6 亿美元首轮外部融资，2025-03-31（官方口径为“first external funding round”，非严格“A 轮”；官网另有后续 Series B 页面）；②诺华、礼来合作：官网合作页述 Novartis 2024-01 首次公布、2025-02 扩展，Eli Lilly 战略研究合作（https://www.isomorphiclabs.com/partnerships）；③晶泰科技 2024-06-13 港交所 18C 上市（https://www.stcn.com/article/detail/1230365.html）；④英矽智能 2025-12-30 上市，股票代码 03696.HK（https://www.stcn.com/article/detail/3564034.html）；⑤剂泰科技 2026-05-13 上市，香港公开发售超 6900 倍超额认购（https://stcn.com/article/detail/3907054.html，另见上海证券报标题“6900余倍超额认购…首日大涨126%”）。**未证实/有出入**：2026-03-29 英矽与礼来确达成最高约 27.5 亿美元合作（含 1.15 亿美元首付款），但公告未披露标的，“GLP-1”仅为业内推测（澎湃新闻，https://business.sohu.com/a/1003133365_260616：“此次BD并未披露具体涉及的产品……业内有观点认为，此次BD的核心资产正是该GLP-1在研产品”）；且该交易为“一项全球独家许可 + 多项研发合作”，称“GLP-1 授权交易”不准确。"
+    },
+    {
+      "id": 14,
+      "claim": "<未在正文中出现>",
+      "status": "not_found",
+      "source": null,
+      "evidence_quote": "",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "编号 14 在三份文档正文中均无 [^14^] 标记（引用缺口），无法定位所支撑论点、亦无来源可重构。"
+    },
+    {
+      "id": 15,
+      "claim": "晶泰科技 2025 年营收 8.03 亿元、同比增长 201%、首次实现全年盈利；三家公司收入结构均不稳定（前五大客户收入占比 58%—99%）：晶泰前五大客户贡献约 58.7% 收入，英矽与剂泰前五大客户占比长期超过 90%；剂泰 2023—2025 年累计亏损超 14 亿元",
+      "status": "partially_verified",
+      "source": {
+        "title": "剂泰科技通过港交所聆讯：三年亏14亿，AI制药商业化怎么走？",
+        "publisher": "南方财经网／21世纪经济报道",
+        "date": "2026-04-21",
+        "url": "https://www.sfccn.com/2026/4-21/5OMDE1MjZfMjEzMjk5OQ.html",
+        "type": "media"
+      },
+      "evidence_quote": "三年净亏损分别为5.82亿元、4.99亿元和3.92亿元，虽呈逐年收窄态势，但累计亏损仍超14亿元。",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "已证实：①晶泰控股 2025 年营业收入 8.026 亿元、同比 +201.2%、年内利润 1.346 亿元、首次年度盈利、AI for Science 领域首家盈利港股公司（格隆汇/证券之星，2026-03-25，https://wap.stockstar.com/detail/IG2026032500036185；本页另述“晶泰科技2025年营收同比增长201.2%至8.03亿元，年内净利润1.24亿元”，净利口径略有差异）；②剂泰 2023—2025 累计亏损超 14 亿元；③剂泰前五大客户占比 98.0%／83.7%／98.9%；④英矽智能 2024 年前五大客户收入占比 94.5%（中国经济网转华夏时报，2025-11-19，http://finance.ce.cn/stock/gsgdbd/202511/t20251119_2589675.shtml）。**未证实/有出入**：晶泰“前五大客户约 58.7%、最大单一客户 45.5%”仅见于东方财富股吧用户帖（2026-06-17，https://caifuhao.eastmoney.com/news/20260617153320721877830），非权威来源，未能用年报/公告证实；剂泰 2024 年前五大客户占比为 83.7%，故“长期超过 90%”对其不成立。"
+    },
+    {
+      "id": 16,
+      "claim": "晶泰科技客户覆盖全球前 20 大药企中的 17 家；英矽智能核心管线 Rentosertib 已启动 III 期临床；剂泰科技拥有超千万种结构的脂质库，其 AI 平台将传统 1—2 年的制剂开发压缩至约 3 个月",
+      "status": "verified",
+      "source": {
+        "title": "英矽智能于Rentosertib的III期临床研究GENESIS-IPF-3完成首例患者给药",
+        "publisher": "英矽智能（Insilico Medicine，HKEX:3696）",
+        "date": "2026-09-10",
+        "url": "https://insilico.com/news_sc/isn1009262-rentosertib-genesis-ipf-3",
+        "type": "official"
+      },
+      "evidence_quote": "Rentosertib（ISM001-055 / INS018_055）III期临床试验（CTR20262475，NCT07687459）已在中国北京协和医院完成首例患者入组并给药，同日上海市肺科医院也完成首例患者入组。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "晶泰“累计覆盖全球前20大药企中的17家”见 2025 年度业绩报道（https://wap.stockstar.com/detail/IG2026032500036185）；剂泰“千万级可电离脂质库”“临床前制剂开发周期由传统的1至2年压缩至不到3个月”见 https://stcn.com/article/detail/3907054.html。文档“冲刺‘全球首款获批上市的 AI 创新药’”属公司/媒体定位表述，非既成事实。"
+    },
+    {
+      "id": 17,
+      "claim": "GNoME（2023）用图神经网络与主动学习发现 220 万种新晶体候选、38 万个稳定结构，使已知稳定晶体数量近乎翻倍；伯克利 A-Lab 在 17 天内自动合成了 58 种目标材料中的 41 种；部分 AI 预测材料被指“无原创性、无实用价值”，MatterGen 推荐的材料被发现 1972 年就已制备",
+      "status": "verified",
+      "source": {
+        "title": "AI推动材料研究的时代来了？",
+        "publisher": "新华网（转载科技日报，记者刘霞）",
+        "date": "2025-10-15",
+        "url": "http://www.news.cn/tech/20251015/e281c89bd1b14449b89cc80c815af395/c.html",
+        "type": "media"
+      },
+      "evidence_quote": "微软的MatterGen也陷入争议。团队测试时让其推荐特定硬度的新材料，其合成出“钽铬氧化物”无序化合物。但今年6月一篇预印本论文指出，这种材料早在1972年就已首次制备，甚至被纳入MatterGen的训练数据。",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "同页逐字另含“深度思维公司开发的‘材料探索图网络’（GNoME）AI系统，一次性发现220万种新型晶体材料”“不少科学家直言，部分AI系统设想的化合物既无原创性，也缺乏实用价值”“该项目合成的41种无机化合物中，部分材料描述有误，甚至有早已合成的已知材料”。提醒：A-Lab 论文后来被期刊更正（C&EN 2026-01 报道），41/58 与材料归属的争议尚未完全落定。"
+    },
+    {
+      "id": 18,
+      "claim": "Google DeepMind 的 GNoME（2023）发现 220 万种新晶体候选、38 万个稳定结构；伯克利 A-Lab 在 17 天内自动合成了 58 种目标材料中的 41 种；2025 年微软在 Nature 发表 MatterGen，基于等变扩散模型按化学式、对称性、目标性能反向生成无机晶体",
+      "status": "verified",
+      "source": {
+        "title": "Google DeepMind Adds Nearly 400,000 New Compounds to Berkeley Lab's Materials Project",
+        "publisher": "Lawrence Berkeley National Laboratory (Berkeley Lab) News Center",
+        "date": "2023-11-29",
+        "url": "https://newscenter.lbl.gov/2023/11/29/google-deepmind-new-compounds-materials-project/",
+        "type": "official"
+      },
+      "evidence_quote": "Over 17 days of independent operation, A-Lab successfully produced 41 new compounds out of an attempted 58 – a rate of more than two new materials per day.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "同页逐字：“GNoME researchers ultimately produced 2.2 million crystal structures, including 380,000 that they are adding to the Materials Project and predict are stable”。MatterGen 确实于 2025 年初发表于 Nature（“A generative model for inorganic materials design”，https://www.nature.com/articles/s41586-025-08628-5），新华网亦称“今年初，微软宣称其AI模型MatterGen能从零生成无机材料”；但“使已知稳定晶体数量近乎翻倍”与“等变扩散模型”未在本条来源中获得逐字支持。"
+    },
+    {
+      "id": 19,
+      "claim": "北京科学智能研究院与深势科技将分子大模型 Uni-Mol 用于 OLED 发光分子筛选；中科院基于 LLaMA2 微调出材料合成路径大模型 MatChatt；国防科技大学、中科院上海硅酸盐所等相继发布 MatPilot、MatMind 等材料大模型",
+      "status": "partially_verified",
+      "source": {
+        "title": "科学家发布材料合成大语言模型MatChat",
+        "publisher": "中国科学院（计算机网络信息中心）",
+        "date": "2023-11-01",
+        "url": "https://www.cas.cn/syky/202311/t20231101_4983701.shtml",
+        "type": "official"
+      },
+      "evidence_quote": "并对开源大语言模型LLaMA2-7B进行微调训练，研发了专注于无机材料合成路径预测任务的大语言模型——MatChat",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "①模型名应为“MatChat”，文档写作“MatChatt”有误；研发方为中科院计算机网络信息中心人工智能部与物理研究所 SF10 组。②Uni-Mol OLED 筛选见新华网 2025-03-19“AI for Science变革新材料研发范式”（https://www.news.cn/tech/20250319/63880e9e7e96463d989eb5ec9e117bbb/c.html）：“该公司打造的分子大模型Uni-Mol……很快就能从160万个候选材料中筛选出1000个左右的选取分子”——该来源仅归功于深势科技，未提及北京科学智能研究院。③MatPilot 见中科院物理所学术报告页（2026-01-05，https://www.iop.cas.cn/xshd/xsbg/202601/t20260105_8095480.html），报告人叶益聪（国防科技大学空天科学学院）。④**MatMind 未能取得逐字证据**：上海硅酸盐所页面（https://www.sic.ac.cn/kybm/skl/yjdt/202504/t20250407_7589586.html）多次抓取均返回“HTML content omitted: unable to convert safely”，仅搜索引擎标题可佐证。"
+    },
+    {
+      "id": 20,
+      "claim": "2025 年微软在 Nature 发表 MatterGen，基于等变扩散模型按化学式、对称性、目标性能（如体积模量、磁性）反向生成无机晶体，标志材料设计从“筛选已知”进入“按需创造”阶段",
+      "status": "partially_verified",
+      "source": {
+        "title": "AI推动材料研究的时代来了？",
+        "publisher": "新华网（转载科技日报）",
+        "date": "2025-10-15",
+        "url": "http://www.news.cn/tech/20251015/e281c89bd1b14449b89cc80c815af395/c.html",
+        "type": "media"
+      },
+      "evidence_quote": "相较于GNoME，MatterGen更具针对性，它能直接生成符合设计条件的材料。科学家不仅可指定材料类型，还能设定机械、电气、磁性等性能需求，为精准研发提供有力工具。",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "“反向生成无机晶体、可按目标性能（含磁性）设计”已证实。未逐字证实：“等变扩散模型”（本页仅称 AI 模型/生成式设计）与“体积模量”表述；MatterGen 论文确为 Nature 2025（https://www.nature.com/articles/s41586-025-08628-5，标题“A generative model for inorganic materials design”），但 nature.com 正文被登录重定向拦截，未能抓取原文验证架构细节。"
+    },
+    {
+      "id": 21,
+      "claim": "2023 年起，Google DeepMind 的 GraphCast（多尺度图神经网络）、华为云盘古气象（3D Earth-Specific Transformer）、复旦大学伏羲（级联 U-Transformer）、上海 AI 实验室风乌、ECMWF 的 AIFS、微软 Aurora（地球系统基础模型）等模型密集涌现，它们在 ERA5 再分析数据上训练，以数据驱动方式替代传统数值预报的动力核心",
+      "status": "partially_verified",
+      "source": {
+        "title": "GraphCast: Learning skillful medium-range global weather forecasting (arXiv:2212.12794v2)",
+        "publisher": "Google DeepMind / arXiv",
+        "date": "2023-08-04",
+        "url": "https://arxiv.org/abs/2212.12794",
+        "type": "paper"
+      },
+      "evidence_quote": "We introduce a machine learning-based method called \"GraphCast\", which can be trained directly from reanalysis data. It predicts hundreds of weather variables, over 10 days at 0.25 degree resolution globally, in under one minute.",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "本条仅逐字证实 GraphCast（图神经网络类方法、直接以 reanalysis/ERA5 数据训练）。其余模型零散可证：风乌 FengWu（上海 AI 实验室，2023-04 发布，“trained on 39 years of global data…higher accuracy than the Integrated Forecast System…more than 10,000 times faster”，https://www.preventionweb.net/news/how-does-ai-aid-forecasting-amid-extreme-weather-events）；伏羲 FuXi-S2S（arXiv:2312.09926，训练于 ECMWF ERA5 再分析 72 年日统计）；Aurora（Nature 2025，“A foundation model for the Earth system”，1.3B 参数，https://www.nature.com/articles/s41586-025-09005-y）；ECMWF AIFS v2 已投入业务（https://www.ecmwf.int/en/newsletter/187/news/implementation-aifs-v2）。**未能找到单一来源同时列出全部六个模型及其 ERA5 训练口径**；“盘古气象 3D Earth-Specific Transformer”“伏羲 级联 U-Transformer”两处技术表述未取得逐字一手证据。"
+    },
+    {
+      "id": 22,
+      "claim": "基于 Transformer 或 GNN 的 AI 气象模型在预测对流层关键变量时均方根误差比欧洲中期天气预报中心的 IFS 系统低 10% 以上；伏羲的子模型 FuXi-S2S 将熟练预报时效延长到 42 天，突破传统次季节预报瓶颈",
+      "status": "partially_verified",
+      "source": {
+        "title": "FuXi-S2S: A machine learning model that outperforms conventional global subseasonal forecast models (arXiv:2312.09926v2)",
+        "publisher": "arXiv（复旦大学等）",
+        "date": "2024-07-05",
+        "url": "https://arxiv.org/abs/2312.09926",
+        "type": "paper"
+      },
+      "evidence_quote": "extending the skillful MJO prediction from 30 days to 36 days",
+      "accessed": "2026-10-06",
+      "confidence": "medium",
+      "notes": "**数字有出入，必须更正**：原文为“provides global daily mean forecasts up to 42 days”——42 天是预报时长（horizon），不是“熟练预报时效”；论文明确“extending the skillful MJO prediction from 30 days to 36 days”，即熟练 MJO 预报由 30 天延长到 36 天。**“RMSE 比 IFS 低 10% 以上”未找到任何支持来源**：已检索到的权威表述为 FengWu 的“7-day lead time with higher accuracy than the Integrated Forecast System…more than 10,000 times faster”（PreventionWeb/CGTN）与 GraphCast 的“在 1380 项验证指标中的 90% 上显著优于最准确的业务确定性预报系统”，均无“10% RMSE”字样。"
+    },
+    {
+      "id": 23,
+      "claim": "GraphCast 能在 60 秒内完成未来 10 天的全球预报，其准确率超过 90% 的欧洲中期天气预报中心高精度预报结果，而传统超算数值模式需要数小时；AI 模型在极端天气预警、长周期气候预估上仍逊于物理模式，纯数据驱动模型缺乏物理守恒约束，长期积分易出现漂移",
+      "status": "verified",
+      "source": {
+        "title": "GraphCast: Learning skillful medium-range global weather forecasting (arXiv:2212.12794v2)",
+        "publisher": "Google DeepMind / arXiv",
+        "date": "2023-08-04",
+        "url": "https://arxiv.org/abs/2212.12794",
+        "type": "paper"
+      },
+      "evidence_quote": "It predicts hundreds of weather variables, over 10 days at 0.25 degree resolution globally, in under one minute. We show that GraphCast significantly outperforms the most accurate operational deterministic systems on 90% of 1380 verification targets",
+      "accessed": "2026-10-06",
+      "confidence": "high",
+      "notes": "“10 天”“一分钟内”“90%”三个数字均出自摘要。表述提醒：原文是“在 1380 项验证指标中的 90% 上显著优于最准确的业务确定性预报系统”（该确定性系统即 ECMWF HRES），文档写作“准确率超过 90% 的 ECMWF 高精度预报结果”属歧义/改写，建议按原文更正。另需注意：同一摘要称其“forecasts support better severe event prediction, including tropical cyclones, atmospheric rivers, and extreme temperatures”，与文档“在极端天气预警上仍逊于物理模式”存在张力；“纯数据驱动缺乏物理守恒约束、长期积分漂移”在本摘要中无对应证据。"
+    }
+  ],
+  "summary": {
+    "verified": 10,
+    "partially_verified": 8,
+    "not_found": 5,
+    "contradicted": 0,
+    "dead_link": 0,
+    "blocking_issues": [
+      "id 22（必须改）：「FuXi-S2S 将熟练预报时效延长到 42 天」与一手论文矛盾——42 天是预报时长，论文原文为熟练 MJO 预报由 30 天延长至 36 天。",
+      "id 22（必须删/改）：「AI 气象模型 RMSE 比 IFS 低 10% 以上」在全网检索中找不到任何支持来源，应删除或替换为可核证的表述（如 GraphCast「在 1380 项验证指标中的 90% 上优于业务确定性预报系统」）。",
+      "id 13（必须改）：「英矽智能 2026 年与礼来达成总额最高 27.5 亿美元的 GLP-1 授权交易」——交易金额与时间属实（2026-03-29），但公司未披露标的，「GLP-1」仅为业内推测；且交易性质为一项全球独家许可＋多项研发合作，不是「GLP-1 授权交易」。",
+      "id 15（必须改/删）：「晶泰前五大客户贡献约 58.7% 收入、最大单一客户 45.5%」仅见于东方财富股吧用户帖，无年报/公告佐证；「英矽和剂泰前五大客户占比长期超过 90%」也不准确——剂泰 2024 年为 83.7%（2023/2025 为 98.0%/98.9%），英矽 2024 年为 94.5%。",
+      "id 6（必须拆分）该编号被复用于十余处不同论点，未能定位到任何单一原始来源；其中「AI Assistant→AI Scientist→AI Innovator 三阶段」「数据孤岛、模型幻觉、研发生态封闭」「中美双轨格局」未找到任何出处，应视为未证实并删除或另找来源。",
+      "id 5（必须改）：日本文部科学省 AI4S 国家框架确已核实（2026-03-31《基本战略方针》＋ARiSE 旗舰项目，「科学基础模型、AI 代理」路线属实），但「三年内将新材料开发效率提升 10 倍以上」找不到任何出处；新加坡「Nobel Turing Challenge」的 NRF 官方页面全部 404，无逐字证据。",
+      "id 19（必须改）：模型名「MatChatt」应更正为「MatChat」（中科院计算机网络信息中心＋物理所，LLaMA2-7B 微调）；Uni-Mol OLED 筛选的来源仅归功于深势科技，未提北京科学智能研究院；MatMind 未能取得任何逐字证据（上海硅酸盐所页面不可解析）。",
+      "id 20/21（建议补证或软化）：「MatterGen 基于等变扩散模型」「体积模量」以及「盘古气象 3D Earth-Specific Transformer」「伏羲级联 U-Transformer」均未取得一手逐字证据；id 21 的六模型并列清单找不到单一权威来源。",
+      "id 8 / id 9 / id 14：正文未出现的引用缺口编号，无对应论点与来源，共享参考文献表重构时应留空或标注为无效编号。",
+      "id 18（表述风险）：「使已知稳定晶体数量近乎翻倍」未在已抓取来源中逐字证实；另 A-Lab 论文在 2026 年已被期刊更正，41/58 与材料归属的表述宜加注。"
+    ]
+  }
+}

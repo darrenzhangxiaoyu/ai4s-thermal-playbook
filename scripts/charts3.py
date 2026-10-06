@@ -1,20 +1,26 @@
 # -*- coding: utf-8 -*-
-"""热管理 AI4S 方向技术地图（航天器热控 × 芯片液冷）"""
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from matplotlib import font_manager
-import matplotlib.patches as mpatches
+"""热管理 AI4S 方向技术地图（航天器热控 × 芯片液冷，fig6）"""
+import sys
+from pathlib import Path
 
-FONT_DIR = '/Users/zhangxiaoyu/Library/Application Support/kimi-desktop/daimon-share/daimon/runtime/python/fonts'
-for f in ['NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf']:
-    font_manager.fontManager.addfont(f'{FONT_DIR}/{f}')
-plt.rcParams['font.family'] = 'Noto Sans SC'
-plt.rcParams['axes.unicode_minus'] = False
+# 共享的中文字体/路径工具；必须在 import matplotlib 之前导入（它会设置 MPLCONFIGDIR）
+for _p in Path(__file__).resolve().parents:
+    if (_p / 'tools' / 'cjkfont.py').exists():
+        sys.path.insert(0, str(_p / 'tools'))
+        break
+import cjkfont  # noqa: E402
+
+import matplotlib  # noqa: E402
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.patches as mpatches  # noqa: E402
+
+cjkfont.setup_cjk_font()
 
 INK, BLUE, TEAL, AMBER, CORAL, GRAY, LIGHT = (
     '#264653', '#2E5EAA', '#2A9D8F', '#E9C46A', '#E76F51', '#8A94A6', '#F4F6F9')
-OUT = '/Users/zhangxiaoyu/Documents/02-研发/01-研发项目/50-AI4S/docs/assets'
+# 输出到仓库内 docs/assets/，与脚本所在位置无关（原实现写死了作者机器的绝对路径）
+OUT = str(cjkfont.repo_root() / 'docs' / 'assets')
 
 fig, ax = plt.subplots(figsize=(12.5, 7.6))
 ax.set_xlim(0, 1)
@@ -32,10 +38,10 @@ rows = [
         '卫星热数字孪生综述\n（Acta Astronautica 2025）\nISS 快速热分析数字孪生\n混合孪生：MLP + Modelica/FMI\n稀疏遥测 + 物理约束在线估计\n微重力两相流型生成模型\n（NASA EPSCoR）',
     ]),
     ('芯片热管理主线', CORAL, [
-        'ML 预测 Nu/f 统一关联式\n（任意截面通道，Purdue）\n几何 CNN 处理非结构网格\nNeural Concept 表面温度场代理\nCAD → 仿真工作流集成',
+        'ML 预测 Nu/f 统一关联式\n（任意截面通道，Purdue）\n点云/图网络处理非结构网格\nNeural Concept 表面温度场代理\nCAD → 仿真工作流集成',
         '微/迷你通道冷凝与两相\n压降 ML 通用关联式\n（Springer 2023）\n微通道环状两相流模型\n（Mudawar 谱系）',
         '池沸腾/流动沸腾 CHF\nML 预测（FBCE 跨重力 ANN）\n沸腾状态识别 CNN+迁移学习\n燃气轮机/半导体 PINN 反演\n对流换热系数（稀疏噪声反问题）',
-        'TDP 300W→2300W→3600W\n（Vera Rubin 演进）\nRubin NVL72 100% 全液冷\n两相冷板应对 300 W/cm²\n清华 SiC 微通道 CHF 1682 W/cm²',
+        'TDP 300W→700W→1000W（公开规格）\nVera Rubin 预期值属供应链口径\nRubin 平台 100% 全液冷（官方）\n两相冷板应对 300 W/cm²\n清华 SiC 微通道 CHF 1682 W/cm²',
     ]),
 ]
 
